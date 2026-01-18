@@ -12,4 +12,9 @@ class HomeController extends Controller
     {
         return view($this->masterView);
     }
+
+    public function home()
+    {
+        return view($this->masterView);
+    }
 }
