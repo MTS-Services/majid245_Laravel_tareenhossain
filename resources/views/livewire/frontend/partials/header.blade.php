@@ -1,8 +1,8 @@
 <header class="sticky top-0 z-[9999] bg-primary transition-all duration-300" id="header">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
         <a class="no-underline" href="#top">
             <span class="text-white font-black tracking-wide text-lg mr-2">CENTRAL</span>
-            <div class="text-gold text-xs tracking-widest uppercase">Executive Transfers</div>
+            <div class="text-second-500 text-xs tracking-widest uppercase">Executive Transfers</div>
         </a>
         <nav class="hidden md:flex gap-2" id="nav">
             <a href="#booking" class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Book</a>

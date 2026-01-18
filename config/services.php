@@ -42,6 +42,7 @@ return [
         'booking_widget' => env('EASYTAXI_BASE_URL') . '/booking/widget?site_key=' . env('EASYTAXI_SITE_KEY'),
         'booking_page'   => env('EASYTAXI_BASE_URL') . '/booking?site_key=' . env('EASYTAXI_SITE_KEY'),
         'customer_page'  => env('EASYTAXI_BASE_URL') . '/customer?site_key=' . env('EASYTAXI_SITE_KEY'),
+        'iframe_resizer' => env('EASYTAXI_BASE_URL') . '/assets/plugins/iframe-resizer/iframeResizer.min.js',
 
         'iframe_resizer' => env('EASYTAXI_BASE_URL') . env('EASYTAXI_IFRAME_RESIZER'),
     ],

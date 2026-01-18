@@ -26,7 +26,7 @@
 
                         <!-- Rating Badge -->
                         <div
-                            class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3 mb-8">
+                            class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-md px-6 py-3 mb-8">
                             <svg class="w-6 h-6 text-yellow-400" fill="yellow" viewBox="0 0 20 20">
                                 <path
                                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -55,7 +55,7 @@
         </section>
 
         <section class="py-9 scroll-mt-[72px]" id="booking">
-            <div class="max-w-6xl mx-auto px-5">
+            <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold text-center mb-6">Book Instantly</h2>
                 <p class="text-center text-sm text-gray-600 -mt-1 mb-5">Search, choose your vehicle/price, then complete
                     details &amp; payment in one flow.</p>
@@ -67,12 +67,21 @@
                         src="{{ config('services.easytaxi.booking_page') }}" id="eto-iframe-booking" allow="geolocation"
                         scrolling="yes" frameborder="0" style="width:1px; min-width:100%; border:0;">
                     </iframe>
+                    <script src="https://696a0e8806cc5.trial.easytaxioffice.com/assets/plugins/iframe-resizer/iframeResizer.min.js">
+                    </script>
+                    <script>
+                        iFrameResize({
+                            log: false,
+                            targetOrigin: '*',
+                            checkOrigin: false
+                        }, "iframe#eto-iframe-booking");
+                    </script>
                 </div>
             </div>
         </section>
 
         <section class="py-9 bg-bg scroll-mt-[72px]" id="why">
-            <div class="max-w-6xl mx-auto px-5">
+            <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold mb-6">Why choose Central Executive Transfers</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                     <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44">
@@ -104,7 +113,7 @@
         </section>
 
         <section class="py-9 scroll-mt-[72px]" id="prices">
-            <div class="max-w-6xl mx-auto px-5">
+            <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold text-center mb-6">Transparent Airport Prices</h2>
                 <div class="overflow-x-auto shadow-lg">
                     <table class="w-full border-collapse bg-white rounded-xl overflow-hidden border border-gray-200">
@@ -167,7 +176,7 @@
         </section>
 
         <section class="py-9 bg-bg scroll-mt-[72px]" id="fleet">
-            <div class="max-w-6xl mx-auto px-5">
+            <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold mb-6">Fleet</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44">
@@ -193,7 +202,7 @@
         </section>
 
         <section class="py-9 scroll-mt-[72px]" id="reviews">
-            <div class="max-w-6xl mx-auto px-5">
+            <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold mb-6">Reviews</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44">
@@ -219,7 +228,7 @@
         </section>
 
         <section class="py-9 scroll-mt-[72px]" id="faq">
-            <div class="max-w-6xl mx-auto px-5">
+            <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold mb-6">FAQs</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                     <div class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44">
@@ -279,7 +288,7 @@
         </section>
 
         <section class="bg-white text-center py-12">
-            <div class="max-w-6xl mx-auto px-5">
+            <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold text-black mb-3">Ready when you are</h2>
                 <p class="text-black mb-3">Reserve now with a <strong>10% deposit</strong> and secure your driver.</p>
                 <p><a class="inline-block px-4 py-3 rounded-lg no-underline font-bold bg-second-500 text-gray-900 hover:translate-y-[-2px] hover:shadow-lg transition-all js-quote"
@@ -288,7 +297,7 @@
         </section>
 
         <section class="py-9 bg-second-500 scroll-mt-[72px]" id="contact">
-            <div class="max-w-6xl mx-auto px-5">
+            <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold text-center mb-6 text-gray-900">Contact</h2>
                 <p class="text-gray-900">
                     <strong>Phone:</strong> <a href="tel:+447405172435" class="text-gray-900 font-bold underline">+44
