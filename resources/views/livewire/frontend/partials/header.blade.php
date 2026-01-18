@@ -50,9 +50,9 @@
 <nav class="fixed w-full top-0 z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-            <div class="flex items-center">
-                <span class="text-2xl font-bold gold-gradient bg-clip-text heading-font text-white">CENTRAL</span>
-                <span class="ml-2 text-yellow-500 text-sm">Executive Transfers</span>
+            <div class="flex flex-col">
+                <span class="text-2xl font-bold gold-gradient bg-clip-text! text-transparent heading-font">CENTRAL</span>
+                <span class="text-white text-md uppercase">Executive Transfers</span>
             </div>
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="#services" class="text-gray-300 hover:text-yellow-500 transition">Services</a>
