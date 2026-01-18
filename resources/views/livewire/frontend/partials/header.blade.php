@@ -1,4 +1,4 @@
-<header x-data="{ mobileMenuOpen: false }" x-cloak class="sticky top-0 z-50 bg-white">
+{{-- <header x-data="{ mobileMenuOpen: false }" x-cloak class="sticky top-0 z-50 bg-white">
     <div class="container-wide flex items-center justify-between py-3 px-6">
         <!-- Logo Section -->
         <a href="{{ route('home') }}" title="{{ __('DiodioGlow') }}" wire:navigate class="flex items-center gap-2">
@@ -45,4 +45,39 @@
             <x-language />
         </nav>
     </div>
-</header>
+</header> --}}
+
+<nav class="fixed w-full top-0 z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold gold-gradient bg-clip-text heading-font text-white">CENTRAL</span>
+                <span class="ml-2 text-yellow-500 text-sm">Executive Transfers</span>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#services" class="text-gray-300 hover:text-yellow-500 transition">Services</a>
+                <a href="#fleet" class="text-gray-300 hover:text-yellow-500 transition">Fleet</a>
+                <a href="#pricing" class="text-gray-300 hover:text-yellow-500 transition">Pricing</a>
+                <a href="#reviews" class="text-gray-300 hover:text-yellow-500 transition">Reviews</a>
+                <a href="tel:+441234567890"
+                    class="gold-gradient text-black px-6 py-2 rounded-full font-semibold hover:opacity-90 transition">
+                    <i class="fas fa-phone mr-2"></i>Call Now
+                </a>
+            </div>
+            <button class="md:hidden text-white" onclick="toggleMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-black/95 px-4 py-6 space-y-4">
+        <a href="#services" class="block text-gray-300 hover:text-yellow-500 transition">Services</a>
+        <a href="#fleet" class="block text-gray-300 hover:text-yellow-500 transition">Fleet</a>
+        <a href="#pricing" class="block text-gray-300 hover:text-yellow-500 transition">Pricing</a>
+        <a href="#reviews" class="block text-gray-300 hover:text-yellow-500 transition">Reviews</a>
+        <a href="tel:+441234567890"
+            class="block gold-gradient text-black px-6 py-3 rounded-full font-semibold text-center">
+            Call Now
+        </a>
+    </div>
+</nav>
