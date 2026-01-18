@@ -12,7 +12,7 @@
 
                 <!-- Content -->
                 <div class="container relative z-10  px-6 text-white">
-                    <div class="#">
+                    <div class="">
                         <!-- Main Heading -->
                         <h1 class="title-font md:text-5xl font-bold mb-6 text-wrap text-white">
                             Executive Airport Transfers —
@@ -40,7 +40,7 @@
                                 class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
                                 Get Instant Quote
                             </a>
-                            <a href=""
+                            <a href="tel:+447405172435"
                                 class="bg-transparent hover:bg-white/10 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 backdrop-blur-sm">
                                 Call 07405 172435
                             </a>
@@ -60,9 +60,13 @@
                 <p class="text-center text-sm text-gray-600 -mt-1 mb-5">Search, choose your vehicle/price, then complete
                     details &amp; payment in one flow.</p>
                 <div class="overflow-visible mt-5">
-                    <iframe id="easytaxi-full" class="w-full border-0" src="https://app.centraltravels.co.uk/booking"
+                    {{-- <iframe id="easytaxi-full" class="w-full border-0" src="https://app.centraltravels.co.uk/booking"
                         title="Booking" loading="lazy" allow="geolocation" frameborder="0" scrolling="yes"
-                        style="height:1100px;min-height:1100px"></iframe>
+                        style="height:1100px;min-height:1100px"></iframe> --}}
+                    <iframe class="w-full min-h-[400px] h-auto" title="Book Now!"
+                        src="{{ config('services.easytaxi.booking_page') }}" id="eto-iframe-booking" allow="geolocation"
+                        scrolling="yes" frameborder="0" style="width:1px; min-width:100%; border:0;">
+                    </iframe>
                 </div>
             </div>
         </section>
@@ -103,8 +107,7 @@
             <div class="max-w-6xl mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold text-center mb-6">Transparent Airport Prices</h2>
                 <div class="overflow-x-auto shadow-lg">
-                    <table
-                        class="w-full border-collapse bg-white rounded-xl overflow-hidden border border-gray-200">
+                    <table class="w-full border-collapse bg-white rounded-xl overflow-hidden border border-gray-200">
                         <thead>
                             <tr>
                                 <th class="bg-primary text-white font-bold border-b-2 border-second-500 p-4 text-left">
@@ -308,131 +311,5 @@
             <a class="flex-1 text-center px-4 py-3 rounded-lg font-semibold no-underline bg-second-500 text-gray-900 js-quote"
                 href="#booking">Get Quote</a>
         </div>
-
-        <script>
-            // Mobile menu toggle
-            function toggleMenu() {
-                const menu = document.getElementById('mobileMenu');
-                menu.classList.toggle('hidden');
-            }
-
-            // FAQ toggle
-            function toggleFAQ(num) {
-                const content = document.getElementById('faq-' + num);
-                const icon = document.getElementById('icon-' + num);
-                content.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
-            }
-
-            // Review carousel
-            const reviews = [{
-                    name: "Sarah Johnson",
-                    rating: 5,
-                    text: "Absolutely fantastic service! The driver was punctual, professional, and the Mercedes was immaculate. Made our trip to Manchester Airport stress-free. Highly recommended!",
-                    date: "2 weeks ago"
-                },
-                {
-                    name: "David Thompson",
-                    rating: 5,
-                    text: "I use Central Executive for all my business trips. Always reliable, comfortable vehicles, and the drivers are very knowledgeable about the local area. Worth every penny.",
-                    date: "1 month ago"
-                },
-                {
-                    name: "Emma Williams",
-                    rating: 5,
-                    text: "Booked a transfer for my parents' anniversary trip. The service was exceptional - on time, courteous driver, and they even helped with heavy luggage. Five stars!",
-                    date: "3 weeks ago"
-                },
-                {
-                    name: "Michael Brown",
-                    rating: 5,
-                    text: "Used them for a 4am airport run. Driver was waiting early, car was spotless and comfortable. Great communication throughout. Will definitely use again.",
-                    date: "1 week ago"
-                },
-                {
-                    name: "Lisa Anderson",
-                    rating: 5,
-                    text: "Professional from start to finish. Online booking was easy, price was transparent, and the journey was smooth. Best airport transfer service in Sheffield!",
-                    date: "2 months ago"
-                },
-                {
-                    name: "James Roberts",
-                    rating: 5,
-                    text: "Flight was delayed by 2 hours, but the driver tracked it and was there waiting when we landed. No stress, no extra charges. Exceptional service!",
-                    date: "3 weeks ago"
-                }
-            ];
-
-            let currentReviewSet = 0;
-
-            function displayReviews() {
-                const carousel = document.getElementById('reviewCarousel');
-                const start = currentReviewSet * 3;
-                const reviewsToShow = reviews.slice(start, start + 3);
-
-                carousel.innerHTML = reviewsToShow.map(review => `
-                <div class="review-card bg-white p-6 rounded-xl shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                            ${review.name.charAt(0)}
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="font-bold">${review.name}</h4>
-                            <div class="text-yellow-500">
-                                ${'<i class="fas fa-star"></i>'.repeat(review.rating)}
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-3">"${review.text}"</p>
-                    <p class="text-sm text-gray-500">${review.date}</p>
-                </div>
-            `).join('');
-            }
-
-            function rotateReviews() {
-                currentReviewSet = (currentReviewSet + 1) % 2;
-                displayReviews();
-            }
-
-            // Initial display
-            displayReviews();
-
-            // Rotate reviews every 5 seconds
-            setInterval(rotateReviews, 5000);
-
-            // Smooth scroll
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        // Close mobile menu if open
-                        document.getElementById('mobileMenu').classList.add('hidden');
-                    }
-                });
-            });
-
-            // Add animation on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-fade-in');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('section').forEach(section => {
-                observer.observe(section);
-            });
-        </script>
     </div>
 </section>
