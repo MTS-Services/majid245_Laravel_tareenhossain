@@ -1,83 +1,96 @@
-{{-- <header x-data="{ mobileMenuOpen: false }" x-cloak class="sticky top-0 z-50 bg-white">
-    <div class="container-wide flex items-center justify-between py-3 px-6">
-        <!-- Logo Section -->
-        <a href="{{ route('home') }}" title="{{ __('DiodioGlow') }}" wire:navigate class="flex items-center gap-2">
-            <div
-                class="w-10 lg:w-14 h-10 lg:h-14 xl:w-16 xl:h-16 rounded-full btn-gradient flex items-center justify-center">
-                <span class="text-white font-bold text-lg lg:text-2xl xl:text-3xl">{{ __('DG') }}</span>
-            </div>
-            <span
-                class="text-lg lg:text-2xl xl:text-3xl font-bold font-playfair text-text-primary">{{ __('DiodioGlow') }}</span>
+<header class="sticky top-0 z-[9999] bg-primary transition-all duration-300" id="header">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a class="no-underline" href="#top">
+            <span class="text-white font-black tracking-wide text-lg mr-2">CENTRAL</span>
+            <div class="text-gold text-xs tracking-widest uppercase">Executive Transfers</div>
         </a>
-
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-8">
-            <a href="{{ route('home') }}" title="{{ __('Home') }}" wire:navigate
-                class="text-text-muted font-inter transition-colors {{ request()->routeIs('home') ? 'text-second-500! border-b-2 border-second-500' : 'hover:text-second-500! hover:border-b-2 hover:border-second-500' }}">
-                {{ __('Home') }}
-            </a>
+        <nav class="hidden md:flex gap-2" id="nav">
+            <a href="#booking" class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Book</a>
+            <a href="#why" class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Why us</a>
+            <a href="#prices" class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Prices</a>
+            <a href="#fleet" class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Fleet</a>
+            <a href="#reviews"
+                class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Reviews</a>
+            <a href="#faq" class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">FAQs</a>
+            <a href="#contact"
+                class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Contact</a>
         </nav>
-
-        <div class="hidden md:block">
-            <x-language />
-        </div>
-
-
-        <!-- Mobile Menu Button -->
-        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 text-text-muted"
-            aria-label="{{ __('Toggle menu') }}">
-            <flux:icon name="menu" class="w-6 h-6" />
-        </button>
+        <button id="menuBtn" aria-label="Menu"
+            class="md:hidden bg-transparent text-white border border-gray-600 rounded-lg px-3 py-2 text-lg cursor-pointer">☰</button>
     </div>
+    <nav class="hidden md:hidden absolute top-[58px] left-0 right-0 bg-gray-900 p-2 border-b border-gray-800"
+        id="mobileNav">
+        <a href="#booking" class="block text-white no-underline font-semibold my-2">Book</a>
+        <a href="#why" class="block text-white no-underline font-semibold my-2">Why us</a>
+        <a href="#prices" class="block text-white no-underline font-semibold my-2">Prices</a>
+        <a href="#fleet" class="block text-white no-underline font-semibold my-2">Fleet</a>
+        <a href="#reviews" class="block text-white no-underline font-semibold my-2">Reviews</a>
+        <a href="#faq" class="block text-white no-underline font-semibold my-2">FAQs</a>
+        <a href="#contact" class="block text-white no-underline font-semibold my-2">Contact</a>
+    </nav>
+</header>
 
-    <!-- Mobile Menu -->
-    <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200"
-        x-transition:enter-start="opacity-0 transform -translate-y-2"
-        x-transition:enter-end="opacity-100 transform translate-y-0"
-        x-transition:leave="transition ease-in duration-150"
-        x-transition:leave-start="opacity-100 transform translate-y-0"
-        x-transition:leave-end="opacity-0 transform -translate-y-2" class="md:hidden border-t border-gray-200 bg-white">
-        <nav class="container mx-auto px-6 py-4 flex flex-col gap-4">
-            <a href="{{ route('home') }}" title="{{ __('Home') }}" wire:navigate
-                class="text-text-muted font-medium font-inter transition-colors {{ request()->routeIs('home') ? 'text-second-500!! underline ' : 'hover:text-second-500!' }}">
-                {{ __('Home') }}
-            </a>
-            <x-language />
-        </nav>
-    </div>
-</header> --}}
+<script>
+    // Mobile nav toggle
+    document.getElementById('menuBtn')?.addEventListener('click', function() {
+        const nav = document.getElementById('mobileNav');
+        if (!nav) return;
+        nav.classList.toggle('hidden');
+    });
 
-<nav class="fixed w-full top-0 z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
-            <div class="flex flex-col">
-                <span class="text-2xl font-bold gold-gradient bg-clip-text! text-transparent heading-font">CENTRAL</span>
-                <span class="text-white text-md uppercase">Executive Transfers</span>
-            </div>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#services" class="text-gray-300 hover:text-yellow-500 transition">Services</a>
-                <a href="#fleet" class="text-gray-300 hover:text-yellow-500 transition">Fleet</a>
-                <a href="#pricing" class="text-gray-300 hover:text-yellow-500 transition">Pricing</a>
-                <a href="#reviews" class="text-gray-300 hover:text-yellow-500 transition">Reviews</a>
-                <a href="tel:+441234567890"
-                    class="gold-gradient text-black px-6 py-2 rounded-full font-semibold hover:opacity-90 transition">
-                    <i class="fas fa-phone mr-2"></i>Call Now
-                </a>
-            </div>
-            <button class="md:hidden text-white" onclick="toggleMenu()">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-black/95 px-4 py-6 space-y-4">
-        <a href="#services" class="block text-gray-300 hover:text-yellow-500 transition">Services</a>
-        <a href="#fleet" class="block text-gray-300 hover:text-yellow-500 transition">Fleet</a>
-        <a href="#pricing" class="block text-gray-300 hover:text-yellow-500 transition">Pricing</a>
-        <a href="#reviews" class="block text-gray-300 hover:text-yellow-500 transition">Reviews</a>
-        <a href="tel:+441234567890"
-            class="block gold-gradient text-black px-6 py-3 rounded-full font-semibold text-center">
-            Call Now
-        </a>
-    </div>
-</nav>
+    // Smooth anchor scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const id = a.getAttribute('href');
+            if (id && id.length > 1) {
+                e.preventDefault();
+                document.getElementById('mobileNav')?.classList.add('hidden');
+                document.querySelector(id)?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Header shrink
+    (function() {
+        const h = document.getElementById('header');
+        if (!h) return;
+        const onScroll = () => {
+            if (window.scrollY > 40) {
+                h.querySelector('.max-w-\\[1120px\\]').classList.add('py-1');
+                h.querySelector('.max-w-\\[1120px\\]').classList.remove('py-3');
+            } else {
+                h.querySelector('.max-w-\\[1120px\\]').classList.remove('py-1');
+                h.querySelector('.max-w-\\[1120px\\]').classList.add('py-3');
+            }
+        };
+        window.addEventListener('scroll', onScroll, {
+            passive: true
+        });
+        onScroll();
+    })();
+
+    // dataLayer events
+    window.dataLayer = window.dataLayer || [];
+
+    function pushEvt(name, params) {
+        try {
+            dataLayer.push(Object.assign({
+                event: name
+            }, params || {}));
+        } catch (e) {}
+    }
+
+    document.querySelectorAll('a[href^="tel:"]').forEach(a => a.addEventListener('click', () => pushEvt(
+    'phone_click')));
+    document.querySelectorAll('a[href^="https://wa.me"]').forEach(a => a.addEventListener('click', () => pushEvt(
+        'whatsapp_click')));
+    document.querySelectorAll('.js-quote, a[href="#booking"]').forEach(a => a.addEventListener('click', () => pushEvt(
+        'start_booking')));
+    document.querySelectorAll('#nav a[href^="#"], #mobileNav a[href^="#"]').forEach(a => a.addEventListener('click',
+    () => pushEvt('nav_click', {
+            target: a.getAttribute('href')
+        })));
+</script>
