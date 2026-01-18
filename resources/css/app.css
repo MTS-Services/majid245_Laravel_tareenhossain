@@ -31,6 +31,9 @@
     --color-end: #FFEBEE;
 
     --color-blog: #EEF7FF;
+    --color-primary: #0b0b0b;
+    --color-gold: '#c9a227';
+
 
     /* Primary: Purple */
      --color-primary-50:  #FFF3F4;
@@ -135,7 +138,8 @@
 
     /* --- base: base Colors Added Here --- */
     --color-blog: var(--color-blog);
-
+    --color-primary: var(--color-primary);
+    --color-gold: var(--color-gold);
     /* ------------------------------------------ */
 
     /* linear color gradient  for bg*/

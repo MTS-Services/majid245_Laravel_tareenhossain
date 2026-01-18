@@ -61,58 +61,7 @@
 </footer> --}}
 
 <!-- Footer -->
-<footer class="bg-black text-white py-12">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="text-2xl font-bold gold-gradient bg-clip-text text-transparent heading-font mb-4">
-                    CENTRAL</h3>
-                <p class="text-gray-400 mb-4">Executive Transfers</p>
-                <p class="text-gray-400 text-sm">Premium airport transfer service across South Yorkshire,
-                    providing luxury chauffeur-driven vehicles 24/7.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4 text-yellow-500">Quick Links</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="#services" class="hover:text-yellow-500 transition">Services</a></li>
-                    <li><a href="#fleet" class="hover:text-yellow-500 transition">Our Fleet</a></li>
-                    <li><a href="#pricing" class="hover:text-yellow-500 transition">Pricing</a></li>
-                    <li><a href="#reviews" class="hover:text-yellow-500 transition">Reviews</a></li>
-                    <li><a href="#booking" class="hover:text-yellow-500 transition">Book Now</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4 text-yellow-500">Services</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li>Airport Transfers</li>
-                    <li>Corporate Travel</li>
-                    <li>Event Transportation</li>
-                    <li>Long Distance Journeys</li>
-                    <li>Cruise Port Transfers</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4 text-yellow-500">Contact Us</h4>
-                <ul class="space-y-3 text-gray-400">
-                    <li><i class="fas fa-phone text-yellow-500 mr-2"></i>0114 123 4567</li>
-                    <li><i class="fas fa-envelope text-yellow-500 mr-2"></i>info@centralexec.co.uk</li>
-                    <li><i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i>Sheffield, South Yorkshire
-                    </li>
-                    <li class="flex gap-4 mt-4">
-                        <a href="#" class="text-2xl hover:text-yellow-500 transition"><i
-                                class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-2xl hover:text-yellow-500 transition"><i
-                                class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-2xl hover:text-yellow-500 transition"><i
-                                class="fab fa-instagram"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-            <p>&copy; 2026 Central Executive Transfers. All rights reserved. | <a href="#"
-                    class="hover:text-yellow-500">Privacy Policy</a> | <a href="#"
-                    class="hover:text-yellow-500">Terms & Conditions</a></p>
-        </div>
-    </div>
+<footer class="bg-white text-black text-center py-5 mb-16">
+    <div><strong>Central Executive Transfers</strong> — "Driven by Excellence"</div>
+    <div class="text-xs mt-1">&copy; 2025 Central Executive Transfers. All rights reserved.</div>
 </footer>
