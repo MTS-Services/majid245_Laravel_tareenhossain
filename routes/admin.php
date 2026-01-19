@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\Admin\UserManagement\UserController;
 use App\Http\Controllers\Backend\Admin\UserManagement\AdminController;
 use App\Http\Controllers\Backend\Admin\ApplicationSettings\ApplicationSettingsController;
+use App\Http\Controllers\Backend\AirportPriceController;
 
 Route::middleware(['auth:admin', 'admin', 'adminVerify'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
@@ -42,5 +43,11 @@ Route::middleware(['auth:admin', 'admin', 'adminVerify'])->name('admin.')->prefi
             Route::get('/tik-tok-settings', 'tikTokSettings')->name('tik-tok-settings');
         });
     });
-  
+
+    Route::controller(AirportPriceController::class)->name('airport-price.')->prefix('airport-price')->group( function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::get('/view/{id}', 'view')->name('view');
+    });
 });

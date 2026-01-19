@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use App\Enums\ActiveInactiveStatus;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -13,6 +14,11 @@ return new class extends Migration
     {
         Schema::create('faqs', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('sort_order')->index()->default(0);
+            
+            $table->string('question');
+            $table->text('answer');
+            $table->string('status')->index()->default(ActiveInactiveStatus::ACTIVE->value);
             $table->timestamps();
         });
     }
