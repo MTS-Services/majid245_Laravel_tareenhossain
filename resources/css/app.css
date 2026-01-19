@@ -16,7 +16,7 @@
 @source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
 @source '../../vendor/livewire/flux/stubs/**/*.blade.php';
 
-@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
 
 /* ================= GOOGLE FONTS ================= */
 
@@ -455,4 +455,12 @@ body {
 
 .heading-font {
     font-family: 'Playfair Display', serif;
+}
+
+.nav_link{
+    @apply relative inline-block text-white font-semibold px-2 transition-colors duration-300 hover:text-second-500;
+}
+
+.nav_style{
+    @apply absolute left-0 -bottom-1 h-0.5 w-0 bg-second-500 transition-all duration-300;
 }
