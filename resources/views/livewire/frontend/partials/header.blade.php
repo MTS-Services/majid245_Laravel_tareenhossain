@@ -1,32 +1,74 @@
-<header class="sticky top-0 z-[9999] bg-primary transition-all duration-300" id="header">
+<header class="sticky top-0 z-50 bg-primary transition-all duration-300" id="header">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-        <a class="no-underline" href="#top">
+        <a class="no-underline" href="{{ route('home_page') }}">
             <span class="text-white font-black tracking-wide text-lg mr-2">CENTRAL</span>
             <div class="text-second-500 text-xs tracking-widest uppercase">Executive Transfers</div>
         </a>
         <nav class="hidden md:flex gap-2" id="nav">
-            <a href="#booking" class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Book</a>
-            <a href="#why" class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Why us</a>
-            <a href="#prices" class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Prices</a>
-            <a href="#fleet" class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Fleet</a>
+
+            <a href="#booking"
+                class="nav_link group">
+                Book
+                <span
+                    class="nav_style group-hover:w-full!"></span>
+            </a>
+
+            <a href="#why"
+                class="nav_link group">
+                Why us
+                <span
+                    class="nav_style group-hover:w-full!"></span>
+            </a>
+
+            <a href="#prices"
+                class="nav_link group">
+                Prices
+                <span
+                    class="nav_style group-hover:w-full!"></span>
+            </a>
+
+            <a href="#fleet"
+                class="nav_link group">
+                Fleet
+                <span
+                    class="nav_style group-hover:w-full!"></span>
+            </a>
+
             <a href="#reviews"
-                class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Reviews</a>
-            <a href="#faq" class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">FAQs</a>
+                class="nav_link group">
+                Reviews
+                <span
+                    class="nav_style group-hover:w-full!"></span>
+            </a>
+
+            <a href="#faq"
+                class="nav_link group">
+                FAQs
+                <span
+                    class="nav_style group-hover:w-full!"></span>
+            </a>
+
             <a href="#contact"
-                class="text-white no-underline font-semibold opacity-90 hover:opacity-100 px-2">Contact</a>
+                class="nav_link group">
+                Contact
+                <span
+                    class="nav_style group-hover:w-full!"></span>
+            </a>
+
         </nav>
+
         <button id="menuBtn" aria-label="Menu"
             class="md:hidden bg-transparent text-white border border-gray-600 rounded-lg px-3 py-2 text-lg cursor-pointer">☰</button>
     </div>
     <nav class="hidden md:hidden absolute top-[58px] left-0 right-0 bg-gray-900 p-2 border-b border-gray-800"
         id="mobileNav">
-        <a href="#booking" class="block text-white no-underline font-semibold my-2">Book</a>
-        <a href="#why" class="block text-white no-underline font-semibold my-2">Why us</a>
-        <a href="#prices" class="block text-white no-underline font-semibold my-2">Prices</a>
-        <a href="#fleet" class="block text-white no-underline font-semibold my-2">Fleet</a>
-        <a href="#reviews" class="block text-white no-underline font-semibold my-2">Reviews</a>
-        <a href="#faq" class="block text-white no-underline font-semibold my-2">FAQs</a>
-        <a href="#contact" class="block text-white no-underline font-semibold my-2">Contact</a>
+        <a href="#booking" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Book</a>
+        <a href="#why" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Why us</a>
+        <a href="#prices" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Prices</a>
+        <a href="#fleet" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Fleet</a>
+        <a href="#reviews" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Reviews</a>
+        <a href="#faq" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">FAQs</a>
+        <a href="#contact" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Contact</a>
     </nav>
 </header>
 
@@ -84,13 +126,13 @@
     }
 
     document.querySelectorAll('a[href^="tel:"]').forEach(a => a.addEventListener('click', () => pushEvt(
-    'phone_click')));
+        'phone_click')));
     document.querySelectorAll('a[href^="https://wa.me"]').forEach(a => a.addEventListener('click', () => pushEvt(
         'whatsapp_click')));
     document.querySelectorAll('.js-quote, a[href="#booking"]').forEach(a => a.addEventListener('click', () => pushEvt(
         'start_booking')));
     document.querySelectorAll('#nav a[href^="#"], #mobileNav a[href^="#"]').forEach(a => a.addEventListener('click',
-    () => pushEvt('nav_click', {
+        () => pushEvt('nav_click', {
             target: a.getAttribute('href')
         })));
 </script>
