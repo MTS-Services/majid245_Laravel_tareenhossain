@@ -371,7 +371,7 @@
     }
 
     .btn-gradient {
-        @apply bg-linear-to-r ! from-second-500 ! to-zinc-500 !;
+        @apply bg-linear-to-r! from-second-500! to-zinc-500!;
     }
 
     .sidebar-glass-card {
@@ -401,11 +401,11 @@
 
     /* === Global Swiper Pagination Style === */
     .swiper-pagination-bullet {
-        @apply w-4 ! h-2.5 ! bg-bg-secondary ! rounded-md ! transition-all duration-300 ease-in-out;
+        @apply w-4! h-2.5! bg-bg-secondary! rounded-md! transition-all duration-300 ease-in-out;
     }
 
     .swiper-pagination-bullet-active {
-        @apply bg-purple-700 ! opacity-100;
+        @apply bg-purple-700! opacity-100;
     }
 
     .mobile-nav-item {
@@ -447,7 +447,7 @@ button {
 }
 
 [data-flux-label] {
-    @apply !mb-0 !leading-tight;
+    @apply mb-0! leading-tight!;
 }
 
 input:focus[data-flux-control],
