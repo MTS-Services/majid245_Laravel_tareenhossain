@@ -1,11 +1,17 @@
 <header class="sticky top-0 z-50 bg-primary transition-all duration-300" id="header">
     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-        <a class="no-underline" href="{{ route('home_page') }}">
+        <a class="no-underline" href="{{ route('home') }}">
             <span class="text-white font-black tracking-wide text-lg mr-2">CENTRAL</span>
             <div class="text-second-500 text-xs tracking-widest uppercase">Executive Transfers</div>
         </a>
         <nav class="hidden md:flex gap-2" id="nav">
 
+            <a href="{{ route('gallery') }}"
+                class="nav_link group {{ Route::currentRouteName() == 'gallery' ? 'text-second-500!' : '' }}">
+                Gallery
+                <span
+                    class="nav_style group-hover:w-full! {{ Route::currentRouteName() == 'gallery' ? 'w-full!' : '' }}"></span>
+            </a>
             <a href="#booking"
                 class="nav_link group">
                 Book
@@ -62,6 +68,7 @@
     </div>
     <nav class="hidden md:hidden absolute top-[58px] left-0 right-0 bg-gray-900 p-2 border-b border-gray-800"
         id="mobileNav">
+        <a href="{{ route('gallery') }}" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Gallery</a>
         <a href="#booking" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Book</a>
         <a href="#why" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Why us</a>
         <a href="#prices" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Prices</a>

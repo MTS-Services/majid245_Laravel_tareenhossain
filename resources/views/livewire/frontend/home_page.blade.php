@@ -371,27 +371,6 @@
     </div>
 </section>
 
-{{-- <script>
-    const scrollElements = document.querySelectorAll('.scroll-animate');
-
-    const scrollObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.transitionDelay = `${index * 100}ms`;
-                    entry.target.classList.remove('opacity-0', 'translate-y-8');
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    scrollObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.15
-        }
-    );
-
-    scrollElements.forEach(el => scrollObserver.observe(el));
-</script> --}}
-
 <script>
     const elements = document.querySelectorAll('.scroll-animate');
 
