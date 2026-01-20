@@ -151,6 +151,46 @@
                         </thead>
                         <tbody>
                             <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">Manchester (MAN)</td>
+                                <td class="p-4">£100</td>
+                                <td class="p-4">£130</td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">East Midlands (EMA)</td>
+                                <td class="p-4">£100</td>
+                                <td class="p-4">£130</td>
+                            </tr>
+                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">Leeds Bradford (LBA)</td>
+                                <td class="p-4">£100</td>
+                                <td class="p-4">£130</td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">Birmingham (BHX)</td>
+                                <td class="p-4">£150</td>
+                                <td class="p-4">£180</td>
+                            </tr>
+                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">Liverpool John Lennon (LPL)</td>
+                                <td class="p-4">£135</td>
+                                <td class="p-4">£195</td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">Luton (LTN)</td>
+                                <td class="p-4">£250</td>
+                                <td class="p-4">£280</td>
+                            </tr>
+                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">Heathrow (LHR)</td>
+                                <td class="p-4">£280</td>
+                                <td class="p-4">£310</td>
+                            </tr>
+                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">Gatwick (LGW)</td>
+                                <td class="p-4">£325</td>
+                                <td class="p-4">£380</td>
+                            </tr>
+                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
                                 <td class="p-4 font-bold">Birmingham Airport</td>
                                 <td class="p-4">£145</td>
                                 <td class="p-4">£175</td>
