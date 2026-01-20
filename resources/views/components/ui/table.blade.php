@@ -24,12 +24,12 @@
     'resetFiltersAction' => 'resetFilters',
 ])
 
-<div class="glass-card rounded-2xl p-4 lg:p-6 mb-6 {{ $class }}">
+<div class="bg-white rounded-2xl p-4 lg:p-6 mb-6 {{ $class }}">
 
     {{-- FILTERS & SEARCH SECTION --}}
     <div class="space-y-4 mb-6">
         {{-- Top Row: Per Page, Status, Reset --}}
-        <div class="glass-card p-4 rounded-lg flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+        <div class=" p-4 rounded-lg flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             {{-- Per Page --}}
             @if ($showPerPage)
                 <div class="w-full sm:w-auto">
@@ -111,8 +111,8 @@
 
     {{-- DESKTOP TABLE VIEW (lg and above) --}}
     <div class="hidden lg:block">
-        <table class="min-w-full divide-y divide-accent/30">
-            <thead class="glass-card shadow-none rounded-t-lg">
+        <table class="min-w-full divide-y divide-gray/30">
+            <thead class="bg-white shadow-none rounded-t-lg">
                 <tr>
                     {{-- Bulk Select Checkbox --}}
                     @if ($showBulkActions)
@@ -169,7 +169,7 @@
                     @endif
                 </tr>
             </thead>
-            <tbody class="divide-y divide-accent/20">
+            <tbody class="divide-y divide-gray/20">
                 @forelse ($data as $item)
                     @php
                         $rowNumber = in_array('id', array_column($columns, 'key'))
@@ -179,7 +179,7 @@
                                 : $loop->iteration);
                     @endphp
                     <tr wire:key="desktop-row-{{ $item->id ?? $loop->index }}"
-                        class="hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-150">
+                        class="hover:bg-gray-100 dark:hover:bg-gray-100 transition-colors duration-150">
 
                         {{-- Bulk Select Checkbox --}}
                         @if ($showBulkActions)
@@ -191,7 +191,7 @@
 
                         {{-- Row Number --}}
                         @if ($showRowNumber)
-                            <td class="px-4 py-3 text-sm font-medium text-gray-900 dark:text-gray-100">
+                            <td class="px-4 py-3 text-sm font-medium text-gray-900 ">
                                 {{ $rowNumber }}
                             </td>
                         @endif
@@ -201,7 +201,7 @@
                             @if ($column['key'] === 'id')
                                 @continue
                             @endif
-                            <td class="px-4 py-3 text-sm text-gray-700 dark:text-gray-300">
+                            <td class="px-4 py-3 text-sm text-gray-700 ">
                                 @if (isset($column['format']) && is_callable($column['format']))
                                     {!! $column['format']($item) !!}
                                 @else
