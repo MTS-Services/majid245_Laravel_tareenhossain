@@ -18,7 +18,7 @@ class HomePage extends Component
     public function render()
     {
         $reviews = $this->googleReviewService->getReviews();
-        $airportPrices = AirportPrice::active()->all();
+        $airportPrices = AirportPrice::active()->get();
         // dd($reviews);
         return view('livewire.frontend.home_page', compact(['reviews','airportPrices']));
     }
