@@ -48,7 +48,7 @@
                         </a>
                         <a href="tel:+447405172435"
                             class="bg-transparent hover:bg-white/20 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300! backdrop-blur-sm">
-                            Call 07405 172435
+                            Call +447405172435
                         </a>
                     </div>
                 </div>
@@ -508,7 +508,7 @@
                     <div
                         class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
                         <h3 class="font-serif text-lg font-bold mb-2">Payment methods</h3>
-                        <p class="m-0">Card, Apple Pay/Google Pay, and Cash (cash requires a 10% deposit first).</p>
+                        <p class="m-0">Card, Apple Pay/Google Pay, and Cash</p>
                     </div>
                     <div
                         class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
@@ -524,8 +524,7 @@
         <section class="bg-white text-center py-12 scroll-animate">
             <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold text-black mb-3 scroll-animate">Ready when you are</h2>
-                <p class="text-black mb-3 scroll-animate">Reserve now with a <strong>10% deposit</strong> and secure
-                    your driver.</p>
+                <p class="text-black mb-3 scroll-animate"> Book now and secure your driver</p>
                 <p class="scroll-animate">
                     <a href="{{route('booking')}}"
                         class="inline-block px-6 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1 hover:shadow-2xl shadow-lg">Reserve
