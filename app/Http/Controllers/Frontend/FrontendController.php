@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 
-class HomeController extends Controller
+class FrontendController extends Controller
 {
     protected $masterView = 'frontend.pages.home';
 
@@ -14,6 +14,10 @@ class HomeController extends Controller
     }
 
     public function home()
+    {
+        return view($this->masterView);
+    }
+    public function gallery()
     {
         return view($this->masterView);
     }

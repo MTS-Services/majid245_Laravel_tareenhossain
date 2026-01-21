@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             UserSeeder::class,
             ApplicationSettingSeeder::class,
+            AirportPriceSeeder::class,
+            FaqSeeder::class,
            
         ]);
     }

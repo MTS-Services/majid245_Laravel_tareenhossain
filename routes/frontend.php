@@ -1,10 +1,8 @@
 <?php
 
-use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'home'])->name('home_page');
-// Route::group(['as' => 'f.'], function () {
-//     Route::get('/', [HomeController::class, 'home'])->name('home');
-// });
+// Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::get('/', [FrontendController::class, 'home'])->name('home');
+Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');

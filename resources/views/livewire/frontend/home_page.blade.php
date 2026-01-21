@@ -10,8 +10,7 @@
         <!-- Hero Section -->
         <section class="relative h-screen md:h-[60vh] flex items-center justify-center overflow-hidden">
             <!-- Background Image -->
-            <div
-                class="absolute inset-0 z-0 scroll-animate">
+            <div class="absolute inset-0 z-0 scroll-animate">
                 <img src="https://centraltravels.co.uk/assets/airport-transfer.jpeg" alt="Luxury Car"
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/45 to-black/70"></div>
@@ -21,15 +20,13 @@
             <div class="container relative z-10 px-6 text-white animate-fade-in-up">
                 <div>
                     <!-- Main Heading -->
-                    <h1
-                        class="font-serif text-4xl md:text-5xl font-bold mb-6 text-white scroll-animate">
+                    <h1 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-white scroll-animate">
                         Executive Airport Transfers —
                         <span class="block mt-2 text-white">Covering All of South Yorkshire</span>
                     </h1>
 
                     <!-- Sub Heading -->
-                    <p
-                        class="text-lg md:text-xl mb-8 text-white scroll-animate">
+                    <p class="text-lg md:text-xl mb-8 text-white scroll-animate">
                         Fixed prices • Flight tracking • 24/7 service
                     </p>
 
@@ -44,8 +41,7 @@
                     </div>
 
                     <!-- CTA Buttons -->
-                    <div
-                        class="flex flex-wrap gap-4 scroll-animate">
+                    <div class="flex flex-wrap gap-4 scroll-animate">
                         <a href="#booking"
                             class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl">
                             Get Instant Quote
@@ -62,15 +58,12 @@
         <!-- Booking Section -->
         <section class="py-9 scroll-mt-[72px]" id="booking">
             <div class="container mx-auto px-5">
-                <h2
-                    class="font-serif text-3xl font-bold text-center mb-6 scroll-animate">
+                <h2 class="font-serif text-3xl font-bold text-center mb-6 scroll-animate">
                     Book Instantly</h2>
-                <p
-                    class="text-center text-sm text-gray-600 -mt-1 mb-5 scroll-animate">
+                <p class="text-center text-sm text-gray-600 -mt-1 mb-5 scroll-animate">
                     Search, choose your vehicle/price, then complete details & payment in one flow.
                 </p>
-                <div
-                    class="overflow-visible mt-5 scroll-animate">
+                <div class="overflow-visible mt-5 scroll-animate">
                     <div
                         class="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-2xl p-8 shadow-xl border-2 border-second-500/20">
                         <iframe class="w-full h-full" title="Book Now!"
@@ -95,8 +88,7 @@
         <!-- Why Choose Section -->
         <section class="py-9 bg-bg scroll-mt-[72px]" id="why">
             <div class="container mx-auto px-5">
-                <h2
-                    class="font-serif text-3xl font-bold mb-6 scroll-animate transition-all duration-700 ease-out">
+                <h2 class="font-serif text-3xl font-bold mb-6 scroll-animate transition-all duration-700 ease-out">
                     Why choose Central Executive Transfers
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -198,6 +190,29 @@
                                 <td class="p-4">£325</td>
                                 <td class="p-4">£380</td>
                             </tr>
+                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">Birmingham Airport</td>
+                                <td class="p-4">£145</td>
+                                <td class="p-4">£175</td>
+                            </tr>
+
+                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">Luton Airport</td>
+                                <td class="p-4">£250</td>
+                                <td class="p-4">£290</td>
+                            </tr>
+
+                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">Heathrow Airport</td>
+                                <td class="p-4">£280</td>
+                                <td class="p-4">£330</td>
+                            </tr>
+
+                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">Gatwick Airpor</td>
+                                <td class="p-4">£350</td>
+                                <td class="p-4">£420</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -207,8 +222,7 @@
         <!-- Fleet Section -->
         <section class="py-9 bg-bg scroll-mt-[72px]" id="fleet">
             <div class="container mx-auto px-5">
-                <h2
-                    class="font-serif text-3xl font-bold mb-6 scroll-animate">Fleet</h2>
+                <h2 class="font-serif text-3xl font-bold mb-6 scroll-animate">Fleet</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div
                         class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2 group">
@@ -244,8 +258,7 @@
         <!-- Reviews Section -->
         <section class="py-9 scroll-mt-[72px]" id="reviews">
             <div class="container mx-auto px-5">
-                <h2
-                    class="font-serif text-3xl font-bold mb-6 scroll-animate">
+                <h2 class="font-serif text-3xl font-bold mb-6 scroll-animate">
                     Reviews</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div
@@ -278,8 +291,7 @@
         <!-- FAQ Section -->
         <section class="py-9 scroll-mt-[72px]" id="faq">
             <div class="container mx-auto px-5">
-                <h2
-                    class="font-serif text-3xl font-bold mb-6 scroll-animate">
+                <h2 class="font-serif text-3xl font-bold mb-6 scroll-animate">
                     FAQs</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                     <div
@@ -353,10 +365,12 @@
         <section class="bg-white text-center py-12 scroll-animate">
             <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold text-black mb-3 scroll-animate">Ready when you are</h2>
-                <p class="text-black mb-3 scroll-animate">Reserve now with a <strong>10% deposit</strong> and secure your driver.</p>
+                <p class="text-black mb-3 scroll-animate">Reserve now with a <strong>10% deposit</strong> and secure
+                    your driver.</p>
                 <p class="scroll-animate">
-                    <a href="#booking" class="inline-block px-6 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1 hover:shadow-2xl shadow-lg"
-                        >Book Now</a>
+                    <a href="#booking"
+                        class="inline-block px-6 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1 hover:shadow-2xl shadow-lg">Book
+                        Now</a>
                 </p>
             </div>
         </section>
@@ -364,8 +378,7 @@
         <!-- Contact Section -->
         <section class="py-9 bg-second-500 scroll-mt-[72px]" id="contact">
             <div class="container mx-auto px-5">
-                <h2
-                    class="font-serif text-3xl font-bold mb-6 text-gray-900 scroll-animate">
+                <h2 class="font-serif text-3xl font-bold mb-6 text-gray-900 scroll-animate">
                     Contact</h2>
                 <div class="scroll-animate">
                     <p class="text-gray-900">
@@ -398,27 +411,6 @@
     </div>
 </section>
 
-{{-- <script>
-    const scrollElements = document.querySelectorAll('.scroll-animate');
-
-    const scrollObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.transitionDelay = `${index * 100}ms`;
-                    entry.target.classList.remove('opacity-0', 'translate-y-8');
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    scrollObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.15
-        }
-    );
-
-    scrollElements.forEach(el => scrollObserver.observe(el));
-</script> --}}
-
 <script>
     const elements = document.querySelectorAll('.scroll-animate');
 
@@ -429,8 +421,9 @@
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.15 });
+    }, {
+        threshold: 0.15
+    });
 
     elements.forEach(el => observer.observe(el));
 </script>
-

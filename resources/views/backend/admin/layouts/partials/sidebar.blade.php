@@ -69,22 +69,8 @@
                     //     'active' => 'admin-users-banned',
                     // ],
                 ]" />
-            {{-- <x-backend.navlink type="dropdown" icon="user-circle" name="Product Management" :page_slug="$active"
-                :items="[
-                    [
-                        'name' => 'Categories',
-                        'route' => '#',
-                        'icon' => 'user-circle',
-                        'active' => 'category',
-                    ],
-                    [
-                        'name' => 'Products',
-                        'route' => '#',
-                        'icon' => 'user',
-                        'active' => 'product',
-                    ],
 
-                ]" /> --}}
+            <x-backend.navlink type="single" route="{{ route('admin.airport-price.index') }}" icon="currency-dollar" name="Airport Price" active="airport_price" :page_slug="$active" />
 
 
 
