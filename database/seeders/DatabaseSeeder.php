@@ -21,7 +21,9 @@ class DatabaseSeeder extends Seeder
             ApplicationSettingSeeder::class,
             AirportPriceSeeder::class,
             FaqSeeder::class,
-           
+            GalleryCategorySeeder::class,
+            GalleryImageSeeder::class,
+
         ]);
     }
 }

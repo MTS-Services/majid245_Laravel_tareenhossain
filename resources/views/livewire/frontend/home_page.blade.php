@@ -56,7 +56,7 @@
         </section>
 
         <!-- Booking Section -->
-        <section class="py-9 scroll-mt-[72px]" id="booking">
+        {{-- <section class="py-9 scroll-mt-[72px]" id="booking">
             <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold text-center mb-6 scroll-animate">
                     Book Instantly</h2>
@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <!-- Why Choose Section -->
         <section class="py-12 bg-bg scroll-mt-[72px]" id="why">
@@ -520,7 +520,7 @@
                 <p class="text-black mb-3 scroll-animate">Reserve now with a <strong>10% deposit</strong> and secure
                     your driver.</p>
                 <p class="scroll-animate">
-                    <a href="#booking"
+                    <a href="{{route('booking')}}"
                         class="inline-block px-6 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1 hover:shadow-2xl shadow-lg">Reserve
                         your driver now</a>
                 </p>
@@ -558,7 +558,7 @@
                 href="https://wa.me/447405172435" target="_blank" rel="noopener"
                 style="background:#25D366">WhatsApp</a>
             <a class="flex-1 text-center px-4 py-3 rounded-lg font-semibold no-underline bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1"
-                href="#booking">Get Quote</a>
+                href="{{route('booking')}}">Get Quote</a>
         </div>
     </div>
 </section>
