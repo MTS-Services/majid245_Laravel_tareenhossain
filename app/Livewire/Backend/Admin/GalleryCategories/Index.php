@@ -28,7 +28,7 @@ class Index extends Component
 
     public function render()
     {
-        $datas = $this->service->getDatas();
+        $datas = $this->service->getPaginatedData($this->perPage, $this->getFilters());
 
         $columns = [
             [

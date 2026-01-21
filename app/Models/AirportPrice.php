@@ -76,7 +76,7 @@ class AirportPrice extends Model
      */
     public function shouldBeSearchable(): bool
     {
-        return is_null($this->deleted_at);
+        return true;
     }
 
     /* =#=#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=

@@ -28,7 +28,7 @@ class Index extends Component
 
     public function render()
     {
-        $datas = $this->service->getDatas();
+        $datas = $this->service->getPaginatedData($this->perPage, $this->getFilters());
 
         $columns = [
             [
@@ -173,18 +173,18 @@ class Index extends Component
         }
     }
 
-    // protected function bulkDelete(): void
-    // {
-    //     $count = $this->service->bulkDeleteData($this->selectedIds, admin()->id);
+    protected function bulkDelete(): void
+    {
+        $count = $this->service->bulkDeleteData($this->selectedIds, admin()->id);
 
-    //     $this->success("{$count} Datas deleted successfully");
-    // }
+        $this->success("{$count} Datas deleted successfully");
+    }
 
-    // protected function bulkUpdateStatus(ActiveInactiveStatus $status): void
-    // {
-    //     $count = $this->service->bulkUpdateStatus($this->selectedIds, $status);
-    //     $this->success("{$count} Datas updated successfully");
-    // }
+    protected function bulkUpdateStatus(ActiveInactiveStatus $status): void
+    {
+        $count = $this->service->bulkUpdateStatus($this->selectedIds, $status);
+        $this->success("{$count} Datas updated successfully");
+    }
 
     protected function getFilters(): array
     {
@@ -196,14 +196,14 @@ class Index extends Component
         ];
     }
 
-    // protected function getSelectableIds(): array
-    // {
-    //     $ids =  $this->service->getPaginatedData(
-    //         perPage: $this->perPage,
-    //         filters: $this->getFilters()
-    //     )->pluck('id')->toArray();
-    //     return $ids;
-    // }
+    protected function getSelectableIds(): array
+    {
+        $ids =  $this->service->getPaginatedData(
+            perPage: $this->perPage,
+            filters: $this->getFilters()
+        )->pluck('id')->toArray();
+        return $ids;
+    }
 
     public function updatedStatusFilter(): void
     {
