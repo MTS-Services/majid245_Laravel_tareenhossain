@@ -107,7 +107,7 @@
         </section>
 
         <!-- Booking Form Section -->
-        <section id="booking" class="py-20 bg-gray-50">
+        {{-- <section id="booking" class="py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4">
                 <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 heading-font">Book Your Transfer</h2>
                 <p class="text-center text-gray-600 mb-12 text-lg">Get an instant quote for your journey across South
@@ -120,7 +120,7 @@
                     </iframe>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <!-- Why Choose Us Section -->
         <section id="services" class="py-20 bg-white">

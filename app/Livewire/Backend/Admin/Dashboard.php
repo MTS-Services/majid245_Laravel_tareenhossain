@@ -14,15 +14,15 @@ class Dashboard extends Component
 {
     public $stats = [];
 
-    public function mount(AdminService $adminService)
+
+
+    public function boot(AdminService $adminService)
     {
-        // Get counts for dashboard
         $this->stats = [
             'total_users' => $adminService->getDataCount(),
             'active_users' => $adminService->getActiveData()->count(),
             'inactive_users' => $adminService->getInactiveData()->count(),
         ];
-
     }
 
 

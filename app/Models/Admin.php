@@ -171,7 +171,7 @@ class Admin extends AuthBaseModel
      */
     public function scopeInactive($query): Builder
     {
-        return $query->where('status', AdminStatus::ACTIVE->value);
+        return $query->where('status', AdminStatus::INACTIVE->value);
     }
 
     public function isActive(): bool

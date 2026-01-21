@@ -116,17 +116,6 @@
             </div>
         </section>
 
-        <!-- Breadcrumb -->
-        <section class="py-4 bg-bg">
-            <div class="container mx-auto px-5">
-                <nav class="text-sm text-gray-600">
-                    <a href="/" class="hover:text-yellow-600 transition-colors duration-300">Home</a>
-                    <span class="mx-2">/</span>
-                    <span class="text-gray-900 font-semibold">Gallery</span>
-                </nav>
-            </div>
-        </section>
-
         <!-- Gallery Categories -->
         <section class="py-9">
             <div class="container mx-auto px-5">
@@ -280,16 +269,25 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="bg-primary text-center py-12 scroll-animate  translate-y-8">
+        <!-- Contact Section -->
+        <section class="py-9 bg-second-500 scroll-mt-[72px]" id="contact">
             <div class="container mx-auto px-5">
-                <h2 class="font-serif text-3xl font-bold text-white mb-3">Ready to Experience Premium Travel?</h2>
-                <p class="text-white mb-6">Book your executive transfer today with a 10% deposit</p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a class="inline-block px-8 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl shadow-lg"
-                        href="/#booking">Reserve your driver now</a>
-                    <a class="inline-block px-8 py-4 rounded-lg no-underline font-bold bg-transparent border-2 border-white text-white transition-all duration-500 hover:bg-white hover:text-primary"
-                        href="tel:+447405172435">Call 07405 172435</a>
+                <h2 class="font-serif text-3xl font-bold mb-6 text-gray-900 scroll-animate">
+                    Contact</h2>
+                <div class="scroll-animate">
+                    <p class="text-gray-900">
+                        <strong>Phone:</strong> <a href="tel:+447405172435"
+                            class="text-gray-900 font-bold underline hover:text-gray-700 transition-colors">+44 7405
+                            172435</a><br>
+                        <strong>WhatsApp:</strong> <a href="https://wa.me/447405172435" target="_blank"
+                            rel="noopener"
+                            class="text-gray-900 font-bold underline hover:text-gray-700 transition-colors">Message
+                            us</a><br>
+                        <strong>Email:</strong> <a href="mailto:admin@centraltravels.co.uk"
+                            class="text-gray-900 font-bold underline hover:text-gray-700 transition-colors">admin@centraltravels.co.uk</a>
+                    </p>
+                    <p class="text-sm text-gray-900 mt-2">We respond quickly — for urgent bookings, call or WhatsApp.
+                    </p>
                 </div>
             </div>
         </section>
@@ -304,7 +302,18 @@
             </div>
         </div>
     </div>
+    <!-- Fixed Bottom Bar -->
+        <div class="fixed left-0 right-0 bottom-0 bg-primary p-3 flex gap-3 justify-between z-50 shadow-2xl">
+            <a class="flex-1 text-center px-4 py-3 rounded-lg font-semibold no-underline bg-gray-800 text-white transition-all duration-300! hover:bg-gray-700 hover:-translate-y-1"
+                href="tel:+447405172435">Call</a>
+            <a class="flex-1 text-center px-4 py-3 rounded-lg font-semibold no-underline text-white transition-all duration-300! hover:-translate-y-1"
+                href="https://wa.me/447405172435" target="_blank" rel="noopener"
+                style="background:#25D366">WhatsApp</a>
+            <a class="flex-1 text-center px-4 py-3 rounded-lg font-semibold no-underline bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1"
+                href="{{route('booking')}}">Get Quote</a>
+        </div>
 </section>
+
 
 <script>
     const elements = document.querySelectorAll('.scroll-animate');

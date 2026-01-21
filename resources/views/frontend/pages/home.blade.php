@@ -13,6 +13,11 @@
             <x-slot name="pageSlug">{{ __('gallery') }}</x-slot>
             <livewire:frontend.gallery />
         @break
+        @case('booking')
+            <x-slot name="title">{{ __('Booking') }}</x-slot>
+            <x-slot name="pageSlug">{{ __('booking') }}</x-slot>
+            <livewire:frontend.booking />
+        @break
 
         @default
             <x-slot name="title">{{ __('Home') }}</x-slot>
