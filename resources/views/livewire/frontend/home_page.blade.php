@@ -302,7 +302,14 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($airportPrices as $airportPrice)
                             <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">{{ $airportPrice->route_from }}</td>
+                                <td class="p-4">£{{ $airportPrice->executive_saloon_price }}</td>
+                                <td class="p-4">£{{ $airportPrice->eight_seater_price }}</td>
+                            </tr>
+                            @endforeach
+                            {{-- <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
                                 <td class="p-4 font-bold">Manchester (MAN)</td>
                                 <td class="p-4">£100</td>
                                 <td class="p-4">£130</td>
@@ -364,7 +371,7 @@
                                 <td class="p-4 font-bold">Gatwick Airpor</td>
                                 <td class="p-4">£350</td>
                                 <td class="p-4">£420</td>
-                            </tr>
+                            </tr> --}}
                         </tbody>
                     </table>
                 </div>

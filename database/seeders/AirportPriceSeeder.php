@@ -11,60 +11,64 @@ class AirportPriceSeeder extends Seeder
     {
         $prices = [
             [
-                'route_from' => 'Sheffield',
-                // 'airport_name' => 'Manchester',
-                // 'airport_code' => 'MAN',
+                'route_from' => 'Manchester (MAN)',
                 'executive_saloon_price' => 100,
                 'eight_seater_price' => 130,
             ],
             [
-                'route_from' => 'Sheffield',
-                // 'airport_name' => 'East Midlands',
-                // 'airport_code' => 'EMA',
+                'route_from' => 'East Midlands (EMA)',
                 'executive_saloon_price' => 100,
                 'eight_seater_price' => 130,
             ],
             [
-                'route_from' => 'Sheffield',
-                // 'airport_name' => 'Leeds Bradford',
-                // 'airport_code' => 'LBA',
+                'route_from' => 'Leeds Bradford (LBA)',
                 'executive_saloon_price' => 100,
                 'eight_seater_price' => 130,
             ],
             [
-                'route_from' => 'Sheffield',
-                // 'airport_name' => 'Birmingham',
-                // 'airport_code' => 'BHX',
+                'route_from' => 'Birmingham (BHX)',
                 'executive_saloon_price' => 150,
                 'eight_seater_price' => 180,
             ],
             [
-                'route_from' => 'Sheffield',
-                // 'airport_name' => 'Liverpool John Lennon',
-                // 'airport_code' => 'LPL',
+                'route_from' => 'Liverpool John Lennon (LPL)',
                 'executive_saloon_price' => 135,
                 'eight_seater_price' => 195,
             ],
             [
-                'route_from' => 'Sheffield',
-                // 'airport_name' => 'Luton',
-                // 'airport_code' => 'LTN',
+                'route_from' => 'Luton (LTN)',
                 'executive_saloon_price' => 250,
                 'eight_seater_price' => 280,
             ],
             [
-                'route_from' => 'Sheffield',
-                // 'airport_name' => 'Heathrow',
-                // 'airport_code' => 'LHR',
+                'route_from' => 'Heathrow (LHR)',
                 'executive_saloon_price' => 280,
                 'eight_seater_price' => 310,
             ],
             [
-                'route_from' => 'Sheffield',
-                // 'airport_name' => 'Gatwick',
-                // 'airport_code' => 'LGW',
+                'route_from' => 'Gatwick (LGW)',
                 'executive_saloon_price' => 325,
                 'eight_seater_price' => 380,
+            ],
+            [
+                'route_from' => 'Birmingham Airport',
+                'executive_saloon_price' => 145,
+                'eight_seater_price' => 175,
+            ],
+            [
+                'route_from' => 'Luton Airport',
+                'executive_saloon_price' => 250,
+                'eight_seater_price' => 290,
+            ],
+            [
+                'route_from' => 'Heathrow Airport',
+                'executive_saloon_price' => 280,
+                'eight_seater_price' => 330,
+            ],
+            [
+                'route_from' => 'Gatwick Airport',
+                'executive_saloon_price' => 350,
+                'eight_seater_price' => 420,
             ],
         ];
 
