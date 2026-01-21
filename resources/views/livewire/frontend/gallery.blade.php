@@ -287,7 +287,7 @@
                 <p class="text-white mb-6">Book your executive transfer today with a 10% deposit</p>
                 <div class="flex flex-wrap justify-center gap-4">
                     <a class="inline-block px-8 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl shadow-lg"
-                        href="/#booking">Book Now</a>
+                        href="/#booking">Reserve your driver now</a>
                     <a class="inline-block px-8 py-4 rounded-lg no-underline font-bold bg-transparent border-2 border-white text-white transition-all duration-500 hover:bg-white hover:text-primary"
                         href="tel:+447405172435">Call 07405 172435</a>
                 </div>
