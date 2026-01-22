@@ -25,7 +25,7 @@ class FaqForm extends Form
 
             'answer' => 'required|string',
             'status' => 'required|string',
-            'question' => 'nullable|string|max:500',
+            'question' => 'required|string|max:500',
             // Add other validation rules as needed
         ];
     }

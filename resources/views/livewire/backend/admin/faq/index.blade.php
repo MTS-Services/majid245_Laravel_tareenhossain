@@ -4,9 +4,9 @@
             <h2 class="text-xl font-bold text-text-black dark:text-text-white">{{ __('FAQ Price') }}</h2>
             <div class="flex items-center gap-2">
                 <x-ui.button href="{{ route('admin.faq.create') }}" class="w-auto! py-2!">
-                    <flux:icon name="arrow-left"
+                    <flux:icon name="plus"
                         class="w-4 h-4 stroke-text-btn-primary group-hover:stroke-text-btn-secondary" />
-                    {{ __('Create') }}
+                    {{ __('Add') }}
                 </x-ui.button>
             </div>
         </div>
@@ -15,10 +15,15 @@
     {{-- Table Component --}}
     <x-ui.table :data="$datas" :columns="$columns" :actions="$actions" :bulkActions="$bulkActions" :bulkAction="$bulkAction"
         :statuses="$statuses" :selectedIds="$selectedIds" :mobileVisibleColumns="2" searchProperty="search" perPageProperty="perPage"
-        :showBulkActions="true" emptyMessage="{{ __('No admins found. Create your first admin to get started.') }}" />
+        :showBulkActions="true" emptyMessage="{{ __('No faqs found. Create your first faq to get started.') }}" />
 
     {{-- Delete Confirmation Modal --}}
-    <x-ui.confirmation-modal :show="'showDeleteModal'" title="{{ __('Delete this admin?') }}"
-        message="{{ __('Are you sure you want to remove this admin?') }}" :method="'delete'"
-        button-text="{{ __('Delete Admin') }}" />
+    <x-ui.confirmation-modal :show="'showDeleteModal'" title="{{ __('Delete this faq?') }}"
+        message="{{ __('Are you sure you want to remove this faq?') }}" :method="'delete'"
+        button-text="{{ __('Delete Faq') }}" />
+
+    {{-- Bulk Action Confirmation Modal --}}
+    <x-ui.confirmation-modal :show="'showBulkActionModal'" title="{{ __('Confirm Bulk Action') }}"
+        message="{{ __('Are you sure you want to perform this action on ' . count($selectedIds) . ' selected faq(s)?') }}"
+        :method="'executeBulkAction'" button-text="{{ __('Confirm Action') }}" />
 </div>

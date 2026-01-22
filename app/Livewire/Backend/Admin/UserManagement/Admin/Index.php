@@ -19,6 +19,8 @@ class Index extends Component
     public $bulkAction = '';
     public $showBulkActionModal = false;
 
+    public $perPage = 15;
+
     protected $listeners = ['adminCreated' => '$refresh', 'adminUpdated' => '$refresh'];
 
     protected AdminService $service;
@@ -69,22 +71,22 @@ class Index extends Component
             ],
             [
                 'key' => 'created_at',
-                'label' => 'Created',
+                'label' => 'Created At',
                 'sortable' => true,
                 'format' => function ($data) {
                     return $data->created_at_formatted;
                 }
             ],
-            [
-                'key' => 'created_by',
-                'label' => 'Created By',
-                'format' => function ($data) {
-                    return optional($data->creater_admin)->name
-                        ? '<span class="text-sm font-medium text-gray-900 dark:text-gray-100">' . e($data->creater_admin->name) . '</span>'
-                        : '<span class="text-sm text-gray-500 dark:text-gray-400 italic">System</span>';
-                },
-                'sortable' => true,
-            ],
+            // [
+            //     'key' => 'created_by',
+            //     'label' => 'Created By',
+            //     'format' => function ($data) {
+            //         return optional($data->creater_admin)->name
+            //             ? '<span class="text-sm font-medium text-gray-900 dark:text-gray-100">' . e($data->creater_admin->name) . '</span>'
+            //             : '<span class="text-sm text-gray-500 dark:text-gray-400 italic">System</span>';
+            //     },
+            //     'sortable' => true,
+            // ],
         ];
 
         $actions = [
@@ -219,7 +221,7 @@ class Index extends Component
 
     protected function getSelectableIds(): array
     {
-        $ids =  $this->service->getPaginatedData(
+        $ids = $this->service->getPaginatedData(
             perPage: $this->perPage,
             filters: $this->getFilters()
         )->pluck('id')->toArray();

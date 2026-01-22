@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Scout\Searchable;
 
-class BaseModel extends Model 
+class BaseModel extends Model
 {
     use HasFactory, SoftDeletes,  Searchable;
 
