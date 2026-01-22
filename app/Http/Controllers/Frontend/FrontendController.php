@@ -21,4 +21,8 @@ class FrontendController extends Controller
     {
         return view($this->masterView);
     }
+    public function booking()
+    {
+        return view($this->masterView);
+    }
 }

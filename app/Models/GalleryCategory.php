@@ -8,14 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Attributes\SearchUsingPrefix;
 use Laravel\Scout\Searchable;
 
-class AirportPrice extends Model
+class GalleryCategory extends Model
 {
     use Searchable;
 
     protected $fillable = [
-        'route_from',
-        'executive_saloon_price',
-        'eight_seater_price',
+        'name',
         'status',
 
     ];
@@ -35,7 +33,14 @@ class AirportPrice extends Model
         return $query->where('status', ActiveInactiveStatus::INACTIVE->value);
     }
 
-     /* =#=#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=
+    public function images()
+    {
+        return $this->hasMany(GalleryImage::class)->active();
+    }
+
+
+
+      /* =#=#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=
     |           Query Scopes                                       |
     =#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=#= */
 
@@ -60,13 +65,11 @@ class AirportPrice extends Model
     |          Scout Search Configuration                         |
     =#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=#= */
 
-    #[SearchUsingPrefix(['route_from','executive_saloon_price','eight_seater_price','status'])]
+    #[SearchUsingPrefix(['name','status'])]
     public function toSearchableArray(): array
     {
         return [
-            'route_from' => $this->route_from,
-            'executive_saloon_price' => $this->executive_saloon_price,
-            'eight_seater_price' => $this->eight_seater_price,
+            'name' => $this->name,
             'status' => $this->status,
         ];
     }
@@ -76,7 +79,7 @@ class AirportPrice extends Model
      */
     public function shouldBeSearchable(): bool
     {
-        return true;
+        return is_null($this->deleted_at);
     }
 
     /* =#=#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=
@@ -100,5 +103,5 @@ class AirportPrice extends Model
     {
         return $this->status->color();
     }
-
 }
+

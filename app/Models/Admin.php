@@ -3,14 +3,12 @@
 namespace App\Models;
 
 use App\Enums\AdminStatus;
-use App\Enums\OtpType;
 use App\Models\AuthBaseModel;
-// use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Scout\Attributes\SearchUsingPrefix;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Builder;
 
-class Admin extends AuthBaseModel 
+class Admin extends AuthBaseModel
 {
     use  Searchable;
 
@@ -173,7 +171,7 @@ class Admin extends AuthBaseModel
      */
     public function scopeInactive($query): Builder
     {
-        return $query->where('status', AdminStatus::ACTIVE->value);
+        return $query->where('status', AdminStatus::INACTIVE->value);
     }
 
     public function isActive(): bool

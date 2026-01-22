@@ -48,7 +48,7 @@
                         </a>
                         <a href="tel:+447405172435"
                             class="bg-transparent hover:bg-white/20 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300! backdrop-blur-sm">
-                            Call 07405 172435
+                            Call +447405172435
                         </a>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
         </section>
 
         <!-- Booking Section -->
-        <section class="py-9 scroll-mt-[72px]" id="booking">
+        {{-- <section class="py-9 scroll-mt-[72px]" id="booking">
             <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold text-center mb-6 scroll-animate">
                     Book Instantly</h2>
@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <!-- Why Choose Section -->
         <section class="py-12 bg-bg scroll-mt-[72px]" id="why">
@@ -123,34 +123,16 @@
                         </div>
                         <span class="text-xs font-bold text-gray-700 text-center">Enhanced DBS<br>Checked Drivers</span>
                     </div>
-
                     <div
-                        class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md border-2 border-yellow-100 hover:border-second-500 transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center gap-1 mb-2">
-                            <svg class="w-5 h-5 text-yellow-400" fill="white" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="white" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="white" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="white" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="white" viewBox="0 0 20 20">
+                        class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md border-2 border-second-200 hover:border-second-500 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-second-500 rounded-full flex items-center justify-center mb-2">
+                            <svg class="w-8 h-8 fill-white" viewBox="0 0 20 20">
                                 <path
                                     d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                         </div>
                         <span class="text-xs font-bold text-gray-700 text-center">5-Star Rated<br>on Google</span>
                     </div>
-
                     <div
                         class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md border-2 border-purple-100 hover:border-second-500 transition-all duration-300 hover:-translate-y-1">
                         <div class="w-16 h-16 bg-purple-700 rounded-full flex items-center justify-center mb-2">
@@ -320,7 +302,14 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($airportPrices as $airportPrice)
                             <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                <td class="p-4 font-bold">{{ $airportPrice->route_from }}</td>
+                                <td class="p-4">£{{ $airportPrice->executive_saloon_price }}</td>
+                                <td class="p-4">£{{ $airportPrice->eight_seater_price }}</td>
+                            </tr>
+                            @endforeach
+                            {{-- <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
                                 <td class="p-4 font-bold">Manchester (MAN)</td>
                                 <td class="p-4">£100</td>
                                 <td class="p-4">£130</td>
@@ -382,7 +371,7 @@
                                 <td class="p-4 font-bold">Gatwick Airpor</td>
                                 <td class="p-4">£350</td>
                                 <td class="p-4">£420</td>
-                            </tr>
+                            </tr> --}}
                         </tbody>
                     </table>
                 </div>
@@ -519,7 +508,7 @@
                     <div
                         class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
                         <h3 class="font-serif text-lg font-bold mb-2">Payment methods</h3>
-                        <p class="m-0">Card, Apple Pay/Google Pay, and Cash (cash requires a 10% deposit first).</p>
+                        <p class="m-0">Card, Apple Pay/Google Pay, and Cash</p>
                     </div>
                     <div
                         class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
@@ -535,11 +524,11 @@
         <section class="bg-white text-center py-12 scroll-animate">
             <div class="container mx-auto px-5">
                 <h2 class="font-serif text-3xl font-bold text-black mb-3 scroll-animate">Ready when you are</h2>
-                <p class="text-black mb-3 scroll-animate">Reserve now with a <strong>10% deposit</strong> and secure
-                    your driver.</p>
+                <p class="text-black mb-3 scroll-animate"> Book now and secure your driver</p>
                 <p class="scroll-animate">
-                    <a href="#booking"
-                        class="inline-block px-6 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1 hover:shadow-2xl shadow-lg">Reserve your driver now</a>
+                    <a href="{{route('booking')}}"
+                        class="inline-block px-6 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1 hover:shadow-2xl shadow-lg">Reserve
+                        your driver now</a>
                 </p>
             </div>
         </section>
