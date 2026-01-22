@@ -8,7 +8,7 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 class AirportPriceService
 {
     public AirportPrice $model;
-    public function __construct( AirportPrice $model)
+    public function __construct(AirportPrice $model)
     {
         $this->model = $model;
     }
@@ -19,15 +19,15 @@ class AirportPriceService
     }
     public function getPaginatedData(int $perPage = 15, array $filters = []): LengthAwarePaginator
     {
-        if($filters['search'] ?? null){
+        if ($filters['search'] ?? null) {
             return $this->model->search($filters['search'] ?? null)
-                    ->latest()
-                    ->paginate($perPage);
+                ->latest()
+                ->paginate($perPage);
         }
 
         return $this->model->filter($filters)
-                    ->latest()
-                    ->paginate($perPage);
+            ->latest()
+            ->paginate($perPage);
     }
 
     public function findData($column_value, $column_name = 'id')
@@ -52,7 +52,7 @@ class AirportPriceService
 
     public function bulkDeleteData($ids, $admin_id)
     {
-        return $this->model->whereIn('id', $ids)->update(['deleted_by' => $admin_id]);
+        return $this->model->whereIn('id', $ids)->delete();
     }
 
     public function bulkUpdateStatus($ids, $status)

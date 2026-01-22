@@ -19,46 +19,34 @@
                     class="nav_style group-hover:w-full! {{ Route::currentRouteName() == 'booking' ? 'w-full!' : '' }}"></span>
             </a>
 
-            <a href="{{route('home')}}#why"
-                class="nav_link group">
+            <a href="{{ route('home') }}#why" class="nav_link group">
                 Why us
-                <span
-                    class="nav_style group-hover:w-full!"></span>
+                <span class="nav_style group-hover:w-full!"></span>
             </a>
 
-            <a href="{{route('home')}}#prices"
-                class="nav_link group">
+            <a href="{{ route('home') }}#prices" class="nav_link group">
                 Prices
-                <span
-                    class="nav_style group-hover:w-full!"></span>
+                <span class="nav_style group-hover:w-full!"></span>
             </a>
 
-            <a href="{{route('home')}}#fleet"
-                class="nav_link group">
+            <a href="{{ route('home') }}#fleet" class="nav_link group">
                 Fleet
-                <span
-                    class="nav_style group-hover:w-full!"></span>
+                <span class="nav_style group-hover:w-full!"></span>
             </a>
 
-            <a href="{{route('home')}}#reviews"
-                class="nav_link group">
+            <a href="{{ route('home') }}#reviews" class="nav_link group">
                 Reviews
-                <span
-                    class="nav_style group-hover:w-full!"></span>
+                <span class="nav_style group-hover:w-full!"></span>
             </a>
 
-            <a href="{{route('home')}}#faq"
-                class="nav_link group">
+            <a href="{{ route('home') }}#faq" class="nav_link group">
                 FAQs
-                <span
-                    class="nav_style group-hover:w-full!"></span>
+                <span class="nav_style group-hover:w-full!"></span>
             </a>
 
-            <a href="{{route('home')}}#contact"
-                class="nav_link group">
+            <a href="{{ route('home') }}#contact" class="nav_link group">
                 Contact
-                <span
-                    class="nav_style group-hover:w-full!"></span>
+                <span class="nav_style group-hover:w-full!"></span>
             </a>
 
         </nav>
@@ -68,14 +56,23 @@
     </div>
     <nav class="hidden md:hidden absolute top-[58px] left-0 right-0 bg-gray-900 p-2 border-b border-gray-800"
         id="mobileNav">
-        <a href="{{ route('gallery') }}" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Gallery</a>
-        <a href="#booking" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Book</a>
-        <a href="#why" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Why us</a>
-        <a href="#prices" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Prices</a>
-        <a href="#fleet" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Fleet</a>
-        <a href="#reviews" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Reviews</a>
-        <a href="#faq" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">FAQs</a>
-        <a href="#contact" class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Contact</a>
+        <a href="{{ route('gallery') }}"
+            class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Gallery</a>
+        <a href="{{ route('booking') }}"
+            class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Book</a>
+        <a href="{{ route('home') }}#why"
+            class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Why
+            us</a>
+        <a href="{{ route('home') }}#prices"
+            class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Prices</a>
+        <a href="{{ route('home') }}#fleet"
+            class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Fleet</a>
+        <a href="{{ route('home') }}#reviews"
+            class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Reviews</a>
+        <a href="{{ route('home') }}#faq"
+            class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">FAQs</a>
+        <a href="{{ route('home') }}#contact"
+            class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Contact</a>
     </nav>
 </header>
 

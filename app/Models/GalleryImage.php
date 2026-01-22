@@ -17,12 +17,22 @@ class GalleryImage extends Model
         'image',
         'alt',
         'status',
+        'created_at',
+        'updated_at',
 
     ];
 
     protected $casts = [
         'status' => ActiveInactiveStatus::class,
     ];
+
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+        $this->appends = array_merge(parent::getAppends(), [
+            'image_url',
+        ]);
+    }
 
     // ############## Scopes ##############
     public function scopeActive($query)
@@ -60,7 +70,7 @@ class GalleryImage extends Model
     |          Scout Search Configuration                         |
     =#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=#= */
 
-    #[SearchUsingPrefix(['alt','status'])]
+    #[SearchUsingPrefix(['alt', 'status'])]
     public function toSearchableArray(): array
     {
         return [
@@ -75,6 +85,11 @@ class GalleryImage extends Model
     public function shouldBeSearchable(): bool
     {
         return true;
+    }
+
+    public function getImageUrlAttribute()
+    {
+        return storage_url($this->image);
     }
 
     /* =#=#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=
@@ -103,5 +118,31 @@ class GalleryImage extends Model
     {
         return $this->belongsTo(GalleryCategory::class, 'gallery_category_id', 'id');
     }
+
+    /* ================================================================
+    |  Accessors
+    ================================================================ */
+
+    public function getCreatedAtHumanAttribute(): string
+    {
+        return dateTimeHumanFormat($this->attributes['created_at']);
+    }
+
+    public function getUpdatedAtHumanAttribute(): string
+    {
+        return dateTimeHumanFormat($this->attributes['updated_at'], $this->attributes['created_at']);
+    }
+
+
+    public function getCreatedAtFormattedAttribute(): string
+    {
+        return dateTimeFormat($this->attributes['created_at']);
+    }
+
+    public function getUpdatedAtFormattedAttribute(): string
+    {
+        return dateTimeFormat($this->attributes['updated_at'], $this->attributes['created_at']);
+    }
+
 
 }

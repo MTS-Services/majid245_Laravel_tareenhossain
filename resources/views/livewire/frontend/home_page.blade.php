@@ -42,7 +42,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-wrap gap-4 scroll-animate">
-                        <a href="#booking"
+                        <a href="{{ route('booking') }}"
                             class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl">
                             Get Instant Quote
                         </a>
@@ -54,37 +54,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Booking Section -->
-        {{-- <section class="py-9 scroll-mt-[72px]" id="booking">
-            <div class="container mx-auto px-5">
-                <h2 class="font-serif text-3xl font-bold text-center mb-6 scroll-animate">
-                    Book Instantly</h2>
-                <p class="text-center text-sm text-gray-600 -mt-1 mb-5 scroll-animate">
-                    Search, choose your vehicle/price, then complete details & payment in one flow.
-                </p>
-                <div class="overflow-visible mt-5 scroll-animate">
-                    <div
-                        class="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-2xl p-8 shadow-xl border-2 border-second-500/20">
-                        <iframe class="w-full h-full" title="Book Now!"
-                            src="{{ config('services.easytaxi.booking_page') }}" id="eto-iframe-booking"
-                            allow="geolocation" scrolling="yes" frameborder="0"
-                            style="width:1px; min-width:100%; border:0;">
-                        </iframe>
-                        <script src="https://696a0e8806cc5.trial.easytaxioffice.com/assets/plugins/iframe-resizer/iframeResizer.min.js">
-                        </script>
-                        <script>
-                            iFrameResize({
-                                log: false,
-                                targetOrigin: '*',
-                                checkOrigin: false
-                            }, "iframe#eto-iframe-booking");
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
-
         <!-- Why Choose Section -->
         <section class="py-12 bg-bg scroll-mt-[72px]" id="why">
             <div class="container mx-auto px-5">
@@ -303,11 +272,11 @@
                         </thead>
                         <tbody>
                             @foreach ($airportPrices as $airportPrice)
-                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">{{ $airportPrice->route_from }}</td>
-                                <td class="p-4">£{{ $airportPrice->executive_saloon_price }}</td>
-                                <td class="p-4">£{{ $airportPrice->eight_seater_price }}</td>
-                            </tr>
+                                <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
+                                    <td class="p-4 font-bold">{{ $airportPrice->route_from }}</td>
+                                    <td class="p-4">£{{ $airportPrice->executive_saloon_price }}</td>
+                                    <td class="p-4">£{{ $airportPrice->eight_seater_price }}</td>
+                                </tr>
                             @endforeach
                             {{-- <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
                                 <td class="p-4 font-bold">Manchester (MAN)</td>
@@ -453,7 +422,15 @@
                 <h2 class="font-serif text-3xl font-bold mb-6 scroll-animate">
                     FAQs</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                    <div
+
+                    @foreach ($faqs as $faq)
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
+                            <h3 class="font-serif text-lg font-bold mb-2">{{ $faq->question }}</h3>
+                            <p class="m-0">{{ $faq->answer }}</p>
+                        </div>
+                    @endforeach
+                    {{-- <div
                         class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
                         <h3 class="font-serif text-lg font-bold mb-2">How do I pick a pickup time?</h3>
                         <p class="m-0">For departures arrive 2–3 hours before take‑off; for arrivals use your
@@ -515,7 +492,7 @@
                         <h3 class="font-serif text-lg font-bold mb-2">Last‑minute bookings</h3>
                         <p class="m-0">Message us on WhatsApp for urgent requests — we'll confirm availability fast.
                         </p>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </section>
@@ -526,51 +503,11 @@
                 <h2 class="font-serif text-3xl font-bold text-black mb-3 scroll-animate">Ready when you are</h2>
                 <p class="text-black mb-3 scroll-animate"> Book now and secure your driver</p>
                 <p class="scroll-animate">
-                    <a href="{{route('booking')}}"
+                    <a href="{{ route('booking') }}"
                         class="inline-block px-6 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1 hover:shadow-2xl shadow-lg">Reserve
                         your driver now</a>
                 </p>
             </div>
         </section>
-
-        <!-- Contact Section -->
-        <section class="py-9 bg-second-500 scroll-mt-[72px]" id="contact">
-            <div class="container mx-auto px-5">
-                <h2 class="font-serif text-3xl font-bold mb-6 text-gray-900 scroll-animate">
-                    Contact</h2>
-                <div class="scroll-animate">
-                    <p class="text-gray-900">
-                        <strong>Phone:</strong> <a href="tel:+447405172435"
-                            class="text-gray-900 font-bold underline hover:text-gray-700 transition-colors">+44 7405
-                            172435</a><br>
-                        <strong>WhatsApp:</strong> <a href="https://wa.me/447405172435" target="_blank"
-                            rel="noopener"
-                            class="text-gray-900 font-bold underline hover:text-gray-700 transition-colors">Message
-                            us</a><br>
-                        <strong>Email:</strong> <a href="mailto:admin@centraltravels.co.uk"
-                            class="text-gray-900 font-bold underline hover:text-gray-700 transition-colors">admin@centraltravels.co.uk</a>
-                    </p>
-                    <p class="text-sm text-gray-900 mt-2">We respond quickly — for urgent bookings, call or WhatsApp.
-                    </p>
-                </div>
-            </div>
-        </section>
     </div>
 </section>
-
-<script>
-    const elements = document.querySelectorAll('.scroll-animate');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.15
-    });
-
-    elements.forEach(el => observer.observe(el));
-</script>
