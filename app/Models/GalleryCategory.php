@@ -15,6 +15,8 @@ class GalleryCategory extends Model
     protected $fillable = [
         'name',
         'status',
+        'created_at',
+        'updated_at',
 
     ];
 
@@ -40,9 +42,9 @@ class GalleryCategory extends Model
 
 
 
-      /* =#=#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=
-    |           Query Scopes                                       |
-    =#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=#= */
+    /* =#=#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=
+  |           Query Scopes                                       |
+  =#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=#= */
 
     public function scopeFilter(Builder $query, array $filters): Builder
     {
@@ -65,7 +67,7 @@ class GalleryCategory extends Model
     |          Scout Search Configuration                         |
     =#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=#= */
 
-    #[SearchUsingPrefix(['name','status'])]
+    #[SearchUsingPrefix(['name', 'status'])]
     public function toSearchableArray(): array
     {
         return [
@@ -103,5 +105,31 @@ class GalleryCategory extends Model
     {
         return $this->status->color();
     }
+
+    /* ================================================================
+    |  Accessors
+    ================================================================ */
+
+    public function getCreatedAtHumanAttribute(): string
+    {
+        return dateTimeHumanFormat($this->attributes['created_at']);
+    }
+
+    public function getUpdatedAtHumanAttribute(): string
+    {
+        return dateTimeHumanFormat($this->attributes['updated_at'], $this->attributes['created_at']);
+    }
+
+
+    public function getCreatedAtFormattedAttribute(): string
+    {
+        return dateTimeFormat($this->attributes['created_at']);
+    }
+
+    public function getUpdatedAtFormattedAttribute(): string
+    {
+        return dateTimeFormat($this->attributes['updated_at'], $this->attributes['created_at']);
+    }
+
 }
 

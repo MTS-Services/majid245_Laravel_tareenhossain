@@ -58,7 +58,7 @@
                                     </p>
                                     <p class="text-slate-400 text-lg font-bold">{{ $model->status }}</p>
                                 </div>
-                                <div class="bg-slate-50 dark:bg-gray-700 rounded-lg p-4 border border-slate-200">
+                                {{-- <div class="bg-slate-50 dark:bg-gray-700 rounded-lg p-4 border border-slate-200">
                                     <p class="text-text-white text-xs font-semibold mb-2 uppercase">
                                         {{ __('Last Login IP') }}</p>
                                     <p class="text-slate-400 text-lg font-bold">{{ $model->last_login_ip ?? 'N/A' }}
@@ -72,7 +72,7 @@
                                     <p class="text-slate-400 text-lg font-bold">
                                         {{ $model->last_login_at_formatted ?? 'N/A' }}
                                     </p>
-                                </div>
+                                </div> --}}
 
                                 <div class="bg-slate-50 dark:bg-gray-700 rounded-lg p-4 border border-slate-200">
                                     <p class="text-text-white text-xs font-semibold mb-2 uppercase">
@@ -92,7 +92,7 @@
                                     </p>
                                 </div>
 
-                                <div class="bg-slate-50 dark:bg-gray-700 rounded-lg p-4 border border-slate-200">
+                                {{-- <div class="bg-slate-50 dark:bg-gray-700 rounded-lg p-4 border border-slate-200">
                                     <p class="text-text-white text-xs font-semibold mb-2 uppercase">
                                         {{ __('Deleted At') }}
                                     </p>
@@ -139,7 +139,7 @@
                                     </p>
                                     <p class="text-slate-400 text-lg font-bold">
                                         {{ $model->restorer_admin->name ?? 'N/A' }}</p>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

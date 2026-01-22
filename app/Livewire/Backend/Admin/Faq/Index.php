@@ -7,6 +7,7 @@ use App\Services\FAQService;
 use App\Traits\Livewire\WithDataTable;
 use App\Traits\Livewire\WithNotification;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 use Livewire\Component;
 
 class Index extends Component
@@ -25,6 +26,8 @@ class Index extends Component
 
     protected FAQService $service;
 
+    public $perPage = 15;
+
     public function boot(FAQService $service)
     {
         $this->service = $service;
@@ -32,42 +35,43 @@ class Index extends Component
 
     public function render()
     {
-        $datas = $this->service->getDatas()->get();
+        $datas = $this->service->getPaginatedData($this->perPage, $this->getFilters());
 
         $columns = [
             [
                 'key' => 'question',
                 'label' => 'Question',
                 'sortable' => true,
+                'format' => function ($data) {
+                    return Str::limit($data->question, 30);
+                },
 
             ],
             [
                 'key' => 'answer',
                 'label' => 'Answer',
                 'sortable' => true,
-            ],
-            [
-                'key' => 'status',
-                'label' => 'Status',
-                'sortable' => true,
+                'format' => function ($data) {
+                    return Str::limit($data->answer, 30);
+                },
             ],
             [
                 'key' => 'status',
                 'label' => 'Status',
                 'sortable' => true,
                 'format' => function ($data) {
-                    return '<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium badge badge-soft '.$data->status->color().'">'.
-                        $data->status->label().
+                    return '<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium badge badge-soft ' . $data->status->color() . '">' .
+                        $data->status->label() .
                         '</span>';
                 },
             ],
 
             [
                 'key' => 'created_at',
-                'label' => 'Created',
+                'label' => 'Created At',
                 'sortable' => true,
                 'format' => function ($data) {
-                    return dateTimeFormat($data->created_at);
+                    return $data->created_at_formatted;
                 },
             ],
         ];
@@ -117,7 +121,7 @@ class Index extends Component
     public function delete(): void
     {
         try {
-            if (! $this->deleteDataId) {
+            if (!$this->deleteDataId) {
                 return;
             }
 
@@ -177,22 +181,22 @@ class Index extends Component
             $this->selectAll = false;
             $this->bulkAction = '';
         } catch (\Exception $e) {
-            $this->error('Bulk action failed: '.$e->getMessage());
+            $this->error('Bulk action failed: ' . $e->getMessage());
         }
     }
 
-    // protected function bulkDelete(): void
-    // {
-    //     $count = $this->service->bulkDeleteData($this->selectedIds, admin()->id);
+    protected function bulkDelete(): void
+    {
+        $count = $this->service->bulkDeleteData($this->selectedIds, admin()->id);
 
-    //     $this->success("{$count} Datas deleted successfully");
-    // }
+        $this->success("{$count} Datas deleted successfully");
+    }
 
-    // protected function bulkUpdateStatus(ActiveInactiveStatus $status): void
-    // {
-    //     $count = $this->service->bulkUpdateStatus($this->selectedIds, $status);
-    //     $this->success("{$count} Datas updated successfully");
-    // }
+    protected function bulkUpdateStatus(ActiveInactiveStatus $status): void
+    {
+        $count = $this->service->bulkUpdateStatus($this->selectedIds, $status);
+        $this->success("{$count} Datas updated successfully");
+    }
 
     protected function getFilters(): array
     {
@@ -204,14 +208,14 @@ class Index extends Component
         ];
     }
 
-    // protected function getSelectableIds(): array
-    // {
-    //     $ids =  $this->service->getPaginatedData(
-    //         perPage: $this->perPage,
-    //         filters: $this->getFilters()
-    //     )->pluck('id')->toArray();
-    //     return $ids;
-    // }
+    protected function getSelectableIds(): array
+    {
+        $ids = $this->service->getPaginatedData(
+            perPage: $this->perPage,
+            filters: $this->getFilters()
+        )->pluck('id')->toArray();
+        return $ids;
+    }
 
     public function updatedStatusFilter(): void
     {

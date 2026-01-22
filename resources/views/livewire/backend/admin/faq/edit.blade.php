@@ -23,11 +23,7 @@
                     <x-ui.input type="text" placeholder="{{ __('Question') }}" wire:model="form.question" />
                     <x-ui.input-error :messages="$errors->get('form.question')" />
                 </div>
-                <div class="w-full">
-                    <x-ui.label value="{{ __('Answer') }}" class="mb-1" />
-                    <x-ui.input type="text" placeholder="{{ __('Answer') }}" wire:model="form.answer" />
-                    <x-ui.input-error :messages="$errors->get('form.answer')" />
-                </div>
+
                 <div class="w-full">
                     <x-ui.label value="{{ __('Select Status') }}" class="mb-1" />
                     <x-ui.select wire:model="form.status">
@@ -36,6 +32,11 @@
                         @endforeach
                     </x-ui.select>
                     <x-ui.input-error :messages="$errors->get('form.status')" />
+                </div>
+                <div class="w-full">
+                    <x-ui.label value="{{ __('Answer') }}" class="mb-1" />
+                    <x-ui.textarea placeholder="{{ __('Answer') }}" wire:model="form.answer" />
+                    <x-ui.input-error :messages="$errors->get('form.answer')" />
                 </div>
 
 
@@ -54,7 +55,7 @@
 
                 <x-ui.button class="w-auto! py-2!" type="submit">
                     <span wire:loading.remove wire:target="save"
-                        class="text-text-btn-primary group-hover:text-text-btn-secondary">{{ __('Update Airport Price') }}</span>
+                        class="text-text-btn-primary group-hover:text-text-btn-secondary">{{ __('Update') }}</span>
                     <span wire:loading wire:target="save"
                         class="text-text-btn-primary group-hover:text-text-btn-secondary">{{ __('Updating...') }}</span>
                 </x-ui.button>
