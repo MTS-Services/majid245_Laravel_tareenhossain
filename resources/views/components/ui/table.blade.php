@@ -230,7 +230,7 @@
                                             x-transition:leave-end="transform opacity-0 scale-95"
                                             class="absolute z-10 mt-2 min-w-32 w-fit max-w-52 origin-top-right right-0 rounded-md shadow-lg text-center"
                                             @click.outside="open = false">
-                                            <div class="rounded-md bg-bg-primary shadow-xs">
+                                            <div class="rounded-md bg-gray-400 shadow-xs">
                                                 <div class="py-1">
                                                     @php
                                                         // Use actionsMap if available, otherwise use static actions

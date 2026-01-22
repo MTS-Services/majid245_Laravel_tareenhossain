@@ -22,12 +22,14 @@
                 </div>
                 <div class="w-full">
                     <x-ui.label value="{{ __('Executive Saloon Price') }}" class="mb-1" />
-                    <x-ui.input type="number" placeholder="{{ __('Enter Executive Saloon Price') }}" wire:model="form.executive_saloon_price" />
+                    <x-ui.input type="number" placeholder="{{ __('Enter Executive Saloon Price') }}"
+                        wire:model="form.executive_saloon_price" />
                     <x-ui.input-error :messages="$errors->get('form.executive_saloon_price')" />
                 </div>
                 <div class="w-full">
                     <x-ui.label value="{{ __('Eight Seater Price') }}" class="mb-1" />
-                    <x-ui.input type="number" placeholder="{{ __('Enter Eight Seater Price') }}" wire:model="form.eight_seater_price" />
+                    <x-ui.input type="number" placeholder="{{ __('Enter Eight Seater Price') }}"
+                        wire:model="form.eight_seater_price" />
                     <x-ui.input-error :messages="$errors->get('form.eight_seater_price')" />
                 </div>
                 <div class="w-full">

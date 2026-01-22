@@ -1,5 +1,5 @@
 <div>
-    <div class="glass-card rounded-2xl p-6 mb-6">
+    <div class="bg-white rounded-2xl p-6 mb-6">
         <div class="flex items-center justify-between">
             <h2 class="text-xl font-bold text-text-black dark:text-text-white">{{ __('Airport Price') }}</h2>
             <div class="flex items-center gap-2">

@@ -101,7 +101,7 @@
         <!-- Hero Section -->
         <section class="relative h-[40vh] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="https://centraltravels.co.uk/assets/airport-transfer.jpeg" alt="Gallery Hero"
+                <img src="{{ asset('assets/images/gallery/airport-transfer.jpeg') }}" alt="Gallery Hero"
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
             </div>
@@ -143,7 +143,7 @@
                     <div class="gallery-item executive scroll-animate  translate-y-8" data-index="0">
                         <div
                             class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group">
-                            <img src="https://centraltravels.co.uk/assets/merc-c.webp" alt="Mercedes E-Class"
+                            <img src="{{ asset('assets/images/gallery/20251016_194825.jpg') }}" alt="Mercedes E-Class"
                                 class="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0   group-hover:opacity-100 transition-opacity duration-500 flex items-end">
@@ -158,7 +158,7 @@
                     <div class="gallery-item executive scroll-animate  translate-y-8" data-index="1">
                         <div
                             class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group">
-                            <img src="https://centraltravels.co.uk/assets/airport-transfer.jpeg"
+                            <img src="{{ asset('assets/images/gallery/1000062004.jpg') }}"
                                 alt="Airport Transfer Service"
                                 class="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110">
                             <div
@@ -175,7 +175,7 @@
                     <div class="gallery-item luxury scroll-animate  translate-y-8" data-index="2">
                         <div
                             class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group">
-                            <img src="https://centraltravels.co.uk/assets/rolls-royce.png" alt="Rolls-Royce"
+                            <img src="{{ asset('assets/images/gallery/1000062052.jpg') }}" alt="Rolls-Royce"
                                 class="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0   group-hover:opacity-100 transition-opacity duration-500 flex items-end">
@@ -191,8 +191,7 @@
                     <div class="gallery-item minibus scroll-animate  translate-y-8" data-index="3">
                         <div
                             class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group">
-                            <img src="https://centraltravels.co.uk/assets/mercedes-benz-vito.webp"
-                                alt="Mercedes Vito Minibus"
+                            <img src="{{ asset('assets/images/gallery/1000062076.jpg') }}" alt="Mercedes Vito Minibus"
                                 class="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0   group-hover:opacity-100 transition-opacity duration-500 flex items-end">
@@ -208,7 +207,7 @@
                     <div class="gallery-item service executive scroll-animate  translate-y-8" data-index="4">
                         <div
                             class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group">
-                            <img src="https://centraltravels.co.uk/assets/merc-c.webp" alt="Professional Chauffeur"
+                            <img src="{{ asset('assets/images/gallery/1000062092.jpg') }}" alt="Professional Chauffeur"
                                 class="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0   group-hover:opacity-100 transition-opacity duration-500 flex items-end">
@@ -223,7 +222,7 @@
                     <div class="gallery-item service scroll-animate  translate-y-8" data-index="5">
                         <div
                             class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group">
-                            <img src="https://centraltravels.co.uk/assets/airport-transfer.jpeg" alt="Meet and Greet"
+                            <img src="{{ asset('assets/images/gallery/1000062096.jpg') }}" alt="Meet and Greet"
                                 class="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0  group-hover:opacity-100 transition-opacity duration-500 flex items-end">
@@ -238,7 +237,7 @@
                     <div class="gallery-item executive scroll-animate  translate-y-8" data-index="6">
                         <div
                             class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group">
-                            <img src="https://centraltravels.co.uk/assets/merc-c.webp" alt="Executive Interior"
+                            <img src="{{ asset('assets/images/gallery/1000062139.jpg') }}" alt="Executive Interior"
                                 class="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0   group-hover:opacity-100 transition-opacity duration-500 flex items-end">
@@ -253,7 +252,7 @@
                     <div class="gallery-item minibus scroll-animate  translate-y-8" data-index="7">
                         <div
                             class="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group">
-                            <img src="https://centraltravels.co.uk/assets/mercedes-benz-vito.webp"
+                            <img src="{{ asset('assets/') }}"
                                 alt="Group Transfer"
                                 class="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110">
                             <div

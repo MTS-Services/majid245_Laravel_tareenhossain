@@ -25,7 +25,7 @@
         removedFiles: [],
         isDragging: false,
         isUpdating: false,
-    
+
         init() {
             // Initialize existing files
             const existingFiles = {{ $existingFilesJson }};
@@ -54,7 +54,7 @@
                 }
             }
         },
-    
+
         getFullUrl(path) {
             if (!path) return '';
             if (path.startsWith('http://') || path.startsWith('https://')) {
@@ -62,26 +62,26 @@
             }
             return `/storage/${path}`;
         },
-    
+
         getFileNameFromPath(path) {
             if (!path) return 'Unknown';
             return path.split('/').pop();
         },
-    
+
         getTypeFromPath(path) {
             if (!path) return 'application/octet-stream';
             const ext = path.split('.').pop().toLowerCase();
             const imageExts = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp', 'ico', 'tiff', 'tif', 'avif', 'heif', 'heic'];
             const videoExts = ['mp4', 'webm', 'ogg', 'mov', 'avi', 'flv', 'wmv', 'mkv', 'm4v', '3gp'];
             const audioExts = ['mp3', 'wav', 'ogg', 'aac', 'm4a', 'flac', 'oga', 'mid', 'midi'];
-    
+
             if (imageExts.includes(ext)) return 'image/' + ext;
             if (videoExts.includes(ext)) return 'video/' + ext;
             if (audioExts.includes(ext)) return 'audio/' + ext;
             if (ext === 'pdf') return 'application/pdf';
             return 'application/octet-stream';
         },
-    
+
         syncRemovedFiles() {
             @if($removeModel)
             {{-- this.$wire.set('{{ $removeModel }}', this.removedFiles); --}}
@@ -94,12 +94,12 @@
             @endif
             @endif
         },
-    
+
         showPreview(event) {
             if (this.isUpdating) return;
             const files = event.target.files;
             if (!files || files.length === 0) return;
-    
+
             if ({{ $multiple ? 'true' : 'false' }}) {
                 const filesData = event.target.files;
                 const newFiles = Array.from(filesData).map(file => ({
@@ -127,29 +127,29 @@
                 }
             }
         },
-    
+
         handleDrop(event) {
             this.isDragging = false;
             const files = event.dataTransfer.files;
             if (!files || files.length === 0) return;
-    
+
             this.$refs.fileInput.files = files;
             this.showPreview({ target: { files } });
         },
-    
+
         updateFileInput(previews = null) {
             this.isUpdating = true;
-    
+
             const dt = new DataTransfer();
             previews = previews ?? this.previews;
-    
+
             previews.forEach(f => {
                 if (f.file) {
                     dt.items.add(f.file);
                 }
             });
             this.$refs.fileInput.files = dt.files;
-    
+
             this.$nextTick(() => {
                 this.$wire.upload(
                     '{{ $attributes->wire('model')->value() }}',
@@ -159,7 +159,7 @@
                 );
             });
         },
-    
+
         removeFile(index) {
             URL.revokeObjectURL(this.previews[index].url);
             this.previews.splice(index, 1);
@@ -170,7 +170,7 @@
                 }
             });
             this.$refs.fileInput.files = dt.files;
-    
+
             if (this.previews.length > 0) {
                 this.$refs.fileInput.dispatchEvent(new Event('change'));
             } else {
@@ -178,14 +178,14 @@
                 this.$wire.set('{{ $attributes->wire('model')->value() }}', null);
             }
         },
-    
+
         removeExistingFile(index) {
             const removedFile = this.existingPreviews[index];
             this.removedFiles.push(removedFile.path);
             this.existingPreviews.splice(index, 1);
             this.syncRemovedFiles();
         },
-    
+
         clearFile() {
             // Track all existing files as removed
             if ({{ $multiple ? 'true' : 'false' }}) {
@@ -199,7 +199,7 @@
                     this.removedFiles = [this.preview.path];
                 }
             }
-    
+
             this.preview = null;
             this.previews.forEach(f => {
                 if (f.url && !f.isExisting) {
@@ -212,7 +212,7 @@
             this.$wire.set('{{ $attributes->wire('model')->value() }}', null);
             this.syncRemovedFiles();
         },
-    
+
         clearAllExisting() {
             this.existingPreviews.forEach(f => {
                 if (f.path && !this.removedFiles.includes(f.path)) {
@@ -222,7 +222,7 @@
             this.existingPreviews = [];
             this.syncRemovedFiles();
         },
-    
+
         getFileType(type) {
             if (type.startsWith('image/')) return 'image';
             if (type.startsWith('video/')) return 'video';
@@ -230,7 +230,7 @@
             if (type.includes('pdf')) return 'pdf';
             return 'document';
         },
-    
+
         formatSize(bytes) {
             if (bytes < 1024) return bytes + ' B';
             if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
@@ -242,7 +242,7 @@
             @drop.prevent="handleDrop($event)"
             :class="isDragging || preview || previews.length > 0 || existingPreviews.length > 0 ?
                 'border-zinc-600! bg-zinc-50 dark:bg-zinc-900/20' : 'border-gray-300 dark:border-gray-600'"
-            class="border-2 border-dashed rounded-xl transition-all duration-300 bg-bg-primary! hover:border-accent hover:shadow-lg cursor-pointer relative overflow-hidden w-full p-2">
+            class="border-2 border-dashed rounded-xl transition-all duration-300  hover:border-accent hover:shadow-lg cursor-pointer relative overflow-hidden w-full p-2">
 
             <input type="file" id="{{ $inputId }}" {{ $attributes->wire('model') }}
                 @if ($accept) accept="{{ $accept }}" @endif
