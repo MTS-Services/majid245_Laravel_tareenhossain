@@ -97,6 +97,22 @@
             document.getElementById('navigation-loader').classList.add('hidden');
         });
     </script>
+    <script>
+        const elements = document.querySelectorAll('.scroll-animate');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        elements.forEach(el => observer.observe(el));
+    </script>
     @stack('scripts')
 </body>
 
