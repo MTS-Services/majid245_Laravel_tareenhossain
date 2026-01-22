@@ -5,15 +5,16 @@ use App\Http\Controllers\Backend\Admin\UserManagement\UserController;
 use App\Http\Controllers\Backend\Admin\UserManagement\AdminController;
 use App\Http\Controllers\Backend\Admin\ApplicationSettings\ApplicationSettingsController;
 use App\Http\Controllers\Backend\AirportPriceController;
+use App\Http\Controllers\Backend\GalleryCategoryController;
+use App\Http\Controllers\Backend\GalleryImageController;
+use App\Http\Controllers\Backend\DashboardController;
 
 Route::middleware(['auth:admin', 'admin', 'adminVerify'])->name('admin.')->prefix('admin')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('backend.admin.pages.dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
-    Route::group(['prefix' => 'user-management', 'as' => 'um.'], function () {
+    Route::group(['as' => 'um.'], function () {
 
-        Route::controller(AdminController::class)->name('admin.')->prefix('admin')->group(function () {
+        Route::controller(AdminController::class)->name('admin.')->group(function () {
             Route::get('/', 'index')->name('index');
             Route::get('/create', 'create')->name('create');
             Route::get('/edit/{id}', 'edit')->name('edit');
@@ -36,7 +37,6 @@ Route::middleware(['auth:admin', 'admin', 'adminVerify'])->name('admin.')->prefi
     });
 
     Route::group(['prefix' => 'application-settings', 'as' => 'as.'], function () {
-
         Route::controller(ApplicationSettingsController::class)->prefix('application-settings')->group(function () {
             Route::get('/general-settings', 'generalSettings')->name('general-settings');
             Route::get('/database-settings', 'databaseSettings')->name('database-settings');
@@ -45,6 +45,20 @@ Route::middleware(['auth:admin', 'admin', 'adminVerify'])->name('admin.')->prefi
     });
 
     Route::controller(AirportPriceController::class)->name('airport-price.')->prefix('airport-price')->group( function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::get('/view/{id}', 'view')->name('view');
+    });
+
+    Route::controller(GalleryCategoryController::class)->name('gallery-category.')->prefix('gallery-category')->group( function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::get('/view/{id}', 'view')->name('view');
+    });
+
+    Route::controller(GalleryImageController::class)->name('gallery-image.')->prefix('gallery-image')->group( function () {
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::get('/edit/{id}', 'edit')->name('edit');

@@ -12,49 +12,49 @@
                 <span
                     class="nav_style group-hover:w-full! {{ Route::currentRouteName() == 'gallery' ? 'w-full!' : '' }}"></span>
             </a>
-            <a href="#booking"
-                class="nav_link group">
+            <a href="{{ route('booking') }}"
+                class="nav_link group {{ Route::currentRouteName() == 'booking' ? 'text-second-500!' : '' }}">
                 Book
                 <span
-                    class="nav_style group-hover:w-full!"></span>
+                    class="nav_style group-hover:w-full! {{ Route::currentRouteName() == 'booking' ? 'w-full!' : '' }}"></span>
             </a>
 
-            <a href="#why"
+            <a href="{{route('home')}}#why"
                 class="nav_link group">
                 Why us
                 <span
                     class="nav_style group-hover:w-full!"></span>
             </a>
 
-            <a href="#prices"
+            <a href="{{route('home')}}#prices"
                 class="nav_link group">
                 Prices
                 <span
                     class="nav_style group-hover:w-full!"></span>
             </a>
 
-            <a href="#fleet"
+            <a href="{{route('home')}}#fleet"
                 class="nav_link group">
                 Fleet
                 <span
                     class="nav_style group-hover:w-full!"></span>
             </a>
 
-            <a href="#reviews"
+            <a href="{{route('home')}}#reviews"
                 class="nav_link group">
                 Reviews
                 <span
                     class="nav_style group-hover:w-full!"></span>
             </a>
 
-            <a href="#faq"
+            <a href="{{route('home')}}#faq"
                 class="nav_link group">
                 FAQs
                 <span
                     class="nav_style group-hover:w-full!"></span>
             </a>
 
-            <a href="#contact"
+            <a href="{{route('home')}}#contact"
                 class="nav_link group">
                 Contact
                 <span

@@ -2,13 +2,13 @@
 
 namespace App\Services;
 
-use App\Models\AirportPrice;
+use App\Models\GalleryImage;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
-class AirportPriceService
+class GalleryImageService
 {
-    public AirportPrice $model;
-    public function __construct( AirportPrice $model)
+    public GalleryImage $model;
+    public function __construct( GalleryImage $model)
     {
         $this->model = $model;
     }
@@ -17,17 +17,19 @@ class AirportPriceService
     {
         return $this->model->orderBy($orderBy, $order)->latest()->get();
     }
+
     public function getPaginatedData(int $perPage = 15, array $filters = []): LengthAwarePaginator
     {
+
+
+
         if($filters['search'] ?? null){
-            return $this->model->search($filters['search'] ?? null)
+            return $this->model->with('category')->search($filters['search'] ?? null)
                     ->latest()
                     ->paginate($perPage);
         }
 
-        return $this->model->filter($filters)
-                    ->latest()
-                    ->paginate($perPage);
+        return $this->model->with('category')->latest()->filter($filters)->paginate($perPage);
     }
 
     public function findData($column_value, $column_name = 'id')
@@ -52,7 +54,7 @@ class AirportPriceService
 
     public function bulkDeleteData($ids, $admin_id)
     {
-        return $this->model->whereIn('id', $ids)->update(['deleted_by' => $admin_id]);
+        return $this->model->whereIn('id', $ids)->delete();
     }
 
     public function bulkUpdateStatus($ids, $status)

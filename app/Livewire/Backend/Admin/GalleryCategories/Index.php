@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Livewire\Backend\Admin\AirportPrices;
+namespace App\Livewire\Backend\Admin\GalleryCategories;
 
 use Livewire\Component;
 use App\Enums\ActiveInactiveStatus;
 use Illuminate\Support\Facades\Log;
-use App\Services\AirportPriceService;
+use App\Services\GalleryCategoryService;
 use App\Traits\Livewire\WithDataTable;
 use App\Traits\Livewire\WithNotification;
 
@@ -19,9 +19,9 @@ class Index extends Component
     public $bulkAction = '';
     public $showBulkActionModal = false;
 
-    protected AirportPriceService $service;
+    protected GalleryCategoryService $service;
 
-    public function boot(AirportPriceService $service)
+    public function boot(GalleryCategoryService $service)
     {
         $this->service = $service;
     }
@@ -32,18 +32,8 @@ class Index extends Component
 
         $columns = [
             [
-                'key' => 'route_from',
-                'label' => 'Route',
-                'sortable' => true
-            ],
-            [
-                'key' => 'executive_saloon_price',
-                'label' => 'Executive Saloon Price',
-                'sortable' => true
-            ],
-            [
-                'key' => 'eight_seater_price',
-                'label' => 'Eight Seater Price',
+                'key' => 'name',
+                'label' => 'Name',
                 'sortable' => true
             ],
             [
@@ -67,16 +57,10 @@ class Index extends Component
         ];
 
         $actions = [
-            // [
-            //     'key' => 'id',
-            //     'label' => 'View',
-            //     'route' => 'admin.airport-price.view',
-            //     'encrypt' => true
-            // ],
             [
                 'key' => 'id',
                 'label' => 'Edit',
-                'route' => 'admin.airport-price.edit',
+                'route' => 'admin.gallery-category.edit',
                 'encrypt' => true
             ],
             [
@@ -93,7 +77,7 @@ class Index extends Component
             ['value' => 'inactive', 'label' => 'Inactive'],
         ];
 
-        return view('livewire.backend.admin.airport-prices.index', [
+        return view('livewire.backend.admin.gallery-categories.index', [
             'datas' => $datas,
             'statuses' => ActiveInactiveStatus::options(),
             'columns' => $columns,
@@ -173,19 +157,6 @@ class Index extends Component
         }
     }
 
-    protected function bulkDelete(): void
-    {
-        $count = $this->service->bulkDeleteData($this->selectedIds, admin()->id);
-
-        $this->success("{$count} Datas deleted successfully");
-    }
-
-    protected function bulkUpdateStatus(ActiveInactiveStatus $status): void
-    {
-        $count = $this->service->bulkUpdateStatus($this->selectedIds, $status);
-        $this->success("{$count} Datas updated successfully");
-    }
-
     protected function getFilters(): array
     {
         return [
@@ -194,15 +165,6 @@ class Index extends Component
             'sort_field' => $this->sortField,
             'sort_direction' => $this->sortDirection,
         ];
-    }
-
-    protected function getSelectableIds(): array
-    {
-        $ids =  $this->service->getPaginatedData(
-            perPage: $this->perPage,
-            filters: $this->getFilters()
-        )->pluck('id')->toArray();
-        return $ids;
     }
 
     public function updatedStatusFilter(): void
