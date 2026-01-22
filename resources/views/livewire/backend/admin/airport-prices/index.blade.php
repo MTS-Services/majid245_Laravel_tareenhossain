@@ -1,5 +1,5 @@
 <div>
-    <div class="glass-card rounded-2xl p-6 mb-6">
+    <div class="bg-white rounded-2xl p-6 mb-6">
         <div class="flex items-center justify-between">
             <h2 class="text-xl font-bold text-text-black dark:text-text-white">{{ __('Airport Price') }}</h2>
             <div class="flex items-center gap-2">
@@ -15,10 +15,14 @@
     {{-- Table Component --}}
     <x-ui.table :data="$datas" :columns="$columns" :actions="$actions" :bulkActions="$bulkActions" :bulkAction="$bulkAction"
         :statuses="$statuses" :selectedIds="$selectedIds" :mobileVisibleColumns="2" searchProperty="search" perPageProperty="perPage"
-        :showBulkActions="true" emptyMessage="{{ __('No admins found. Create your first admin to get started.') }}" />
+        :showBulkActions="true" emptyMessage="{{ __('No datas found. Create your first data to get started.') }}" />
 
     {{-- Delete Confirmation Modal --}}
-    <x-ui.confirmation-modal :show="'showDeleteModal'" title="{{ __('Delete this admin?') }}"
-        message="{{ __('Are you sure you want to remove this admin?') }}" :method="'delete'"
-        button-text="{{ __('Delete Admin') }}" />
+    <x-ui.confirmation-modal :show="'showDeleteModal'" title="{{ __('Delete this data?') }}"
+        message="{{ __('Are you sure you want to remove this data?') }}" :method="'delete'"
+        button-text="{{ __('Delete Data') }}" />
+    {{-- Bulk Action Confirmation Modal --}}
+    <x-ui.confirmation-modal :show="'showBulkActionModal'" title="{{ __('Confirm Bulk Action') }}"
+        message="{{ __('Are you sure you want to perform this action on ' . count($selectedIds) . ' selected data(s)?') }}"
+        :method="'executeBulkAction'" button-text="{{ __('Confirm Action') }}" />
 </div>

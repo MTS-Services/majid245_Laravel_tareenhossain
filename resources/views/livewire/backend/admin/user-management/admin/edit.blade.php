@@ -1,5 +1,5 @@
 <section>
-    <div class="glass-card rounded-2xl p-6 mb-6">
+    <div class="bg-white rounded-2xl p-6 mb-6">
         <div class="flex items-center justify-between">
             <h2 class="text-xl font-bold text-text-black dark:text-text-white">{{ __('Admin Edit') }}</h2>
             <div class="flex items-center gap-2">
@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <div class="glass-card rounded-2xl p-6 mb-6">
+    <div class="bg-white rounded-2xl p-6 mb-6">
         <form wire:submit="save">
             <div>
                 <x-ui.file-input wire:model="form.avatar" label="Profile Picture" accept="image/*" :error="$errors->first('form.avatar')"
@@ -64,7 +64,7 @@
                 </x-ui.button>
 
                 <x-ui.button type="submit" class="w-auto! py-2!">
-                    <span wire:loading.remove wire:target="save" class="text-white">{{ __('Update Admin') }}</span>
+                    <span wire:loading.remove wire:target="save" class="text-white">{{ __('Update') }}</span>
                     <span wire:loading wire:target="save" class="text-white">{{ __('Updating...') }}</span>
                 </x-ui.button>
             </div>
