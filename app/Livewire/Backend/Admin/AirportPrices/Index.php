@@ -19,6 +19,8 @@ class Index extends Component
     public $bulkAction = '';
     public $showBulkActionModal = false;
 
+    public $perPage = 15;
+
     protected AirportPriceService $service;
 
     public function boot(AirportPriceService $service)
@@ -58,10 +60,10 @@ class Index extends Component
             ],
             [
                 'key' => 'created_at',
-                'label' => 'Created',
+                'label' => 'Created At',
                 'sortable' => true,
                 'format' => function ($data) {
-                    return dateTimeFormat($data->created_at);
+                    return $data->created_at_formatted;
                 }
             ],
         ];
@@ -198,7 +200,7 @@ class Index extends Component
 
     protected function getSelectableIds(): array
     {
-        $ids =  $this->service->getPaginatedData(
+        $ids = $this->service->getPaginatedData(
             perPage: $this->perPage,
             filters: $this->getFilters()
         )->pluck('id')->toArray();

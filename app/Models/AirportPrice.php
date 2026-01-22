@@ -17,6 +17,8 @@ class AirportPrice extends Model
         'executive_saloon_price',
         'eight_seater_price',
         'status',
+        'created_at',
+        'updated_at',
 
     ];
 
@@ -100,5 +102,32 @@ class AirportPrice extends Model
     {
         return $this->status->color();
     }
+
+     /* ================================================================
+     |  Accessors
+     ================================================================ */
+
+    public function getCreatedAtHumanAttribute(): string
+    {
+        return dateTimeHumanFormat($this->attributes['created_at']);
+    }
+
+    public function getUpdatedAtHumanAttribute(): string
+    {
+        return dateTimeHumanFormat($this->attributes['updated_at'], $this->attributes['created_at']);
+    }
+
+
+    public function getCreatedAtFormattedAttribute(): string
+    {
+        return dateTimeFormat($this->attributes['created_at']);
+    }
+
+    public function getUpdatedAtFormattedAttribute(): string
+    {
+        return dateTimeFormat($this->attributes['updated_at'], $this->attributes['created_at']);
+    }
+
+
 
 }

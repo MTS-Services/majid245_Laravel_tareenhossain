@@ -13,7 +13,7 @@
     </title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @fluxAppearance
-    
+
     <script>
         document.addEventListener('livewire:initialized', function() {
             Livewire.on('notify', (event) => {
@@ -31,7 +31,7 @@
         x-transition:leave-end="opacity-0" @click="closeMobileMenu()" class="fixed inset-0 z-40 glass-card lg:hidden">
     </div>
 
-    <div class="flex h-screen">
+    <div class="flex h-screen bg-gray-100">
         <!-- Sidebar -->
         <livewire:backend.admin.partials.sidebar :active="$pageSlug" />
 

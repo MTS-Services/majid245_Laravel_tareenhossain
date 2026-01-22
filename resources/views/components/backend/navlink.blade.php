@@ -143,7 +143,7 @@
                         x-transition:leave="transition-all duration-200"
                         x-transition:leave-start="opacity-100 translate-x-0"
                         x-transition:leave-end="opacity-0 -translate-x-4"
-                        class="font-medium {{ $isMainActive ? 'text-accent-content ' : 'text-text-secondary ' }}">{{ __($name) }}</span>
+                        class="font-medium {{ $isMainActive ? 'text-black ' : 'text-text-secondary ' }}">{{ __($name) }}</span>
                     <div x-show="(desktop && sidebar_expanded) || (!desktop && mobile_menu_open)"
                         class="ml-auto {{ $isMainActive ? 'block' : 'hidden' }}">
                         <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
@@ -182,7 +182,7 @@
                     x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition-all duration-200"
                     x-transition:leave-start="opacity-100 translate-x-0"
                     x-transition:leave-end="opacity-0 -translate-x-4"
-                    class="font-medium text-left {{ $isAnyActive ? 'text-accent-content ' : 'text-text-secondary ' }}">{{ __($name) }}</span>
+                    class="font-medium text-left {{ $isAnyActive ? 'text-black ' : 'text-text-secondary ' }}">{{ __($name) }}</span>
 
                 <!-- Dropdown Arrow for expanded state -->
                 <div x-show="(desktop && sidebar_expanded) || (!desktop && mobile_menu_open)"
@@ -211,20 +211,20 @@
                         const triggerRect = $el.previousElementSibling.getBoundingClientRect();
                         const viewportHeight = window.innerHeight;
                         const dropdownHeight = 400; // approximate max height
-                
+
                         // Position to the right of the trigger
                         $el.style.left = (triggerRect.right + 8) + 'px';
-                
+
                         // Position vertically - center with trigger, but ensure it stays in viewport
                         let topPosition = triggerRect.top + (triggerRect.height / 2) - (dropdownHeight / 2);
-                
+
                         // Adjust if dropdown would go off screen
                         if (topPosition < 20) {
                             topPosition = 20;
                         } else if (topPosition + dropdownHeight > viewportHeight - 20) {
                             topPosition = viewportHeight - dropdownHeight - 20;
                         }
-                
+
                         $el.style.top = topPosition + 'px';
                     }
                 })"
@@ -293,7 +293,7 @@
                                 </div>
                                 <div class="flex-1">
                                     <span
-                                        class="font-medium text-sm {{ isset($item['active']) && $page_slug == $item['active'] ? 'text-accent-content' : 'text-text-secondary' }}">{{ __($item['name']) }}</span>
+                                        class="font-medium text-sm {{ isset($item['active']) && $page_slug == $item['active'] ? 'text-black' : 'text-text-secondary' }}">{{ __($item['name']) }}</span>
                                 </div>
                                 @if (isset($item['active']) && $page_slug == $item['active'])
                                     <div class="w-2 h-2 bg-accent rounded-full animate-pulse">
@@ -341,7 +341,7 @@
                                         class="font-medium text-sm flex-1 text-left {{ (function () use ($item, $page_slug) {
                                             foreach ($item['subitems'] as $subitem) {
                                                 if (isset($subitem['active']) && $page_slug == $subitem['active']) {
-                                                    return 'text-accent-content';
+                                                    return 'text-black';
                                                 }
                                             }
                                             return 'text-text-secondary';
@@ -391,7 +391,7 @@
                                                 @endif
                                             </div>
                                             <span
-                                                class="font-medium text-xs {{ isset($subitem['active']) && $page_slug == $subitem['active'] ? 'text-accent-content' : 'text-text-secondary ' }} flex-1">{{ __($subitem['name']) }}</span>
+                                                class="font-medium text-xs {{ isset($subitem['active']) && $page_slug == $subitem['active'] ? 'text-black' : 'text-text-secondary ' }} flex-1">{{ __($subitem['name']) }}</span>
                                             @if (isset($subitem['active']) && $page_slug == $subitem['active'])
                                                 <div class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse">
                                                 </div>
@@ -418,7 +418,7 @@
                                 </div>
                                 <div class="flex-1">
                                     <span
-                                        class="font-medium text-sm {{ isset($item['active']) && $page_slug == $item['active'] ? 'text-accent-content' : 'text-text-secondary ' }}">{{ __($item['name']) }}</span>
+                                        class="font-medium text-sm {{ isset($item['active']) && $page_slug == $item['active'] ? 'text-black' : 'text-text-secondary ' }}">{{ __($item['name']) }}</span>
                                 </div>
                                 @if (isset($item['active']) && $page_slug == $item['active'])
                                     <div class="w-2 h-2 bg-accent rounded-full animate-pulse">
@@ -466,7 +466,7 @@
                                 @endif
                             </div>
                             <span
-                                class="font-medium text-sm  text-left {{ isset($item['active']) && $page_slug == $item['active'] ? 'text-accent-content' : 'text-text-secondary ' }}">{{ __($item['name']) }}</span>
+                                class="font-medium text-sm  text-left {{ isset($item['active']) && $page_slug == $item['active'] ? 'text-black' : 'text-text-secondary ' }}">{{ __($item['name']) }}</span>
                         </a>
                     @elseif (isset($item['subitems']) && count($item['subitems']) > 0)
                         <!-- Multi-dropdown item -->
@@ -517,7 +517,7 @@
                                     class="font-medium text-sm flex-1 text-left {{ (function () use ($item, $page_slug) {
                                         foreach ($item['subitems'] as $subitem) {
                                             if (isset($subitem['active']) && $page_slug == $subitem['active']) {
-                                                return 'text-accent-content';
+                                                return 'text-black';
                                             }
                                         }
                                         return 'text-text-secondary';
@@ -555,7 +555,7 @@
                                             @endif
                                         </div>
                                         <span
-                                            class="font-medium text-xs {{ isset($subitem['active']) && $page_slug == $subitem['active'] ? 'text-accent-content' : 'text-text-secondary ' }}">{{ __($subitem['name']) }}</span>
+                                            class="font-medium text-xs {{ isset($subitem['active']) && $page_slug == $subitem['active'] ? 'text-black' : 'text-text-secondary ' }}">{{ __($subitem['name']) }}</span>
                                         @if (isset($subitem['active']) && $page_slug == $subitem['active'])
                                             <div class="ml-auto">
                                                 <div class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse">
@@ -582,7 +582,7 @@
                                 @endif
                             </div>
                             <span
-                                class="font-medium text-sm {{ isset($item['active']) && $page_slug == $item['active'] ? 'text-accent-content' : 'text-text-secondary ' }}">{{ __($item['name']) }}</span>
+                                class="font-medium text-sm {{ isset($item['active']) && $page_slug == $item['active'] ? 'text-black' : 'text-text-secondary ' }}">{{ __($item['name']) }}</span>
                             @if (isset($item['active']) && $page_slug == $item['active'])
                                 <div class="ml-auto">
                                     <div class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse">

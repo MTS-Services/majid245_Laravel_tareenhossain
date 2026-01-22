@@ -19,6 +19,8 @@ class Index extends Component
     public $bulkAction = '';
     public $showBulkActionModal = false;
 
+    public $perPage = 15;
+
     protected GalleryCategoryService $service;
 
     public function boot(GalleryCategoryService $service)
@@ -48,10 +50,10 @@ class Index extends Component
             ],
             [
                 'key' => 'created_at',
-                'label' => 'Created',
+                'label' => 'Created At',
                 'sortable' => true,
                 'format' => function ($data) {
-                    return dateTimeFormat($data->created_at);
+                    return $data->created_at_formatted;
                 }
             ],
         ];
