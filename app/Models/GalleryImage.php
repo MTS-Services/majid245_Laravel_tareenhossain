@@ -26,6 +26,14 @@ class GalleryImage extends Model
         'status' => ActiveInactiveStatus::class,
     ];
 
+    public function __construct(array $attributes = [])
+    {
+        parent::__construct($attributes);
+        $this->appends = array_merge(parent::getAppends(), [
+            'image_url',
+        ]);
+    }
+
     // ############## Scopes ##############
     public function scopeActive($query)
     {
@@ -77,6 +85,11 @@ class GalleryImage extends Model
     public function shouldBeSearchable(): bool
     {
         return true;
+    }
+
+    public function getImageUrlAttribute()
+    {
+        return storage_url($this->image);
     }
 
     /* =#=#=#=#=#=#=#=#=#=#=#==#=#=#=#= =#=#=#=#=#=#=#=#=#=#==#=#=#=#=
