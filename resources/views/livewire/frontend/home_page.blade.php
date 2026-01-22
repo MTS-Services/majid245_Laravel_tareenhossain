@@ -42,7 +42,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-wrap gap-4 scroll-animate">
-                        <a href="#booking"
+                        <a href="{{ route('booking') }}"
                             class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl">
                             Get Instant Quote
                         </a>
@@ -511,5 +511,3 @@
         </section>
     </div>
 </section>
-
-
