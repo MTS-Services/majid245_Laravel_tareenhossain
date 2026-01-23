@@ -473,7 +473,7 @@ body {
 }
 
 .scroll-animate {
-    @apply translate-y-8 opacity-0 transition-all duration-700 ease-out;
+    @apply translate-y-8 opacity-0 transition-all duration-1000 ease-out;
 }
 
 .scroll-animate.show {

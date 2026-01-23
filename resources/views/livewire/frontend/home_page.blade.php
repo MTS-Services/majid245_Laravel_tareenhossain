@@ -20,7 +20,7 @@
             <div class="container relative z-10 px-6 text-white animate-fade-in-up">
                 <div>
                     <!-- Main Heading -->
-                    <h1 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-white scroll-animate">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white scroll-animate">
                         Executive Airport Transfers —
                         <span class="block mt-2 text-white">Covering All of South Yorkshire</span>
                     </h1>
@@ -58,7 +58,7 @@
         <section class="py-12 bg-bg scroll-mt-[72px]" id="why">
             <div class="container mx-auto px-5">
                 <h2
-                    class="font-serif text-3xl md:text-4xl font-bold mb-3 text-center scroll-animate transition-all duration-700 ease-out">
+                    class="text-3xl md:text-4xl font-bold mb-3 text-center scroll-animate transition-all duration-700 ease-out">
                     Why choose Central Executive Transfers
                 </h2>
                 <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto scroll-animate">
@@ -118,7 +118,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     <!-- Card 1: Licensed Drivers -->
                     <div
-                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-lg min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group flex flex-col justify-center items-center">
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group flex flex-col justify-center items-center">
                         <div
                             class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
@@ -127,14 +127,14 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <h3 class="font-serif text-xl font-bold mb-2 text-gray-900">Sheffield Licensed</h3>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Sheffield Licensed</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">All drivers fully licensed by Sheffield
                             City Council with enhanced DBS checks for your safety and peace of mind.</p>
                     </div>
 
                     <!-- Card 2: Executive Vehicles -->
                     <div
-                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-lg min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
                         <div
                             class="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
@@ -144,14 +144,14 @@
                                     d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z" />
                             </svg>
                         </div>
-                        <h3 class="font-serif text-xl font-bold mb-2 text-gray-900">Premium Fleet</h3>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Premium Fleet</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">Mercedes E-Class and 8-seater MPVs —
                             immaculately maintained, comfortable, and reliable executive vehicles.</p>
                     </div>
 
                     <!-- Card 3: Flight Tracking -->
                     <div
-                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-lg min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
                         <div
                             class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
@@ -159,14 +159,14 @@
                                     d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
                             </svg>
                         </div>
-                        <h3 class="font-serif text-xl font-bold mb-2 text-gray-900">Flight Tracking</h3>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Flight Tracking</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">Real-time flight monitoring with complimentary
                             waiting time — we adapt to delays so you never worry.</p>
                     </div>
 
                     <!-- Card 4: Fixed Prices -->
                     <div
-                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-lg min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
                         <div
                             class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
@@ -177,14 +177,14 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <h3 class="font-serif text-xl font-bold mb-2 text-gray-900">Transparent Pricing</h3>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Transparent Pricing</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">Fixed rates quoted upfront before booking — no
                             hidden charges, no meter surprises, total clarity.</p>
                     </div>
 
                     <!-- Card 5: 24/7 Service -->
                     <div
-                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-lg min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
                         <div
                             class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
@@ -193,14 +193,14 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <h3 class="font-serif text-xl font-bold mb-2 text-gray-900">24/7 Availability</h3>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">24/7 Availability</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">Round-the-clock service for early departures
                             and late arrivals — we're ready whenever you need us.</p>
                     </div>
 
                     <!-- Card 6: Easy Booking -->
                     <div
-                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-lg min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
                         <div
                             class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
@@ -208,14 +208,14 @@
                                     d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                             </svg>
                         </div>
-                        <h3 class="font-serif text-xl font-bold mb-2 text-gray-900">Instant Booking</h3>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Instant Booking</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">Quick online quotes with secure payment in
                             minutes — book your transfer effortlessly from any device.</p>
                     </div>
 
                     <!-- Card 7: Meet & Greet -->
                     <div
-                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-lg min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
                         <div
                             class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
@@ -223,14 +223,14 @@
                                     d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
                             </svg>
                         </div>
-                        <h3 class="font-serif text-xl font-bold mb-2 text-gray-900">Meet & Greet</h3>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Meet & Greet</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">Personal terminal meet service with name board
                             — seamless airport collection for a premium experience.</p>
                     </div>
 
                     <!-- Card 8: Luggage Assistance -->
                     <div
-                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-lg min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
                         <div
                             class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
@@ -239,7 +239,7 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <h3 class="font-serif text-xl font-bold mb-2 text-gray-900">Luggage Assistance</h3>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Luggage Assistance</h3>
                         <p class="text-gray-600 text-sm leading-relaxed">Complimentary help with bags and cases — our
                             chauffeurs ensure door-to-door convenience and care.</p>
                     </div>
@@ -251,7 +251,7 @@
         <section class="py-9 scroll-mt-[72px]" id="prices">
             <div class="container mx-auto px-5">
                 <h2
-                    class="font-serif text-3xl font-bold text-center mb-6 scroll-animate transition-all duration-700 ease-out">
+                    class="text-3xl font-bold text-center mb-6 scroll-animate transition-all duration-700 ease-out">
                     Transparent Airport Prices
                 </h2>
                 <div
@@ -271,76 +271,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($airportPrices as $airportPrice)
-                                <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                    <td class="p-4 font-bold">{{ $airportPrice->route_from }}</td>
-                                    <td class="p-4">£{{ $airportPrice->executive_saloon_price }}</td>
-                                    <td class="p-4">£{{ $airportPrice->eight_seater_price }}</td>
+                            @forelse ($airportPrices as $airportPrice)
+                                <tr
+                                    class="hover:bg-yellow-50 transition-all duration-300 cursor-pointer border-b border-gray-200 shadow-sm scroll-animate">
+                                    <td class="p-4 font-bold border-r border-gray-200 shadow">
+                                        {{ $airportPrice->route_from }}
+                                    </td>
+                                    <td class="p-4 border-r border-gray-200 shadow-sm">
+                                        £{{ round($airportPrice->executive_saloon_price) }}
+                                    </td>
+                                    <td class="p-4 shadow-sm">
+                                        £{{ round($airportPrice->eight_seater_price) }}
+                                    </td>
                                 </tr>
-                            @endforeach
-                            {{-- <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">Manchester (MAN)</td>
-                                <td class="p-4">£100</td>
-                                <td class="p-4">£130</td>
-                            </tr>
-                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">East Midlands (EMA)</td>
-                                <td class="p-4">£100</td>
-                                <td class="p-4">£130</td>
-                            </tr>
-                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">Leeds Bradford (LBA)</td>
-                                <td class="p-4">£100</td>
-                                <td class="p-4">£130</td>
-                            </tr>
-                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">Birmingham (BHX)</td>
-                                <td class="p-4">£150</td>
-                                <td class="p-4">£180</td>
-                            </tr>
-                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">Liverpool John Lennon (LPL)</td>
-                                <td class="p-4">£135</td>
-                                <td class="p-4">£195</td>
-                            </tr>
-                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">Luton (LTN)</td>
-                                <td class="p-4">£250</td>
-                                <td class="p-4">£280</td>
-                            </tr>
-                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">Heathrow (LHR)</td>
-                                <td class="p-4">£280</td>
-                                <td class="p-4">£310</td>
-                            </tr>
-                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">Gatwick (LGW)</td>
-                                <td class="p-4">£325</td>
-                                <td class="p-4">£380</td>
-                            </tr>
-                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">Birmingham Airport</td>
-                                <td class="p-4">£145</td>
-                                <td class="p-4">£175</td>
-                            </tr>
-
-                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">Luton Airport</td>
-                                <td class="p-4">£250</td>
-                                <td class="p-4">£290</td>
-                            </tr>
-
-                            <tr class="hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">Heathrow Airport</td>
-                                <td class="p-4">£280</td>
-                                <td class="p-4">£330</td>
-                            </tr>
-
-                            <tr class="bg-gray-50 hover:bg-yellow-50 transition-all duration-300! cursor-pointer">
-                                <td class="p-4 font-bold">Gatwick Airpor</td>
-                                <td class="p-4">£350</td>
-                                <td class="p-4">£420</td>
-                            </tr> --}}
+                            @empty
+                                <tr>
+                                    <td colspan="3"
+                                        class="p-4 text-center text-gray-500 border-t border-gray-200 shadow-sm">
+                                        No airport prices found.
+                                    </td>
+                                </tr>
+                            @endforelse
                         </tbody>
                     </table>
                 </div>
@@ -350,33 +301,36 @@
         <!-- Fleet Section -->
         <section class="py-9 bg-bg scroll-mt-[72px]" id="fleet">
             <div class="container mx-auto px-5">
-                <h2 class="font-serif text-3xl font-bold mb-6 scroll-animate">Fleet</h2>
+                <h2 class="text-3xl font-bold mb-6 scroll-animate">Fleet</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2 group">
+                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
                         <div class="overflow-hidden rounded-lg mb-2 bg-gray-100">
                             <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
                                 src="https://centraltravels.co.uk/assets/merc-c.webp" alt="Executive">
                         </div>
-                        <h3 class="font-serif text-lg font-bold mb-2">Executive</h3>
+                        <h3 class="text-lg font-bold mb-2">Executive</h3>
                         <p class="m-0">Mercedes E‑Class or similar — 4 passengers • 2 suitcases • 2 hand carry.</p>
                     </div>
                     <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2 group">
+                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
                         <div class="overflow-hidden rounded-lg mb-2 bg-gray-100">
                             <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
                                 src="https://centraltravels.co.uk/assets/mercedes-benz-vito.webp" alt="Minibus">
                         </div>
-                        <h3 class="font-serif text-lg font-bold mb-2">Minibus</h3>
+                        <h3 class="text-lg font-bold mb-2">Minibus</h3>
                         <p class="m-0">8‑seater MPV — 8 passengers • 8 suitcases • 3 hand carry.</p>
                     </div>
                     <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2 group">
+                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
                         <div class="overflow-hidden rounded-lg mb-2 bg-gray-100">
                             <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
                                 src="https://centraltravels.co.uk/assets/rolls-royce.png" alt="Luxury">
                         </div>
-                        <h3 class="font-serif text-lg font-bold mb-2">Luxury</h3>
+                        <h3 class="text-lg font-bold mb-2">Luxury</h3>
                         <p class="m-0">Rolls‑Royce or similar — 3 passengers • 2 suitcases • 2 hand carry.</p>
                     </div>
                 </div>
@@ -386,25 +340,28 @@
         <!-- Reviews Section -->
         <section class="py-9 scroll-mt-[72px]" id="reviews">
             <div class="container mx-auto px-5">
-                <h2 class="font-serif text-3xl font-bold mb-6 scroll-animate">
+                <h2 class="text-3xl font-bold mb-6 scroll-animate">
                     Reviews</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">"Reliable and professional"</h3>
+                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <h3 class="text-lg font-bold mb-2">"Reliable and professional"</h3>
                         <p class="m-0">Great communication, spotless car and on time for both legs. Will use again.
                         </p>
                         <p class="text-sm text-gray-600 mt-2">— Google Review</p>
                     </div>
                     <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">"Smooth airport run"</h3>
+                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <h3 class="text-lg font-bold mb-2">"Smooth airport run"</h3>
                         <p class="m-0">Driver tracked our flight and waited — stress free after a long day.</p>
                         <p class="text-sm text-gray-600 mt-2">— Google Review</p>
                     </div>
                     <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">"Executive service"</h3>
+                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                        <h3 class="text-lg font-bold mb-2">"Executive service"</h3>
                         <p class="m-0">Mercedes E‑Class, bottled water, and a calm ride. 5 stars.</p>
                         <p class="text-sm text-gray-600 mt-2">— Google Review</p>
                     </div>
@@ -416,91 +373,57 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
+        {{-- <!-- FAQ Section -->
         <section class="py-9 scroll-mt-[72px]" id="faq">
             <div class="container mx-auto px-5">
-                <h2 class="font-serif text-3xl font-bold mb-6 scroll-animate">
+                <h2 class="text-3xl font-bold mb-6 scroll-animate">
                     FAQs</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 
                     @foreach ($faqs as $faq)
                         <div
-                            class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                            <h3 class="font-serif text-lg font-bold mb-2">{{ $faq->question }}</h3>
+                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <h3 class="text-lg font-bold mb-2">{{ $faq->question }}</h3>
                             <p class="m-0">{{ $faq->answer }}</p>
                         </div>
                     @endforeach
-                    {{-- <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">How do I pick a pickup time?</h3>
-                        <p class="m-0">For departures arrive 2–3 hours before take‑off; for arrivals use your
-                            landing time — we include waiting.</p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">Do you work 24/7?</h3>
-                        <p class="m-0">Yes — early mornings and late nights covered.</p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">Do you charge for delays?</h3>
-                        <p class="m-0">No, we track flights and adjust.</p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">Do you include waiting time for arrivals?</h3>
-                        <p class="m-0">Yes. We track your flight and include complimentary waiting after landing.
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">Are child seats available?</h3>
-                        <p class="m-0">Yes — request at booking (subject to availability) so we can prepare the
-                            correct seat.</p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">What areas do you cover?</h3>
-                        <p class="m-0">All of South Yorkshire for pickups, and any UK airport or destination for
-                            drop‑offs.</p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">Corporate accounts</h3>
-                        <p class="m-0">We welcome business accounts with consolidated billing and priority support.
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">Can I change or cancel?</h3>
-                        <p class="m-0">Yes — contact us as soon as possible. Changes are free; cancellation policy
-                            applies.</p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">Meet & Greet</h3>
-                        <p class="m-0">Your driver can meet you in the terminal with a name board; add this in the
-                            notes.</p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">Payment methods</h3>
-                        <p class="m-0">Card, Apple Pay/Google Pay, and Cash</p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-4 shadow-lg min-h-44 scroll-animate hover:shadow-2xl transition-all duration-300! hover:border-second-500 hover:-translate-y-2">
-                        <h3 class="font-serif text-lg font-bold mb-2">Last‑minute bookings</h3>
-                        <p class="m-0">Message us on WhatsApp for urgent requests — we'll confirm availability fast.
-                        </p>
-                    </div> --}}
+                </div>
+            </div>
+        </section> --}}
+
+        <!-- FAQ Section -->
+        <section class="py-14 scroll-mt-[72px] bg-gray-50" id="faq">
+            <div class="container mx-auto px-5">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-3 scroll-animate">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-gray-600 mb-8 max-w-2xl scroll-animate">
+                    Clear answers to common questions about our executive transfer services.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    @foreach ($faqs as $faq)
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                                {{ $faq->question }}
+                            </h3>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                {{ $faq->answer }}
+                            </p>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </section>
 
+
         <!-- CTA Section -->
         <section class="bg-white text-center py-12 scroll-animate">
             <div class="container mx-auto px-5">
-                <h2 class="font-serif text-3xl font-bold text-black mb-3 scroll-animate">Ready when you are</h2>
+                <h2 class="text-3xl font-bold text-black mb-3 scroll-animate">Ready when you are</h2>
                 <p class="text-black mb-3 scroll-animate"> Book now and secure your driver</p>
                 <p class="scroll-animate">
                     <a href="{{ route('booking') }}"
