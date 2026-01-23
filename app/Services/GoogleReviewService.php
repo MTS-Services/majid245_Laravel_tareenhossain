@@ -3,29 +3,29 @@
 namespace App\Services;
 
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Cache;
 
 class GoogleReviewService
 {
-    /**
-     * Create a new class instance.
-     */
-    public function __construct()
+    public function getReviews(): array
     {
-        //
-    }
+        // return Cache::remember('google_reviews', now()->addHours(6), function () {
 
-    public function getReviews()
-    {
         $response = Http::get(
             'https://maps.googleapis.com/maps/api/place/details/json',
             [
                 'place_id' => config('services.google.place_id'),
-                'fields'   => 'reviews,rating,user_ratings_total',
-                'key'      => config('services.google.api_key'),
+                'fields' => 'reviews,rating,user_ratings_total',
+                'key' => config('services.google.api_key'),
             ]
         );
-        // dd($response->json());
+        dd($response->json());
 
-        return $response->json('result.reviews') ?? [];
+        if (!$response->successful()) {
+            return [];
+        }
+
+        return $response->json('result.reviews', []);
+        // });
     }
 }
