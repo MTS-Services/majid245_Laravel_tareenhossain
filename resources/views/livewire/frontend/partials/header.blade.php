@@ -3,6 +3,7 @@
         <a class="no-underline" href="{{ route('home') }}">
             <span class="text-white font-black tracking-wide text-lg mr-2">CENTRAL</span>
             <div class="text-second-500 text-xs tracking-widest uppercase">Executive Transfers</div>
+            <span>tests</span>
         </a>
         <nav class="hidden md:flex gap-2" id="nav">
 

@@ -295,14 +295,15 @@
     h3,
     h4,
     h5,
-    h6 {
-        @apply font-montserrat;
-    }
-
+    h6,
     p,
     li {
         @apply font-inter;
     }
+    * {
+    font-family: 'Inter', sans-serif;
+    }
+
 
     .dark * {
         border-color: var(--color-gray-700, currentColor);
