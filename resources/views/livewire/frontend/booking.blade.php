@@ -7,10 +7,10 @@
         </div>
 
         <div class="container relative z-10 px-6 text-white text-center">
-            <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-second-500 scroll-animate-y-reverse ease-in!">
                 Reserve your driver now
             </h1>
-            <p class="text-lg md:text-xl text-white max-w-2xl mx-auto">
+            <p class="text-lg md:text-xl text-white max-w-2xl mx-auto scroll-animate-x ease-in!">
                 Search, choose your vehicle/price, then complete details & payment in one flow.
             </p>
         </div>
@@ -19,7 +19,7 @@
 
     <section class="py-9 scroll-mt-[72px]" id="booking">
         <div class="container mx-auto px-5">
-            <h2 class="font-serif text-3xl font-bold text-center mb-6 scroll-animate">
+            <h2 class="text-3xl font-bold text-center mb-6 scroll-animate">
                 Book Instantly</h2>
             <p class="text-center text-sm text-gray-600 -mt-1 mb-5 scroll-animate">
                 Search, choose your vehicle/price, then complete details & payment in one flow.
