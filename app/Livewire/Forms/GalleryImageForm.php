@@ -22,7 +22,7 @@ class GalleryImageForm extends Form
         $imageRule = $this->id ? 'nullable' : 'required';
 
         return [
-            'gallery_category_id' => 'required|exists:gallery_categories,id',
+            'gallery_category_id' => 'nullable|exists:gallery_categories,id',
             'image' => $imageRule . '|image|mimes:jpeg,jpg,png,gif,webp',
             'alt' => 'nullable|string|max:255',
             'status' => 'required|string|in:' . implode(',', array_column(ActiveInactiveStatus::cases(), 'value')),

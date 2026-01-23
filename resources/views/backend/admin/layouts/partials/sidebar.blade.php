@@ -31,12 +31,15 @@
         <nav class="p-2 space-y-2">
             <x-backend.navlink type="single" icon="layout-dashboard" name="Dashboard" :route="route('admin.dashboard')"
                 active="dashboard" :page_slug="$active" />
-            <x-backend.navlink type="single" icon="user-circle" name="Admins" :route="route('admin.um.admin.index')"
-                active="admin" :page_slug="$active" />
-            <x-backend.navlink type="single" route="{{ route('admin.airport-price.index') }}" icon="currency-dollar" name="Airport Price" active="airport_price" :page_slug="$active" />
-            <x-backend.navlink type="single" route="{{ route('admin.gallery-category.index') }}" icon="folder" name="Gallery Category" active="gallery_category" :page_slug="$active" />
-            <x-backend.navlink type="single" route="{{ route('admin.gallery-image.index') }}" icon="photo" name="Gallery Image" active="gallery_image" :page_slug="$active" />
-            <x-backend.navlink type="single" route="{{ route('admin.faq.index') }}" icon="question-mark-circle" name="FAQ" active="faq" :page_slug="$active" />
+            <x-backend.navlink type="single" icon="user-circle" name="Admins" :route="route('admin.um.admin.index')" active="admin"
+                :page_slug="$active" />
+            <x-backend.navlink type="single" route="{{ route('admin.airport-price.index') }}" icon="currency-dollar"
+                name="Airport Price" active="airport_price" :page_slug="$active" />
+            {{-- <x-backend.navlink type="single" route="{{ route('admin.gallery-category.index') }}" icon="folder" name="Gallery Category" active="gallery_category" :page_slug="$active" /> --}}
+            <x-backend.navlink type="single" route="{{ route('admin.gallery-image.index') }}" icon="photo"
+                name="Gallery Image" active="gallery_image" :page_slug="$active" />
+            <x-backend.navlink type="single" route="{{ route('admin.faq.index') }}" icon="question-mark-circle"
+                name="FAQ" active="faq" :page_slug="$active" />
 
             <div class="space-y-2">
                 <flux:separator class="bg-accent!" />

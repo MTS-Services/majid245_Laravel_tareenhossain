@@ -52,7 +52,7 @@
         <a class="flex-1 text-center px-4 py-3 rounded-lg font-semibold no-underline text-white transition-all duration-300! hover:-translate-y-1"
             href="https://wa.me/447405172435" target="_blank" rel="noopener" style="background:#25D366">WhatsApp</a>
         <a class="flex-1 text-center px-4 py-3 rounded-lg font-semibold no-underline bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1"
-            href="{{ route('booking') }}">Get Quote</a>
+            href="{{ route('booking') }}#booking">Get Quote</a>
     </div>
 
 
