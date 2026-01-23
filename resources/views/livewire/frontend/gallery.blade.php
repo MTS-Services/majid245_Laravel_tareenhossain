@@ -25,18 +25,20 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
         <template x-for="(image, i) in images" :key="image.id">
-            <div @click="openLightbox(i)"
+
+            <div x-memo="image.id" @click="openLightbox(i)"
                 class="cursor-pointer transform transition-all duration-500 hover:-translate-y-1">
 
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
 
-                    <img :src="image.image_url ?? '{{ asset('storage') }}/' + image.image" :alt="image.alt"
+                    <img loading="eager" decoding="async" fetchpriority="high" width="400" height="400"
+                        :src="image.thumb_url ?? (image.image_url ?? '{{ asset('storage') }}/' + image.image)"
+                        :alt="image.alt"
                         class="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110">
 
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent
                                opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
-
                         <div class="p-4">
                             <p class="text-sm text-white" x-text="image.alt"></p>
                         </div>
@@ -44,6 +46,7 @@
 
                 </div>
             </div>
+
         </template>
 
         {{-- Empty state --}}
@@ -69,8 +72,10 @@
 
         {{-- Image --}}
         <div class="max-w-[90vw] max-h-[85vh]">
-            <img x-show="images.length"
-                :src="images[index]?.image_url ?? '{{ asset('storage') }}/' + images[index]?.image"
+            <img x-show="images.length" loading="eager" decoding="async"
+                :src="images[index]?.full_url ??
+                    images[index]?.image_url ??
+                    '{{ asset('storage') }}/' + images[index]?.image"
                 :alt="images[index]?.alt"
                 class="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl transition-all duration-300">
         </div>
