@@ -98,20 +98,30 @@
         });
     </script>
     <script>
-        const elements = document.querySelectorAll('.scroll-animate');
+        function initScrollAnimations() {
+            const elements = document.querySelectorAll(
+                '.scroll-animate, .scroll-animate-x, .scroll-animate-x-reverse, .scroll-animate-y, .scroll-animate-y-reverse'
+            );
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                    observer.unobserve(entry.target);
-                }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
             });
-        }, {
-            threshold: 0.15
-        });
 
-        elements.forEach(el => observer.observe(el));
+            elements.forEach(el => observer.observe(el));
+        }
+
+        // First load
+        document.addEventListener('DOMContentLoaded', initScrollAnimations);
+
+        // Livewire wire:navigate page change
+        document.addEventListener('livewire:navigated', initScrollAnimations);
     </script>
     @stack('scripts')
 </body>

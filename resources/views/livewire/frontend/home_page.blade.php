@@ -10,7 +10,7 @@
         <!-- Hero Section -->
         <section class="relative h-screen md:h-[60vh] flex items-center justify-center overflow-hidden">
             <!-- Background Image -->
-            <div class="absolute inset-0 z-0 scroll-animate">
+            <div class="absolute inset-0 z-0 scroll-animate-y">
                 <img src="https://centraltravels.co.uk/assets/airport-transfer.jpeg" alt="Luxury Car"
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/45 to-black/70"></div>
@@ -20,20 +20,20 @@
             <div class="container relative z-10 px-6 text-white animate-fade-in-up">
                 <div>
                     <!-- Main Heading -->
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white scroll-animate">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white scroll-animate-y-reverse ease-in!">
                         Executive Airport Transfers —
-                        <span class="block mt-2 text-white">Covering All of South Yorkshire</span>
+                        <span class="block mt-2 text-second-500 scroll-animate-x ease-in!">Covering All of South Yorkshire</span>
                     </h1>
 
                     <!-- Sub Heading -->
-                    <p class="text-lg md:text-xl mb-8 text-white scroll-animate">
+                    <p class="text-lg md:text-xl mb-8 text-white scroll-animate-y-reverse ease-in-out!">
                         Fixed prices • Flight tracking • 24/7 service
                     </p>
 
                     <!-- Rating Badge -->
                     <div
-                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-md px-6 py-3 mb-8 hover:bg-white/20 scroll-animate">
-                        <svg class="w-6 h-6 text-second-500" fill="currentColor" viewBox="0 0 20 20">
+                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-md px-6 py-3 mb-8 hover:bg-white/20 scroll-animate-y-reverse ease-in-out!">
+                        <svg class="w-6 h-6 fill-second-500" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
@@ -41,21 +41,81 @@
                     </div>
 
                     <!-- CTA Buttons -->
-                    <div class="flex flex-wrap gap-4 scroll-animate">
+                    <div class="flex flex-wrap gap-4">
                         <a href="{{ route('booking') }}"
-                            class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl">
+                            class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl scroll-animate-x-reverse pulse-premium">
                             Get Instant Quote
                         </a>
                         <a href="tel:+447405172435"
-                            class="bg-transparent hover:bg-white/20 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300! backdrop-blur-sm">
+                            class="bg-transparent hover:bg-white/20 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all backdrop-blur-sm scroll-animate-x">
                             Call +447405172435
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+
+        {{-- <!-- Hero Section -->
+        <section class="relative h-screen md:h-[60vh] flex items-center justify-center overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0 scroll-animate-y">
+                <img src="https://centraltravels.co.uk/assets/airport-transfer.jpeg" alt="Luxury Car"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/45 to-black/70"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="container relative z-10 px-6 text-white animate-fade-in-up">
+                <div>
+                    <!-- Main Heading -->
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white scroll-animate-y-reverse ease-in">
+                        Executive Airport Transfers —
+                        <span class="block mt-2">Covering All of South Yorkshire</span>
+                    </h1>
+
+                    <!-- Sub Heading -->
+                    <p class="text-lg md:text-xl mb-8 text-white scroll-animate-y-reverse">
+                        Fixed prices • Flight tracking • 24/7 service
+                    </p>
+
+                    <!-- PRIMARY CTA (MOST PROMINENT) -->
+                    <div class="mb-8">
+                        <a href="{{ route('booking') }}"
+                            class="pulse-premium inline-block bg-second-500 hover:bg-yellow-500 text-black font-semibold
+                          px-10 py-5 rounded-xl text-xl transition-all duration-300
+                          hover:scale-105 hover:shadow-2xl shadow-xl">
+                            Get Instant Quote
+                        </a>
+                    </div>
+
+                    <!-- Rating Badge (Now Secondary) -->
+                    <div
+                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm
+                       border border-white/30 rounded-md px-6 py-3 mb-8
+                       hover:bg-white/20 transition-all">
+                        <svg class="w-6 h-6 text-second-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <span class="font-semibold text-lg text-white">
+                            5-Star Rated Service on Google
+                        </span>
+                    </div>
+
+                    <!-- Secondary CTA -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="tel:+447405172435"
+                            class="bg-transparent hover:bg-white/20 border-2 border-white text-white
+                          font-semibold px-8 py-4 rounded-lg text-lg transition-all backdrop-blur-sm">
+                            Call +44 7405 172435
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section> --}}
+
         <!-- Why Choose Section -->
-        <section class="py-12 bg-bg scroll-mt-[72px]" id="why">
+        <section class="py-12 bg-bg scroll-mt-[72px] max-h-[100vh-200px] md:h-full" id="why">
             <div class="container mx-auto px-5">
                 <h2
                     class="text-3xl md:text-4xl font-bold mb-3 text-center scroll-animate transition-all duration-700 ease-out">
@@ -250,8 +310,7 @@
         <!-- Prices Section -->
         <section class="py-9 scroll-mt-[72px]" id="prices">
             <div class="container mx-auto px-5">
-                <h2
-                    class="text-3xl font-bold text-center mb-6 scroll-animate transition-all duration-700 ease-out">
+                <h2 class="text-3xl font-bold text-center mb-6 scroll-animate transition-all duration-700 ease-out">
                     Transparent Airport Prices
                 </h2>
                 <div

@@ -57,7 +57,7 @@
                         class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent
                                opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
                         <div class="p-4">
-                            <h3 class="text-white font-serif text-lg font-bold" x-text="image.category?.name"></h3>
+                            <h3 class="text-white text-lg font-bold" x-text="image.category?.name"></h3>
                             <p class="text-sm text-white" x-text="image.alt"></p>
                         </div>
                     </div>
