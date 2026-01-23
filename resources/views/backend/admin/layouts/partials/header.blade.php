@@ -74,8 +74,14 @@
 
                     <button @click="open = !open" class="avatar">
                         <div class="w-10 h-10 rounded-full">
-                            <img src="{{ storage_url(admin()->avatar) }}" alt="{{ admin()->name }}"
-                                class="object-cover w-full h-full">
+                            @if (admin()->avatar)
+                                <img src="{{ auth_storage_url(admin()->avatar) }}" alt="Profile"
+                                    class="w-10 h-10 rounded-full object-cover shadow-sm">
+                            @else
+                                <div
+                                    class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 font-semibold">
+                                    {{ strtoupper(substr(admin()->name, 0, 2)) }}</div>
+                            @endif
                         </div>
                     </button>
 

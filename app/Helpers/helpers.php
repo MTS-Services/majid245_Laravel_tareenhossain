@@ -83,7 +83,7 @@ if (!function_exists('auth_storage_url')) {
     function auth_storage_url($url)
     {
         $image = asset('assets/images/other.png');
-        return $url ? $url : $image;
+        return $url ? (Str::startsWith($url, 'https://') ? $url : asset('storage/' . $url)) : $image;
     }
 }
 

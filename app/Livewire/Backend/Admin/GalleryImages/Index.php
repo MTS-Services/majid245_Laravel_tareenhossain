@@ -37,17 +37,17 @@ class Index extends Component
                 'label' => 'Image',
                 'sortable' => false,
                 'format' => function ($data) {
-                    return '<img src="' . asset('storage/' . $data->image) . '" alt="' . ($data->alt ?? 'Gallery Image') . '" class="w-16 h-16 object-cover rounded">';
+                    return '<img src="' . storage_url($data->image) . '" class="w-16 h-16 object-cover rounded">';
                 }
             ],
-            [
-                'key' => 'gallery_category_id',
-                'label' => 'Category',
-                'sortable' => true,
-                'format' => function ($data) {
-                    return $data->category ? $data->category->name : 'N/A';
-                }
-            ],
+            // [
+            //     'key' => 'gallery_category_id',
+            //     'label' => 'Category',
+            //     'sortable' => true,
+            //     'format' => function ($data) {
+            //         return $data->category ? $data->category->name : 'N/A';
+            //     }
+            // ],
             [
                 'key' => 'alt',
                 'label' => 'Alt Text',

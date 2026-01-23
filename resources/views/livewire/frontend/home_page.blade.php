@@ -42,7 +42,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-wrap gap-4 scroll-animate">
-                        <a href="{{ route('booking') }}"
+                        <a href="{{ route('booking') }}#booking"
                             class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl">
                             Get Instant Quote
                         </a>
@@ -426,7 +426,7 @@
                 <h2 class="text-3xl font-bold text-black mb-3 scroll-animate">Ready when you are</h2>
                 <p class="text-black mb-3 scroll-animate"> Book now and secure your driver</p>
                 <p class="scroll-animate">
-                    <a href="{{ route('booking') }}"
+                    <a href="{{ route('booking') }}#booking"
                         class="inline-block px-6 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1 hover:shadow-2xl shadow-lg">Reserve
                         your driver now</a>
                 </p>

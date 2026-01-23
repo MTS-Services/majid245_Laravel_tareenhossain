@@ -12,7 +12,7 @@
                 <span
                     class="nav_style group-hover:w-full! {{ Route::currentRouteName() == 'gallery' ? 'w-full!' : '' }}"></span>
             </a>
-            <a href="{{ route('booking') }}"
+            <a href="{{ route('booking') }}#booking"
                 class="nav_link group {{ Route::currentRouteName() == 'booking' ? 'text-second-500!' : '' }}">
                 Book
                 <span
@@ -58,7 +58,7 @@
         id="mobileNav">
         <a href="{{ route('gallery') }}"
             class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Gallery</a>
-        <a href="{{ route('booking') }}"
+        <a href="{{ route('booking') }}#booking"
             class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Book</a>
         <a href="{{ route('home') }}#why"
             class="block text-white no-underline font-semibold my-2 hover:text-second-500 hover:bg-white/10 p-2">Why

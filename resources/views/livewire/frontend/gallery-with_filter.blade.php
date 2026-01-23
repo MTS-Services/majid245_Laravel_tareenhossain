@@ -21,13 +21,33 @@
     }
 }" class="container mx-auto px-4 py-10">
 
+    {{-- ================= CATEGORY FILTER ================= --}}
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+        <button wire:click="selectCategory('All')"
+            class="px-6 py-2 rounded-lg font-semibold transition-all duration-500
+                {{ $selectedCategory === 'All'
+                    ? 'bg-second-500 text-gray-900'
+                    : 'bg-gray-200 text-gray-700 hover:bg-second-500 hover:text-gray-900' }}">
+            All
+        </button>
+
+        @foreach ($categories as $category)
+            <button wire:click="selectCategory({{ $category->id }})"
+                class="px-6 py-2 rounded-lg font-semibold transition-all duration-500
+                    {{ $selectedCategory == $category->id
+                        ? 'bg-second-500 text-gray-900'
+                        : 'bg-gray-200 text-gray-700 hover:bg-second-500 hover:text-gray-900' }}">
+                {{ $category->name }}
+            </button>
+        @endforeach
+    </div>
+
     {{-- ================= GALLERY GRID ================= --}}
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
         <template x-for="(image, i) in images" :key="image.id">
             <div @click="openLightbox(i)"
                 class="cursor-pointer transform transition-all duration-500 hover:-translate-y-1">
-
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
 
                     <img :src="image.image_url ?? '{{ asset('storage') }}/' + image.image" :alt="image.alt"
@@ -36,8 +56,8 @@
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent
                                opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
-
                         <div class="p-4">
+                            <h3 class="text-white font-serif text-lg font-bold" x-text="image.category?.name"></h3>
                             <p class="text-sm text-white" x-text="image.alt"></p>
                         </div>
                     </div>
@@ -48,7 +68,7 @@
 
         {{-- Empty state --}}
         <div x-show="images.length === 0" class="col-span-full text-center text-gray-500 text-lg py-20">
-            No images found.
+            No images found for this category.
         </div>
 
     </div>
