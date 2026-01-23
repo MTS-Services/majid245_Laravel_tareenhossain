@@ -173,6 +173,18 @@ class Index extends Component
             $this->error('Bulk action failed: ' . $e->getMessage());
         }
     }
+     protected function bulkDelete(): void
+    {
+        $count = $this->service->bulkDeleteData($this->selectedIds, admin()->id);
+
+        $this->success("{$count} Datas deleted successfully");
+    }
+
+    protected function bulkUpdateStatus(ActiveInactiveStatus $status): void
+    {
+        $count = $this->service->bulkUpdateStatus($this->selectedIds, $status);
+        $this->success("{$count} Datas updated successfully");
+    }
 
     protected function getFilters(): array
     {
@@ -188,4 +200,14 @@ class Index extends Component
     {
         $this->resetPage();
     }
+
+     protected function getSelectableIds(): array
+    {
+        $ids = $this->service->getPaginatedData(
+            perPage: $this->perPage,
+            filters: $this->getFilters()
+        )->pluck('id')->toArray();
+        return $ids;
+    }
+
 }
