@@ -19,8 +19,6 @@ class GoogleReviewService
                 'key' => config('services.google.api_key'),
             ]
         );
-        dd($response->json());
-
         if (!$response->successful()) {
             return [];
         }
