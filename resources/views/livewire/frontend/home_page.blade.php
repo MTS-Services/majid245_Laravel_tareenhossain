@@ -32,7 +32,7 @@
 
                     <!-- Rating Badge -->
                     <div
-                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-md px-6 py-3 mb-8 hover:bg-white/20 scroll-animate-y-reverse ease-in-out!">
+                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-md px-3 md:px-6 py-3 mb-8 hover:bg-white/20 scroll-animate-y-reverse ease-in-out!">
                         <svg class="w-6 h-6 fill-second-500" viewBox="0 0 20 20">
                             <path
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -43,11 +43,11 @@
                     <!-- CTA Buttons -->
                     <div class="flex flex-wrap gap-4">
                         <a href="{{ route('booking') }}#booking"
-                            class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl scroll-animate-x-reverse pulse-premium">
+                            class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-6 py-4 md:px-8 md:py-4 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl scroll-animate-x-reverse pulse-premium">
                             Get Instant Quote
                         </a>
                         <a href="tel:+447405172435"
-                            class="bg-transparent hover:bg-white/20 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all backdrop-blur-sm scroll-animate-x">
+                            class="bg-transparent hover:bg-white/20 border-2 border-white text-white font-semibold px-6 py-4 md:px-8 md:py-4 rounded-lg text-lg transition-all backdrop-blur-sm scroll-animate-x">
                             Call +447405172435
                         </a>
                     </div>
@@ -432,26 +432,6 @@
             </div>
         </section>
 
-        {{-- <!-- FAQ Section -->
-        <section class="py-9 scroll-mt-[72px]" id="faq">
-            <div class="container mx-auto px-5">
-                <h2 class="text-3xl font-bold mb-6 scroll-animate">
-                    FAQs</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-
-                    @foreach ($faqs as $faq)
-                        <div
-                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
-                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                            <h3 class="text-lg font-bold mb-2">{{ $faq->question }}</h3>
-                            <p class="m-0">{{ $faq->answer }}</p>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section> --}}
-
-        <!-- FAQ Section -->
         <section class="py-14 scroll-mt-[72px] bg-gray-50" id="faq">
             <div class="container mx-auto px-5">
                 <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-3 scroll-animate">
@@ -461,22 +441,31 @@
                     Clear answers to common questions about our executive transfer services.
                 </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    @foreach ($faqs as $faq)
-                        <div
-                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
-                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-3">
+                <!-- FAQ List -->
+                <div class="w-full space-y-4">
+                    @foreach($faqs as $index => $faq)
+                        <div class="collapse collapse-plus bg-white border border-gray-200 rounded-2xl
+                                    transition-all duration-300 hover:shadow-md scroll-animate" >
+                            
+                            <input 
+                                type="radio" 
+                                name="faq-accordion" 
+                                {{ $index == 0 ? 'checked' : '' }} 
+                            />
+
+                            <div class="collapse-title text-base font-semibold text-gray-900 scroll-animate">
                                 {{ $faq->question }}
-                            </h3>
-                            <p class="text-sm text-gray-600 leading-relaxed">
+                            </div>
+
+                            <div class="collapse-content text-sm text-gray-600 leading-relaxed scroll-animate">
                                 {{ $faq->answer }}
-                            </p>
+                            </div>
                         </div>
                     @endforeach
                 </div>
             </div>
         </section>
+
 
 
         <!-- CTA Section -->

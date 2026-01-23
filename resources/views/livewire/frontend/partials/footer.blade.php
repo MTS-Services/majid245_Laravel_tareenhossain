@@ -47,17 +47,17 @@
 
     <!-- Fixed Bottom Bar -->
     <div class="fixed left-0 right-0 bottom-0 bg-primary p-3 flex gap-3 justify-between z-50 shadow-2xl">
-        <a class="flex-1 text-center px-4 py-3 rounded-lg font-semibold no-underline bg-gray-800 text-white transition-all duration-300! hover:bg-gray-700 hover:-translate-y-1"
+        <a class="flex-1 text-center px-2 py-1 md:px-4 md:py-3 rounded-lg font-semibold no-underline bg-gray-800 text-white transition-all duration-300! hover:bg-gray-700 hover:-translate-y-1"
             href="tel:+447405172435">Call</a>
-        <a class="flex-1 text-center px-4 py-3 rounded-lg font-semibold no-underline text-white transition-all duration-300! hover:-translate-y-1"
+        <a class="flex-1 text-center px-2 py-1 md:px-4 md:py-3 rounded-lg font-semibold no-underline text-white transition-all duration-300! hover:-translate-y-1"
             href="https://wa.me/447405172435" target="_blank" rel="noopener" style="background:#25D366">WhatsApp</a>
-        <a class="flex-1 text-center px-4 py-3 rounded-lg font-semibold no-underline bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1"
+        <a class="flex-1 text-center px-2 py-1 md:px-4 md:py-3 rounded-lg font-semibold no-underline bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1"
             href="{{ route('booking') }}#booking">Get Quote</a>
     </div>
 
 
     <!-- Footer -->
-    <footer class="bg-black/90 text-center py-5 mb-16">
+    <footer class="bg-black/90 text-center py-5 mb-5 md:mb-16">
         <p class="text-sm text-white"><strong class="text-white/60">Central Executive Transfers</strong> — "Driven by Excellence"</p>
         <div class="text-xs mt-1 text-white/60">&copy; 2025 Central Executive Transfers. All rights reserved.</div>
     </footer>
