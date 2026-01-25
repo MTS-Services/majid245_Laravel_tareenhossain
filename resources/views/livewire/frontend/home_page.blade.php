@@ -8,10 +8,10 @@
 <section>
     <div>
         <!-- Hero Section -->
-        <section class="relative h-screen md:h-[60vh] flex items-center justify-center overflow-hidden">
+        <section class="relative h-[calc(100vh-70px)] md:h-[60vh] flex items-center justify-center overflow-hidden">
             <!-- Background Image -->
             <div class="absolute inset-0 z-0 scroll-animate-y">
-                <img src="https://centraltravels.co.uk/assets/airport-transfer.jpeg" alt="Luxury Car"
+                <img src="{{ asset('assets/images/home_page/airport-transfer.jpeg') }}" alt="Luxury Car"
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/45 to-black/70"></div>
             </div>
@@ -44,13 +44,13 @@
                     <!-- CTA Buttons -->
                     <div class="flex flex-wrap gap-4">
                         <a href="{{ route('booking') }}#booking"
-                            class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-6 py-4 md:px-8 md:py-4 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl scroll-animate-x-reverse pulse-premium">
+                            class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-6 py-4 md:px-8 md:py-6 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl scroll-animate-x-reverse pulse-premium">
                             Get Instant Quote
                         </a>
-                        <a href="tel:+447405172435"
+                        {{-- <a href="tel:+447405172435"
                             class="bg-transparent hover:bg-white/20 border-2 border-white text-white font-semibold px-6 py-4 md:px-8 md:py-4 rounded-lg text-lg transition-all backdrop-blur-sm scroll-animate-x">
                             Call +447405172435
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
             </div>
