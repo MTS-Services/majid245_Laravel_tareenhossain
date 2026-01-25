@@ -409,8 +409,8 @@
         @apply bg-purple-700! opacity-100;
     }
 
-    .mobile-nav-item {
-        @apply text-text-primary hover:bg-bg-secondary block px-3 py-2 rounded-md text-base font-medium;
+    .nav-item {
+        @apply block text-white font-medium px-4 py-3 rounded-lg hover:bg-white/10 hover:text-second-500 transition;
     }
 }
 
