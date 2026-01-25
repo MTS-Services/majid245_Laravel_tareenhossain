@@ -22,7 +22,8 @@
                     <!-- Main Heading -->
                     <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white scroll-animate-y-reverse ease-in!">
                         Executive Airport Transfers —
-                        <span class="block mt-2 text-second-500 scroll-animate-x ease-in!">Covering All of South Yorkshire</span>
+                        <span class="block mt-2 text-second-500 scroll-animate-x ease-in!">Covering All of South
+                            Yorkshire</span>
                     </h1>
 
                     <!-- Sub Heading -->
@@ -402,7 +403,7 @@
                 <h2 class="text-3xl font-bold mb-6 scroll-animate">
                     Reviews</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div
+                    {{-- <div
                         class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
                            transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                         <h3 class="text-lg font-bold mb-2">"Reliable and professional"</h3>
@@ -423,7 +424,25 @@
                         <h3 class="text-lg font-bold mb-2">"Executive service"</h3>
                         <p class="m-0">Mercedes E‑Class, bottled water, and a calm ride. 5 stars.</p>
                         <p class="text-sm text-gray-600 mt-2">— Google Review</p>
-                    </div>
+                    </div> --}}
+                    @forelse ($reviews as $review)
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <h3 class="text-lg font-bold mb-2">"{{ $review['author_name'] }}"</h3>
+                            <p class="m-0">{{ $review['text'] }}</p>
+                            <p class="text-sm text-gray-600 mt-2"><a
+                                    href="{{ $review['author_url'] }}" target="_blank"
+                                    class="hover:text-second-500 hover:underline duration-300">
+                                    — Google Review
+                                </a></p>
+                        </div>
+                    @empty
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <h3 class="text-lg font-bold mb-2">No reviews yet</h3>
+                        </div>
+                    @endforelse
                 </div>
                 <p class="text-sm text-gray-600 mt-3 scroll-animate">
                     See all reviews on <a href="https://g.co/kgs/CQqsY6t" target="_blank" rel="noopener"
@@ -443,15 +462,12 @@
 
                 <!-- FAQ List -->
                 <div class="w-full space-y-4">
-                    @foreach($faqs as $index => $faq)
-                        <div class="collapse collapse-plus bg-white border border-gray-200 rounded-2xl
-                                    transition-all duration-300 hover:shadow-md scroll-animate" >
-                            
-                            <input 
-                                type="radio" 
-                                name="faq-accordion" 
-                                {{ $index == 0 ? 'checked' : '' }} 
-                            />
+                    @foreach ($faqs as $index => $faq)
+                        <div
+                            class="collapse collapse-plus bg-white border border-gray-200 rounded-2xl
+                                    transition-all duration-300 hover:shadow-md scroll-animate">
+
+                            <input type="radio" name="faq-accordion" {{ $index == 0 ? 'checked' : '' }} />
 
                             <div class="collapse-title text-base font-semibold text-gray-900 scroll-animate">
                                 {{ $faq->question }}
