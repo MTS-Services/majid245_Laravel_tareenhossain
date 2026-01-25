@@ -1,5 +1,15 @@
 <section>
 
+    <a href="https://wa.me/447405172435" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+        class="fixed right-6 bottom-6 md:right-10 md:bottom-10
+          w-12 h-12 md:w-14 md:h-14
+          flex items-center justify-center
+          rounded-full shadow-2xl
+          hover:-translate-y-1 transition-all duration-300 pulse-premium z-50">
+        <img src="{{ asset('assets/icons/WhatsApp.svg.webp') }}" alt="WhatsApp">
+    </a>
+
+
 
     <!-- Contact Section -->
     <div class="py-16 bg-black scroll-mt-[72px]" id="contact">
@@ -32,9 +42,9 @@
                 <!-- Email -->
                 <div class="bg-gray-900 rounded-2xl p-6 text-white shadow-lg">
                     <h3 class="text-lg font-semibold mb-2 text-white">Email</h3>
-                    <a href="mailto:admin@centralexecutivetransfers.co.uk"
+                    <a href="mailto:Admin@centralexecutivetransfers.co.uk"
                         class="text-sm font-semibold text-second-500 break-all underline">
-                        admin@centralexecutivetransfers.co.uk
+                        Admin@centralexecutivetransfers.co.uk
                     </a>
                 </div>
             </div>
@@ -45,7 +55,7 @@
         </div>
     </div>
 
-    <!-- Fixed Bottom Bar -->
+    {{-- <!-- Fixed Bottom Bar -->
     <div class="fixed left-0 right-0 bottom-0 bg-primary p-3 flex gap-3 justify-between z-50 shadow-2xl">
         <a class="flex-1 text-center px-2 py-1 md:px-4 md:py-3 rounded-lg font-semibold no-underline bg-gray-800 text-white transition-all duration-300! hover:bg-gray-700 hover:-translate-y-1"
             href="tel:+447405172435">Call</a>
@@ -53,12 +63,13 @@
             href="https://wa.me/447405172435" target="_blank" rel="noopener" style="background:#25D366">WhatsApp</a>
         <a class="flex-1 text-center px-2 py-1 md:px-4 md:py-3 rounded-lg font-semibold no-underline bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1"
             href="{{ route('booking') }}#booking">Get Quote</a>
-    </div>
+    </div> --}}
 
 
     <!-- Footer -->
     <footer class="bg-black/90 text-center py-5 mb-5 md:mb-16">
-        <p class="text-sm text-white"><strong class="text-white/60">Central Executive Transfers</strong> — "Driven by Excellence"</p>
+        <p class="text-sm text-white"><strong class="text-white/60">Central Executive Transfers</strong> — "Driven by
+            Excellence"</p>
         <div class="text-xs mt-1 text-white/60">&copy; 2025 Central Executive Transfers. All rights reserved.</div>
     </footer>
 </section>
