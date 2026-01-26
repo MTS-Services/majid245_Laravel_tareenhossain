@@ -1,7 +1,7 @@
 <section>
     <section class="relative h-[40vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://centraltravels.co.uk/assets/airport-transfer.jpeg" alt="Gallery Hero"
+            <img src="{{ asset('assets/images/home_page/airport-transfer.jpeg') }}" alt="Gallery Hero"
                 class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
         </div>

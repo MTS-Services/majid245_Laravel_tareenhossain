@@ -11,10 +11,10 @@
         </a>
 
         <!-- Right actions -->
-        <div class="flex items-center gap-5">
+        <div class="flex items-center gap-3 md:gap-5">
             <a href="{{ route('booking') }}#booking"
-                class="hidden md:inline-flex bg-second-500 hover:bg-yellow-500 text-black font-semibold px-4 py-3 rounded-lg text-sm transition-all duration-300 hover:scale-105 shadow-lg">
-                Get Instant Quote
+                class="inline-flex bg-second-500 hover:bg-yellow-500 text-black font-semibold px-4 py-3 rounded-lg text-sm transition-all duration-300 hover:scale-105 shadow-lg">
+                Book Now
             </a>
 
             <!-- Hamburger always visible -->
@@ -54,7 +54,7 @@
 
                 <a href="{{ route('gallery') }}" class="nav-item">Gallery</a>
 
-                <a href="{{ route('home') }}#contact" class="nav-item">Contact</a>
+                <a href="{{ route('home') }}#contact" class="nav-item">Contact Us</a>
             </div>
         </nav>
     </div>

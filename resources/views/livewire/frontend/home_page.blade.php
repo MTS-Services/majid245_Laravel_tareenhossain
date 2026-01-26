@@ -1,10 +1,3 @@
-@push('styles')
-    <style>
-        .animate-fade-in-up {
-            animation: fadeIn 0.8s ease-in;
-        }
-    </style>
-@endpush
 <section>
     <div>
         <!-- Hero Section -->
@@ -42,78 +35,19 @@
                     </div>
 
                     <!-- CTA Buttons -->
-                    <div class="flex flex-wrap gap-4">
+                    <div class="flex flex-col md:flex-row gap-4 text-center">
                         <a href="{{ route('booking') }}#booking"
                             class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-6 py-4 md:px-8 md:py-6 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl scroll-animate-x-reverse pulse-premium">
                             Get Instant Quote
                         </a>
-                        {{-- <a href="tel:+447405172435"
-                            class="bg-transparent hover:bg-white/20 border-2 border-white text-white font-semibold px-6 py-4 md:px-8 md:py-4 rounded-lg text-lg transition-all backdrop-blur-sm scroll-animate-x">
-                            Call +447405172435
-                        </a> --}}
+                        <a href="tel:+447405172435"
+                            class="bg-transparent hover:bg-white/20 border-2 border-white text-white font-semibold px-6 py-4 md:px-8 md:py-6 rounded-lg text-lg transition-all backdrop-blur-sm scroll-animate-x">Call
+                            Us Now</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        {{-- <!-- Hero Section -->
-        <section class="relative h-screen md:h-[60vh] flex items-center justify-center overflow-hidden">
-            <!-- Background Image -->
-            <div class="absolute inset-0 z-0 scroll-animate-y">
-                <img src="https://centraltravels.co.uk/assets/airport-transfer.jpeg" alt="Luxury Car"
-                    class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-b from-black/45 to-black/70"></div>
-            </div>
-
-            <!-- Content -->
-            <div class="container relative z-10 px-6 text-white animate-fade-in-up">
-                <div>
-                    <!-- Main Heading -->
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white scroll-animate-y-reverse ease-in">
-                        Executive Airport Transfers —
-                        <span class="block mt-2">Covering All of South Yorkshire</span>
-                    </h1>
-
-                    <!-- Sub Heading -->
-                    <p class="text-lg md:text-xl mb-8 text-white scroll-animate-y-reverse">
-                        Fixed prices • Flight tracking • 24/7 service
-                    </p>
-
-                    <!-- PRIMARY CTA (MOST PROMINENT) -->
-                    <div class="mb-8">
-                        <a href="{{ route('booking') }}"
-                            class="pulse-premium inline-block bg-second-500 hover:bg-yellow-500 text-black font-semibold
-                          px-10 py-5 rounded-xl text-xl transition-all duration-300
-                          hover:scale-105 hover:shadow-2xl shadow-xl">
-                            Get Instant Quote
-                        </a>
-                    </div>
-
-                    <!-- Rating Badge (Now Secondary) -->
-                    <div
-                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm
-                       border border-white/30 rounded-md px-6 py-3 mb-8
-                       hover:bg-white/20 transition-all">
-                        <svg class="w-6 h-6 text-second-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <span class="font-semibold text-lg text-white">
-                            5-Star Rated Service on Google
-                        </span>
-                    </div>
-
-                    <!-- Secondary CTA -->
-                    <div class="flex flex-wrap gap-4">
-                        <a href="tel:+447405172435"
-                            class="bg-transparent hover:bg-white/20 border-2 border-white text-white
-                          font-semibold px-8 py-4 rounded-lg text-lg transition-all backdrop-blur-sm">
-                            Call +44 7405 172435
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
 
         <!-- Why Choose Section -->
         <section class="py-12 bg-bg scroll-mt-[72px] max-h-[100vh-200px] md:h-full" id="why">
@@ -366,9 +300,9 @@
                     <div
                         class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
                            transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
-                        <div class="overflow-hidden rounded-lg mb-2 bg-gray-100">
+                        <div class="overflow-hidden rounded-lg mb-2 bg-white">
                             <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
-                                src="https://centraltravels.co.uk/assets/merc-c.webp" alt="Executive">
+                                src="{{ asset('assets/images/home_page/Executive.png') }}" alt="Executive">
                         </div>
                         <h3 class="text-lg font-bold mb-2">Executive</h3>
                         <p class="m-0">Mercedes E‑Class or similar — 4 passengers • 2 suitcases • 2 hand carry.</p>
@@ -376,9 +310,9 @@
                     <div
                         class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
                            transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
-                        <div class="overflow-hidden rounded-lg mb-2 bg-gray-100">
+                        <div class="overflow-hidden rounded-lg mb-2 bg-white">
                             <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
-                                src="https://centraltravels.co.uk/assets/mercedes-benz-vito.webp" alt="Minibus">
+                                src="{{ asset('assets/images/home_page/Minibus.png') }}" alt="Minibus">
                         </div>
                         <h3 class="text-lg font-bold mb-2">Minibus</h3>
                         <p class="m-0">8‑seater MPV — 8 passengers • 8 suitcases • 3 hand carry.</p>
@@ -386,9 +320,9 @@
                     <div
                         class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
                            transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
-                        <div class="overflow-hidden rounded-lg mb-2 bg-gray-100">
+                        <div class="overflow-hidden rounded-lg mb-2 bg-white">
                             <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
-                                src="https://centraltravels.co.uk/assets/rolls-royce.png" alt="Luxury">
+                                src="{{ asset('assets/images/home_page/Luxury.png') }}" alt="Luxury">
                         </div>
                         <h3 class="text-lg font-bold mb-2">Luxury</h3>
                         <p class="m-0">Rolls‑Royce or similar — 3 passengers • 2 suitcases • 2 hand carry.</p>
@@ -397,60 +331,74 @@
             </div>
         </section>
 
-        <!-- Reviews Section -->
-        <section class="py-9 scroll-mt-[72px]" id="reviews">
-            <div class="container mx-auto px-5">
-                <h2 class="text-3xl font-bold mb-6 scroll-animate">
-                    Reviews</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {{-- <div
-                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
-                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                        <h3 class="text-lg font-bold mb-2">"Reliable and professional"</h3>
-                        <p class="m-0">Great communication, spotless car and on time for both legs. Will use again.
-                        </p>
-                        <p class="text-sm text-gray-600 mt-2">— Google Review</p>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <section class="py-12 scroll-mt-[72px] bg-gray-50" id="reviews">
+            <div class="container mx-auto px-5 relative">
+
+                <div class="flex items-end justify-between mb-8">
+                    <div>
+                        <h2 class="text-3xl font-bold scroll-animate">Reviews</h2>
+                        <p class="text-gray-600 mt-1">What our community says about us.</p>
                     </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
-                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                        <h3 class="text-lg font-bold mb-2">"Smooth airport run"</h3>
-                        <p class="m-0">Driver tracked our flight and waited — stress free after a long day.</p>
-                        <p class="text-sm text-gray-600 mt-2">— Google Review</p>
+
+                    <div class="hidden md:flex gap-2">
+                        <button
+                            class="swiper-prev-btn w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:shadow-md transition-all active:scale-95">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button
+                            class="swiper-next-btn w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:shadow-md transition-all active:scale-95">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
                     </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
-                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                        <h3 class="text-lg font-bold mb-2">"Executive service"</h3>
-                        <p class="m-0">Mercedes E‑Class, bottled water, and a calm ride. 5 stars.</p>
-                        <p class="text-sm text-gray-600 mt-2">— Google Review</p>
-                    </div> --}}
-                    @forelse ($reviews as $review)
-                        <div
-                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                            <h3 class="text-lg font-bold mb-2">"{{ $review['author_name'] }}"</h3>
-                            <p class="m-0">{{ $review['text'] }}</p>
-                            <p class="text-sm text-gray-600 mt-2"><a
-                                    href="{{ $review['author_url'] }}" target="_blank"
-                                    class="hover:text-second-500 hover:underline duration-300">
-                                    — Google Review
-                                </a></p>
-                        </div>
-                    @empty
-                        <div
-                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
-                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                            <h3 class="text-lg font-bold mb-2">No reviews yet</h3>
-                        </div>
-                    @endforelse
                 </div>
-                <p class="text-sm text-gray-600 mt-3 scroll-animate">
-                    See all reviews on <a href="https://g.co/kgs/CQqsY6t" target="_blank" rel="noopener"
-                        class="font-bold underline hover:text-yellow-600 transition-colors">our Google profile</a>.
-                </p>
+
+                <div class="swiper reviewSwiper !pb-8">
+                    <div class="swiper-wrapper">
+                        @forelse ($reviews as $review)
+                            <div class="swiper-slide h-auto">
+                                <div
+                                    class="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm h-full min-h-80 flex flex-col justify-between transition-all duration-300 hover:shadow-lg">
+                                    <div class="flex-grow">
+                                        <h3 class="text-lg font-bold mb-3 text-gray-900 leading-tight">
+                                            "{{ $review['author_name'] }}"</h3>
+                                        <p class="text-gray-600 leading-relaxed italic text-sm md:text-base">
+                                            {{ Str::limit($review['text'], 200) }}
+                                        </p>
+                                    </div>
+
+                                    <div class="mt-6 pt-4 border-t border-gray-100">
+                                        <a href="{{ $review['author_url'] }}" target="_blank"
+                                            class="text-xs font-semibold tracking-wide uppercase text-gray-400 hover:text-yellow-600 transition-colors">
+                                            — Verified Google Review
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        @empty
+                        @endforelse
+                    </div>
+
+                    <div class="swiper-pagination md:hidden"></div>
+                </div>
+
+                <div class="text-center md:text-left mt-2">
+                    <a href="https://g.co/kgs/CQqsY6t" target="_blank" rel="noopener"
+                        class="text-sm font-medium text-gray-500 hover:text-yellow-600 underline decoration-gray-300 transition-all">
+                        See all reviews on Google
+                    </a>
+                </div>
             </div>
         </section>
-
         <section class="py-14 scroll-mt-[72px] bg-gray-50" id="faq">
             <div class="container mx-auto px-5">
                 <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-3 scroll-animate">
@@ -498,3 +446,42 @@
         </section>
     </div>
 </section>
+
+@push('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.reviewSwiper', {
+            slidesPerView: 1.2, // Shows a peek of the next card on mobile
+            spaceBetween: 16,
+            centeredSlides: false,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-next-btn',
+                prevEl: '.swiper-prev-btn',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 16,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            }
+        });
+    </script>
+@endpush
