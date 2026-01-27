@@ -1,28 +1,28 @@
+# ------------------------------------
+# Main Rules (Applies to Google, Bing, etc)
+# ------------------------------------
 User-agent: *
-
-Disallow: /admin/*
-
+Disallow: /admin/
+Disallow: /api/
 Allow: /
 
-# Allow all AI crawlers explicitly
-User-agent: Google-Extended
-Allow: /
+# ------------------------------------
+# AI Bots (Must repeat Disallow rules!)
+# ------------------------------------
 
 User-agent: GPTBot
+Disallow: /admin/
+Disallow: /api/
 Allow: /
 
 User-agent: ClaudeBot
+Disallow: /admin/
+Disallow: /api/
 Allow: /
 
 User-agent: CCBot
+Disallow: /admin/
+Disallow: /api/
 Allow: /
 
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-
-Sitemap: https://diodioglow.com/sitemap.xml
-
+Sitemap: https://centralexecutivetransfers.co.uk/sitemap.xml
