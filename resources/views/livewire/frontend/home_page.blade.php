@@ -297,36 +297,43 @@
             <div class="container mx-auto px-5">
                 <h2 class="text-3xl font-bold mb-6 scroll-animate">Fleet</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                    <a href="{{ route('booking') }}#boking" wire:navigate class="cursor-pointer">
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
                            transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
-                        <div class="overflow-hidden rounded-lg mb-2 bg-white">
-                            <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
-                                src="{{ asset('assets/images/home_page/Executive.png') }}" alt="Executive">
+                            <div class="overflow-hidden rounded-lg mb-2 bg-white">
+                                <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
+                                    src="{{ asset('assets/images/home_page/Executive.png') }}" alt="Executive">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Executive</h3>
+                            <p class="m-0">Mercedes E‑Class or similar — 4 passengers • 2 suitcases • 2 hand carry.
+                            </p>
                         </div>
-                        <h3 class="text-lg font-bold mb-2">Executive</h3>
-                        <p class="m-0">Mercedes E‑Class or similar — 4 passengers • 2 suitcases • 2 hand carry.</p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                    </a>
+                    <a href="{{ route('booking') }}#boking" wire:navigate class="cursor-pointer">
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
                            transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
-                        <div class="overflow-hidden rounded-lg mb-2 bg-white">
-                            <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
-                                src="{{ asset('assets/images/home_page/Minibus.png') }}" alt="Minibus">
+                            <div class="overflow-hidden rounded-lg mb-2 bg-white">
+                                <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
+                                    src="{{ asset('assets/images/home_page/Minibus.png') }}" alt="Minibus">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Minibus</h3>
+                            <p class="m-0">8‑seater MPV — 8 passengers • 8 suitcases • 3 hand carry.</p>
                         </div>
-                        <h3 class="text-lg font-bold mb-2">Minibus</h3>
-                        <p class="m-0">8‑seater MPV — 8 passengers • 8 suitcases • 3 hand carry.</p>
-                    </div>
-                    <div
-                        class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                    </a>
+                    <a href="{{ route('booking') }}#boking" wire:navigate class="cursor-pointer">
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
                            transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
-                        <div class="overflow-hidden rounded-lg mb-2 bg-white">
-                            <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
-                                src="{{ asset('assets/images/home_page/Luxury.png') }}" alt="Luxury">
+                            <div class="overflow-hidden rounded-lg mb-2 bg-white">
+                                <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
+                                    src="{{ asset('assets/images/home_page/Luxury.png') }}" alt="Luxury">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Luxury</h3>
+                            <p class="m-0">Rolls‑Royce or similar — 3 passengers • 2 suitcases • 2 hand carry.</p>
                         </div>
-                        <h3 class="text-lg font-bold mb-2">Luxury</h3>
-                        <p class="m-0">Rolls‑Royce or similar — 3 passengers • 2 suitcases • 2 hand carry.</p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
