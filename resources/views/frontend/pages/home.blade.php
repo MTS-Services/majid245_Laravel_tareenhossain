@@ -18,11 +18,16 @@
             <x-slot name="pageSlug">{{ __('booking') }}</x-slot>
             <livewire:frontend.booking />
         @break
+        @case('booking.success')
+            <x-slot name="title">{{ __('Booking Success') }}</x-slot>
+            <x-slot name="pageSlug">{{ __('booking-success') }}</x-slot>
+            <livewire:frontend.booking-success />
+        @break
 
         @default
             <x-slot name="title">{{ __('Home') }}</x-slot>
             <x-slot name="pageSlug">{{ __('home') }}</x-slot>
             <x-slot name="title">{{ __('Home') }}</x-slot>
-            <livewire:frontend.home />
+            <livewire:frontend.home_page />
     @endswitch
 </x-frontend::app>
