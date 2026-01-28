@@ -60,97 +60,37 @@
     </div>
 </header>
 
-<script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    const header = document.getElementById('header');
+@push('scripts')
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const header = document.getElementById('header');
+        const headerInner = document.getElementById('headerInner');
 
-    if (menuBtn && mobileNav) {
-
-        // Toggle on button click
-        menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mobileNav.classList.toggle('hidden');
-        });
-
-        // Close when clicking a nav link
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.add('hidden');
+        if (menuBtn && mobileNav) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mobileNav.classList.toggle('hidden');
             });
-        });
 
-        // Close on outside click
-        document.addEventListener('click', (e) => {
-            if (
-                !header.contains(e.target) &&
-                !mobileNav.classList.contains('hidden')
-            ) {
-                mobileNav.classList.add('hidden');
-            }
-        });
-    }
-</script>
-
-
-
-<script>
-    // Toggle menu
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-
-    menuBtn?.addEventListener('click', () => {
-        mobileNav.classList.toggle('hidden');
-    });
-
-    // Close menu on link click + smooth scroll
-    document.querySelectorAll('#mobileNav a[href^="#"]').forEach(link => {
-        link.addEventListener('click', e => {
-            const target = document.querySelector(link.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                mobileNav.classList.add('hidden');
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            mobileNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.add('hidden');
                 });
-            }
-        });
-    });
-
-    // Header shrink
-    const headerInner = document.getElementById('headerInner');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            headerInner.classList.add('py-2');
-            headerInner.classList.remove('py-3');
-        } else {
-            headerInner.classList.remove('py-2');
-            headerInner.classList.add('py-3');
-        }
-    }, {
-        passive: true
-    });
-
-    // dataLayer events
-    window.dataLayer = window.dataLayer || [];
-    const pushEvt = (name, params = {}) => {
-        try {
-            dataLayer.push({
-                event: name,
-                ...params
             });
-        } catch {}
-    };
 
-    document.querySelectorAll('a[href^="tel:"]').forEach(a =>
-        a.addEventListener('click', () => pushEvt('phone_click'))
-    );
-    document.querySelectorAll('a[href^="https://wa.me"]').forEach(a =>
-        a.addEventListener('click', () => pushEvt('whatsapp_click'))
-    );
-    document.querySelectorAll('a[href="#booking"]').forEach(a =>
-        a.addEventListener('click', () => pushEvt('start_booking'))
-    );
-</script>
+            document.addEventListener('click', (e) => {
+                if (!header.contains(e.target)) {
+                    mobileNav.classList.add('hidden');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            headerInner.classList.toggle('py-2', window.scrollY > 40);
+            headerInner.classList.toggle('py-3', window.scrollY <= 40);
+        }, {
+            passive: true
+        });
+    </script>
+@endpush

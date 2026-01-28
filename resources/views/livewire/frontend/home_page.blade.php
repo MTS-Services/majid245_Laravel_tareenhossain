@@ -4,7 +4,7 @@
         <section class="relative h-[calc(100vh-70px)] md:h-[60vh] flex items-center justify-center overflow-hidden">
             <!-- Background Image -->
             <div class="absolute inset-0 z-0 scroll-animate-y">
-                <img src="{{ asset('assets/images/home_page/airport-transfer.jpeg') }}" alt="Luxury Car"
+                <img src="{{ asset('assets/images/home_page/airport-transfer.jpeg') }}" fetchpriority="high" alt="Luxury Car"
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/45 to-black/70"></div>
             </div>

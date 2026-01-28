@@ -31,10 +31,16 @@
 
                 <div class="relative overflow-hidden rounded-2xl shadow-lg group">
 
-                    <img loading="eager" decoding="async" fetchpriority="high" width="400" height="400"
+                    <img loading="eager" fetchpriority="high" decoding="async" fetchpriority="high" width="400"
+                        height="400"
                         :src="image.thumb_url ?? (image.image_url ?? '{{ asset('storage') }}/' + image.image)"
                         :alt="image.alt"
                         class="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110">
+                    <img :loading="i < 4 ? 'eager' : 'lazy'"
+                        :fetchpriority="i < 4 ? 'high' : 'low'" decoding="async" width="400" height="300"
+                        :src="image.thumb_url ?? (image.image_url ?? '{{ asset('storage') }}/' + image.image)"
+                        :alt="image.alt"
+                        class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
 
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent
