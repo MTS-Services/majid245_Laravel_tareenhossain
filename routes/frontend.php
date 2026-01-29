@@ -8,3 +8,4 @@ Route::get('/', [FrontendController::class, 'home'])->name('home');
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 Route::get('/booking', [FrontendController::class, 'booking'])->name('booking');
 Route::get('/booking/success', [FrontendController::class, 'bookingSuccess'])->name('booking.success');
+Route::get('/account', [FrontendController::class, 'account'])->name('account');

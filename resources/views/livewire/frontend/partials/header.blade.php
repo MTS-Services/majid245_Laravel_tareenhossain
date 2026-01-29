@@ -55,6 +55,7 @@
                 <a href="{{ route('gallery') }}" class="nav-item">Gallery</a>
 
                 <a href="{{ route('home') }}#contact" class="nav-item">Contact Us</a>
+                <a href="{{ route('account') }}" class="nav-item">My Account</a>
             </div>
         </nav>
     </div>

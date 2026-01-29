@@ -29,4 +29,8 @@ class FrontendController extends Controller
     {
         return view($this->masterView);
     }
+    public function account()
+    {
+        return view($this->masterView);
+    }
 }
