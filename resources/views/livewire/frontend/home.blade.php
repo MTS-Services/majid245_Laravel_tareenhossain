@@ -1,685 +1,539 @@
+@section('meta')
+    {{-- SEO PRIMARY TAGS --}}
+    <meta name="title" content="Central Executive Transfers | Luxury Airport Transfers Sheffield">
+    <meta name="description"
+        content="Premium executive airport transfers in Sheffield & South Yorkshire. 5-star rated, licensed chauffeurs, Mercedes fleet, and fixed prices to Manchester, Heathrow & all UK airports. Book now.">
+    <meta name="keywords"
+        content="Executive Transfers Sheffield, Airport Taxi South Yorkshire, Chauffeur Service Sheffield, Manchester Airport Transfer, Luxury Travel Sheffield, Corporate Transfers, Mercedes E-Class Taxi, Central Executive Transfers">
+
+    {{-- Open Graph / Facebook --}}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Central Executive Transfers | Luxury Airport Transfers Sheffield">
+    <meta property="og:description"
+        content="Reliable, licensed executive airport transfers. 24/7 service, flight tracking, and fixed prices to all UK airports. Experience 5-star chauffeur service in Sheffield.">
+    <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image:secure_url" content="{{ asset('assets/images/logo.png') }}">
+    <link rel="image_src" href="{{ asset('assets/images/logo.png') }}">
+
+    {{-- Twitter --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Central Executive Transfers | Luxury Airport Transfers Sheffield">
+    <meta name="twitter:description"
+        content="Premium airport transfers in Sheffield. Licensed drivers, flight tracking, and luxury Mercedes vehicles. Book your ride today.">
+    <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+
+    {{-- Canonical URL --}}
+    <link rel="canonical" href="{{ url()->current() }}">
+@endsection
+
 <section>
-    <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
-        }
-
-        .gold-gradient {
-            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
-        }
-
-        .scroll-smooth {
-            scroll-behavior: smooth;
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .review-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .feature-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover .feature-icon {
-            transform: scale(1.1);
-        }
-
-        .pricing-table {
-            backdrop-filter: blur(10px);
-        }
-
-        .cta-pulse {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
-            }
-
-            50% {
-                box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
-            }
-        }
-    </style>
     <div>
         <!-- Hero Section -->
-        <section class="relative h-screen flex items-center justify-center"
-            style="background: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1920') center/cover; margin-top: 80px;">
-            <div class="absolute inset-0 hero-gradient"></div>
-            <div class="relative z-10 text-center px-4 max-w-5xl mx-auto animate-fade-in">
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 heading-font leading-tight">
-                    Executive Airport Transfers<br />
-                    <span class="gold-gradient bg-clip-text! text-transparent">Covering All of South Yorkshire</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-200 mb-8">
-                    Premium chauffeur service • Fixed pricing • Available 24/7
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                    <div class="bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-yellow-500/50">
-                        <i class="fas fa-star text-yellow-500"></i>
-                        <i class="fas fa-star text-yellow-500"></i>
-                        <i class="fas fa-star text-yellow-500"></i>
-                        <i class="fas fa-star text-yellow-500"></i>
-                        <i class="fas fa-star text-yellow-500"></i>
-                        <span class="text-white ml-2 font-semibold">5 Star Rated Service on Google</span>
-                    </div>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#booking"
-                        class="gold-gradient text-black px-8 py-4 rounded-full font-bold text-lg hover:opacity-90 transition cta-pulse inline-flex items-center justify-center">
-                        <i class="fas fa-calendar-check mr-2"></i> Get Instant Quote
-                    </a>
-                    <a href="tel:+441234567890"
-                        class="bg-white/20 backdrop-blur-md text-white border-2 border-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-black transition inline-flex items-center justify-center">
-                        <i class="fas fa-phone mr-2"></i> Call: 0114 123 4567
-                    </a>
-                </div>
+        <section class="relative h-[calc(100vh-70px)] md:h-[60vh] flex items-center justify-center overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0 scroll-animate-y">
+                <img src="{{ asset('assets/images/home_page/airport-transfer.webp') }}" fetchpriority="high"
+                    alt="Central Executive Transfers | Airport Transfer"
+                    title="Central Executive Transfers | Airport Transfer" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/45 to-black/70"></div>
             </div>
-            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <a href="#booking">
-                    <i class="fas fa-chevron-down text-white text-3xl"></i>
-                </a>
-            </div>
-        </section>
 
-        <!-- Booking Form Section -->
-        {{-- <section id="booking" class="py-20 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 heading-font">Book Your Transfer</h2>
-                <p class="text-center text-gray-600 mb-12 text-lg">Get an instant quote for your journey across South
-                    Yorkshire</p>
+            <!-- Content -->
+            <div class="container relative z-10 px-6 text-white animate-fade-in-up">
+                <div>
+                    <!-- Main Heading -->
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white scroll-animate-y-reverse ease-in!">
+                        Executive Airport Transfers —
+                        <span class="block mt-2 text-second-500 scroll-animate-x ease-in!">Covering All of South
+                            Yorkshire</span>
+                    </h1>
 
-                <div class="w-full h-full">
-                    <iframe class="w-full min-h-[400px] h-auto" title="Book Now!"
-                        src="{{ config('services.easytaxi.booking_page') }}" id="eto-iframe-booking" allow="geolocation"
-                        scrolling="yes" frameborder="0" style="width:1px; min-width:100%; border:0;">
-                    </iframe>
-                </div>
-            </div>
-        </section> --}}
+                    <!-- Sub Heading -->
+                    <p class="text-lg md:text-xl mb-8 text-white scroll-animate-y-reverse ease-in-out!">
+                        Fixed prices • Flight tracking • 24/7 service
+                    </p>
 
-        <!-- Why Choose Us Section -->
-        <section id="services" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 heading-font">Why Choose Central Executive
-                    Transfers?</h2>
-                <p class="text-center text-gray-600 mb-16 text-lg">Premium chauffeur service across Sheffield & South
-                    Yorkshire</p>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="feature-card text-center p-8 rounded-xl hover:shadow-xl transition">
-                        <div
-                            class="feature-icon w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-user-tie text-3xl text-black"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Professional Chauffeurs</h3>
-                        <p class="text-gray-600">Fully licensed, DBS-checked drivers with extensive local knowledge and
-                            impeccable service standards.</p>
+                    <!-- Rating Badge -->
+                    <div
+                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-md px-3 md:px-6 py-3 mb-8 hover:bg-white/20 scroll-animate-y-reverse ease-in-out!">
+                        <svg class="w-6 h-6 fill-second-500" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <span class="font-semibold text-lg text-white">5-Star Rated Service on Google</span>
                     </div>
 
-                    <div class="feature-card text-center p-8 rounded-xl hover:shadow-xl transition">
-                        <div
-                            class="feature-icon w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-car text-3xl text-black"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Executive Vehicles</h3>
-                        <p class="text-gray-600">Mercedes E-Class and S-Class fleet. Immaculate condition, comfortable,
-                            and equipped with modern amenities.</p>
-                    </div>
-
-                    <div class="feature-card text-center p-8 rounded-xl hover:shadow-xl transition">
-                        <div
-                            class="feature-icon w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-map-marked-alt text-3xl text-black"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Flight Tracking</h3>
-                        <p class="text-gray-600">Real-time flight monitoring ensures we're always on time, with
-                            complimentary waiting for delays.</p>
-                    </div>
-
-                    <div class="feature-card text-center p-8 rounded-xl hover:shadow-xl transition">
-                        <div
-                            class="feature-icon w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-pound-sign text-3xl text-black"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Fixed Pricing</h3>
-                        <p class="text-gray-600">Transparent pricing with no hidden fees. What you're quoted is what
-                            you pay, guaranteed.</p>
-                    </div>
-
-                    <div class="feature-card text-center p-8 rounded-xl hover:shadow-xl transition">
-                        <div
-                            class="feature-icon w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-clock text-3xl text-black"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">24/7 Availability</h3>
-                        <p class="text-gray-600">Round-the-clock service for early morning flights, late night
-                            arrivals, and everything in between.</p>
-                    </div>
-
-                    <div class="feature-card text-center p-8 rounded-xl hover:shadow-xl transition">
-                        <div
-                            class="feature-icon w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-mobile-alt text-3xl text-black"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Easy Online Booking</h3>
-                        <p class="text-gray-600">Simple, secure online booking system with instant confirmation and
-                            flexible payment options.</p>
-                    </div>
-
-                    <div class="feature-card text-center p-8 rounded-xl hover:shadow-xl transition">
-                        <div
-                            class="feature-icon w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-briefcase text-3xl text-black"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Corporate Accounts</h3>
-                        <p class="text-gray-600">Tailored business travel solutions with monthly invoicing and
-                            dedicated account management.</p>
-                    </div>
-
-                    <div class="feature-card text-center p-8 rounded-xl hover:shadow-xl transition">
-                        <div
-                            class="feature-icon w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-shield-alt text-3xl text-black"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Fully Insured</h3>
-                        <p class="text-gray-600">Comprehensive insurance coverage for complete peace of mind on every
-                            journey.</p>
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col md:flex-row gap-4 text-center">
+                        <a href="{{ route('booking') }}#booking" title="Central Executive Transfers | Get Instant Quote"
+                            class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-6 py-4 md:px-8 md:py-6 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl scroll-animate-x-reverse pulse-premium">
+                            Get Instant Quote
+                        </a>
+                        <a href="tel:+447405172435" title="Central Executive Transfers | Call Us Now"
+                            class="bg-transparent hover:bg-white/20 border-2 border-white text-white font-semibold px-6 py-4 md:px-8 md:py-6 rounded-lg text-lg transition-all backdrop-blur-sm scroll-animate-x">Call
+                            Us Now</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Pricing Section -->
-        <section id="pricing" class="py-20 bg-gradient-to-br from-gray-900 to-black text-white">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 heading-font text-white">Transparent Airport
-                    Prices
+
+        <!-- Why Choose Section -->
+        <section class="py-12 bg-bg scroll-mt-[72px] max-h-[100vh-200px] md:h-full" id="why">
+            <div class="container mx-auto px-5">
+                <h2
+                    class="text-3xl md:text-4xl font-bold mb-3 text-center scroll-animate transition-all duration-700 ease-out">
+                    Why choose Central Executive Transfers
                 </h2>
-                <p class="text-center text-gray-300 mb-16 text-lg">Fixed rates with no hidden charges</p>
+                <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto scroll-animate">
+                    Licensed by Sheffield City Council with enhanced DBS-checked drivers, we deliver premium airport
+                    transfers with unwavering professionalism
+                </p>
 
-                <div class="overflow-x-auto">
-                    <table class="w-full bg-white/10 backdrop-blur-md rounded-xl overflow-hidden">
-                        <thead class="gold-gradient text-black">
+                <!-- Trust Badges Section -->
+                <div class="flex flex-wrap justify-center items-center gap-6 mb-12 scroll-animate">
+                    <div
+                        class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md border-2 border-blue-100 hover:border-second-500 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-2">
+                            <svg class="w-8 h-8 text-white" fill="white" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold text-gray-700 text-center">Sheffield City<br>Council
+                            Licensed</span>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md border-2 border-green-100 hover:border-second-500 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-green-700 rounded-full flex items-center justify-center mb-2">
+                            <svg class="w-8 h-8 text-white" fill="white" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold text-gray-700 text-center">Enhanced DBS<br>Checked Drivers</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md border-2 border-second-200 hover:border-second-500 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-second-500 rounded-full flex items-center justify-center mb-2">
+                            <svg class="w-8 h-8 fill-white" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold text-gray-700 text-center">5-Star Rated<br>on Google</span>
+                    </div>
+                    <div
+                        class="flex flex-col items-center p-4 bg-white rounded-xl shadow-md border-2 border-purple-100 hover:border-second-500 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-purple-700 rounded-full flex items-center justify-center mb-2">
+                            <svg class="w-8 h-8 text-white" fill="white" viewBox="0 0 20 20">
+                                <path
+                                    d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                            </svg>
+                        </div>
+                        <span class="text-xs font-bold text-gray-700 text-center">Professional<br>Chauffeurs</span>
+                    </div>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Card 1: Licensed Drivers -->
+                    <div
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group flex flex-col justify-center items-center">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Sheffield Licensed</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">All drivers fully licensed by Sheffield
+                            City Council with enhanced DBS checks for your safety and peace of mind.</p>
+                    </div>
+
+                    <!-- Card 2: Executive Vehicles -->
+                    <div
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
+                                <path
+                                    d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                                <path
+                                    d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Premium Fleet</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Mercedes E-Class and 8-seater MPVs —
+                            immaculately maintained, comfortable, and reliable executive vehicles.</p>
+                    </div>
+
+                    <!-- Card 3: Flight Tracking -->
+                    <div
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
+                                <path
+                                    d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Flight Tracking</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Real-time flight monitoring with complimentary
+                            waiting time — we adapt to delays so you never worry.</p>
+                    </div>
+
+                    <!-- Card 4: Fixed Prices -->
+                    <div
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
+                                <path
+                                    d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Transparent Pricing</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Fixed rates quoted upfront before booking — no
+                            hidden charges, no meter surprises, total clarity.</p>
+                    </div>
+
+                    <!-- Card 5: 24/7 Service -->
+                    <div
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">24/7 Availability</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Round-the-clock service for early departures
+                            and late arrivals — we're ready whenever you need us.</p>
+                    </div>
+
+                    <!-- Card 6: Easy Booking -->
+                    <div
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
+                                <path
+                                    d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Instant Booking</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Quick online quotes with secure payment in
+                            minutes — book your transfer effortlessly from any device.</p>
+                    </div>
+
+                    <!-- Card 7: Meet & Greet -->
+                    <div
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
+                                <path
+                                    d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Meet & Greet</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Personal terminal meet service with name board
+                            — seamless airport collection for a premium experience.</p>
+                    </div>
+
+                    <!-- Card 8: Luggage Assistance -->
+                    <div
+                        class="bg-white border-2 border-gray-200 rounded-2xl p-6 shadow-sm min-h-56 scroll-animate hover:shadow-2xl transition-all duration-500 hover:border-second-500 hover:-translate-y-2 group  flex flex-col justify-center items-center">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-7 h-7 text-white" fill="white" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Luggage Assistance</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Complimentary help with bags and cases — our
+                            chauffeurs ensure door-to-door convenience and care.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prices Section -->
+        <section class="py-9 scroll-mt-[72px]" id="prices">
+            <div class="container mx-auto px-5">
+                <h2 class="text-3xl font-bold text-center mb-6 scroll-animate transition-all duration-700 ease-out">
+                    Transparent Airport Prices
+                </h2>
+                <div
+                    class="overflow-x-auto shadow-lg scroll-animate rounded-xl opacity-0 transition-all duration-700 ease-out">
+                    <table class="w-full border-collapse bg-white rounded-xl overflow-hidden border border-gray-200">
+                        <thead>
                             <tr>
-                                <th class="px-6 py-4 text-left font-bold text-white">Route</th>
-                                <th class="px-6 py-4 text-center font-bold text-white">Executive Saloon</th>
-                                <th class="px-6 py-4 text-center font-bold text-white">6-Seater MPV</th>
+                                <th class="bg-primary text-white font-bold border-b-2 border-second-500 p-4 text-left">
+                                    Route<br><span class="block text-sm text-white font-bold mt-0">(Sheffield ↔)</span>
+                                </th>
+                                <th class="bg-primary text-white font-bold border-b-2 border-second-500 p-4 text-left">
+                                    Executive Saloon
+                                </th>
+                                <th class="bg-primary text-white font-bold border-b-2 border-second-500 p-4 text-left">
+                                    8‑Seater
+                                </th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-700">
-                            <tr class="hover:bg-white/5 transition">
-                                <td class="px-6 py-4 font-semibold text-white">Manchester Airport (MAN)</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£100</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£140</td>
-                            </tr>
-                            <tr class="hover:bg-white/5 transition">
-                                <td class="px-6 py-4 font-semibold text-white">East Midlands (EMA)</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£120</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£160</td>
-                            </tr>
-                            <tr class="hover:bg-white/5 transition">
-                                <td class="px-6 py-4 font-semibold text-white">Leeds Bradford (LBA)</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£100</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£140</td>
-                            </tr>
-                            <tr class="hover:bg-white/5 transition">
-                                <td class="px-6 py-4 font-semibold text-white">Doncaster (DSA)</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£70</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£95</td>
-                            </tr>
-                            <tr class="hover:bg-white/5 transition">
-                                <td class="px-6 py-4 font-semibold text-white">Liverpool John Lennon (LPL)</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£135</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£180</td>
-                            </tr>
-                            <tr class="hover:bg-white/5 transition">
-                                <td class="px-6 py-4 font-semibold text-white">London Luton (LTN)</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£225</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£280</td>
-                            </tr>
-                            <tr class="hover:bg-white/5 transition">
-                                <td class="px-6 py-4 font-semibold text-white">Heathrow (LHR)</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£250</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£310</td>
-                            </tr>
-                            <tr class="hover:bg-white/5 transition">
-                                <td class="px-6 py-4 font-semibold text-white">Gatwick (LGW)</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£265</td>
-                                <td class="px-6 py-4 text-center text-yellow-400 font-bold">£330</td>
-                            </tr>
+                        <tbody>
+                            @forelse ($airportPrices as $airportPrice)
+                                <tr
+                                    class="hover:bg-yellow-50 transition-all duration-300 cursor-pointer border-b border-gray-200 shadow-sm scroll-animate">
+                                    <td class="p-4 font-bold border-r border-gray-200 shadow">
+                                        {{ $airportPrice->route_from }}
+                                    </td>
+                                    <td class="p-4 border-r border-gray-200 shadow-sm">
+                                        £{{ round($airportPrice->executive_saloon_price) }}
+                                    </td>
+                                    <td class="p-4 shadow-sm">
+                                        £{{ round($airportPrice->eight_seater_price) }}
+                                    </td>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="3"
+                                        class="p-4 text-center text-gray-500 border-t border-gray-200 shadow-sm">
+                                        No airport prices found.
+                                    </td>
+                                </tr>
+                            @endforelse
                         </tbody>
                     </table>
-                </div>
-
-                <div class="mt-8 text-center">
-                    <p class="text-gray-300 mb-4"><i class="fas fa-info-circle text-yellow-500 mr-2"></i>All prices
-                        are per vehicle, not per person. Includes meet & greet and 60 minutes free waiting time.</p>
-                    <a href="#booking"
-                        class="gold-gradient text-black px-8 py-4 rounded-full font-bold inline-flex items-center hover:opacity-90 transition">
-                        <i class="fas fa-calculator mr-2"></i>Get Custom Quote
-                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Fleet Section -->
-        <section id="fleet" class="py-20 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 heading-font">Our Executive Fleet</h2>
-                <p class="text-center text-gray-600 mb-16 text-lg">Luxury vehicles for every occasion</p>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
-                        <div class="h-64 bg-gradient-to-br from-gray-800 to-gray-600 flex items-center justify-center">
-                            <i class="fas fa-car text-8xl text-yellow-500"></i>
+        <section class="py-9 bg-bg scroll-mt-[72px]" id="fleet">
+            <div class="container mx-auto px-5">
+                <h2 class="text-3xl font-bold mb-6 scroll-animate">Fleet</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="{{ route('booking') }}#booking" class="cursor-pointer"
+                        title="Central Executive Transfers | Executive">
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+                            <div class="overflow-hidden rounded-lg mb-2 bg-white">
+                                <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
+                                    src="{{ asset('assets/images/home_page/Executive.png') }}"
+                                    alt="Central Executive Transfers | Executive"
+                                    title="Central Executive Transfers | Executive">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Executive</h3>
+                            <p class="m-0">Mercedes E‑Class or similar — 4 passengers • 2 suitcases • 2 hand carry.
+                            </p>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-3">Executive Saloon</h3>
-                            <p class="text-gray-600 mb-4">Mercedes E-Class or similar – Perfect for 1-3 passengers with
-                                2 medium cases and 2 hand luggage.</p>
-                            <ul class="space-y-2 text-gray-700">
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Air conditioning</li>
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Leather interior</li>
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Phone chargers</li>
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Bottled water</li>
-                            </ul>
+                    </a>
+                    <a href="{{ route('booking') }}#booking" class="cursor-pointer"
+                        title="Central Executive Transfers | Minibus">
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+                            <div class="overflow-hidden rounded-lg mb-2 bg-white">
+                                <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
+                                    src="{{ asset('assets/images/home_page/Minibus.png') }}"
+                                    alt="Central Executive Transfers | Minibus"
+                                    title="Central Executive Transfers | Minibus">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Minibus</h3>
+                            <p class="m-0">8‑seater MPV — 8 passengers • 8 suitcases • 3 hand carry.</p>
                         </div>
-                    </div>
-
-                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
-                        <div class="h-64 bg-gradient-to-br from-gray-800 to-gray-600 flex items-center justify-center">
-                            <i class="fas fa-shuttle-van text-8xl text-yellow-500"></i>
+                    </a>
+                    <a href="{{ route('booking') }}#booking" class="cursor-pointer"
+                        title="Central Executive Transfers | Luxury">
+                        <div
+                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
+                           transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+                            <div class="overflow-hidden rounded-lg mb-2 bg-white">
+                                <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
+                                    src="{{ asset('assets/images/home_page/Luxury.png') }}"
+                                    alt="Central Executive Transfers | Luxury"
+                                    title="Central Executive Transfers | Luxury">
+                            </div>
+                            <h3 class="text-lg font-bold mb-2">Luxury</h3>
+                            <p class="m-0">Rolls‑Royce or similar — 3 passengers • 2 suitcases • 2 hand carry.</p>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-3">Executive MPV</h3>
-                            <p class="text-gray-600 mb-4">Mercedes V-Class – Spacious for 4-6 passengers with ample
-                                luggage space for family trips.</p>
-                            <ul class="space-y-2 text-gray-700">
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Extra legroom</li>
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Premium comfort</li>
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Group travel</li>
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Large boot space</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition border-2 border-yellow-500">
-                        <div class="gold-gradient text-black text-center py-2 font-bold">
-                            PREMIUM CHOICE
-                        </div>
-                        <div class="h-64 bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
-                            <i class="fas fa-gem text-8xl text-yellow-500"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-3">Luxury Premium</h3>
-                            <p class="text-gray-600 mb-4">Mercedes S-Class – Ultimate luxury for VIP clients and
-                                special occasions with premium amenities.</p>
-                            <ul class="space-y-2 text-gray-700">
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Executive seating</li>
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Premium sound</li>
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>Privacy glass</li>
-                                <li><i class="fas fa-check text-yellow-600 mr-2"></i>VIP treatment</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reviews Section -->
-        <section id="reviews" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 heading-font">What Our Customers Say</h2>
-                <p class="text-center text-gray-600 mb-4 text-lg">Trusted by hundreds of satisfied clients across South
-                    Yorkshire</p>
-                <div class="text-center mb-12">
-                    <div class="inline-flex items-center gap-2 bg-yellow-50 px-6 py-3 rounded-full">
-                        <i class="fas fa-star text-yellow-500"></i>
-                        <i class="fas fa-star text-yellow-500"></i>
-                        <i class="fas fa-star text-yellow-500"></i>
-                        <i class="fas fa-star text-yellow-500"></i>
-                        <i class="fas fa-star text-yellow-500"></i>
-                        <span class="font-bold text-gray-800 ml-2">5.0 on Google Reviews</span>
-                    </div>
-                </div>
-
-                <div id="reviewCarousel" class="grid md:grid-cols-3 gap-8">
-                    <!-- Review cards will be populated by JavaScript -->
-                </div>
-
-                <div class="text-center mt-12">
-                    <a href="#" target="_blank"
-                        class="text-yellow-600 hover:text-yellow-700 font-semibold inline-flex items-center">
-                        See all reviews on Google <i class="fas fa-external-link-alt ml-2"></i>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="py-20 bg-gray-50">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 heading-font">Frequently Asked Questions
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <section class="py-12 scroll-mt-[72px] bg-gray-50" id="reviews">
+            <div class="container mx-auto px-5 relative">
+
+                <div class="flex items-end justify-between mb-8">
+                    <div>
+                        <h2 class="text-3xl font-bold scroll-animate">Reviews</h2>
+                        <p class="text-gray-600 mt-1">What our community says about us.</p>
+                    </div>
+
+                    <div class="hidden md:flex gap-2">
+                        <button
+                            class="swiper-prev-btn w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:shadow-md transition-all active:scale-95">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button
+                            class="swiper-next-btn w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-white hover:shadow-md transition-all active:scale-95">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="swiper reviewSwiper !pb-8">
+                    <div class="swiper-wrapper">
+                        @forelse ($reviews as $review)
+                            <div class="swiper-slide h-auto">
+                                <div
+                                    class="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm h-full min-h-80 flex flex-col justify-between transition-all duration-300 hover:shadow-lg">
+                                    <div class="flex-grow">
+                                        <h3 class="text-lg font-bold mb-3 text-gray-900 leading-tight">
+                                            "{{ $review['author_name'] }}"</h3>
+                                        <p class="text-gray-600 leading-relaxed italic text-sm md:text-base">
+                                            {{ Str::limit($review['text'], 200) }}
+                                        </p>
+                                    </div>
+
+                                    <div class="mt-6 pt-4 border-t border-gray-100">
+                                        <a href="{{ $review['author_url'] }}" target="_blank"
+                                            title="Central Executive Transfers | Verified Google Review"
+                                            class="text-xs font-semibold tracking-wide uppercase text-gray-400 hover:text-yellow-600 transition-colors">
+                                            — Verified Google Review
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        @empty
+                        @endforelse
+                    </div>
+
+                    <div class="swiper-pagination md:hidden"></div>
+                </div>
+
+                <div class="text-center md:text-left mt-2">
+                    <a href="https://g.co/kgs/CQqsY6t" target="_blank" rel="noopener"
+                        title="Central Executive Transfers | See all reviews on Google"
+                        class="text-sm font-medium text-gray-500 hover:text-yellow-600 underline decoration-gray-300 transition-all">
+                        See all reviews on Google
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="py-14 scroll-mt-[72px] bg-gray-50" id="faq">
+            <div class="container mx-auto px-5">
+                <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-3 scroll-animate">
+                    Frequently Asked Questions
                 </h2>
-                <p class="text-center text-gray-600 mb-16 text-lg">Everything you need to know about our service</p>
+                <p class="text-gray-600 mb-8 max-w-2xl scroll-animate">
+                    Clear answers to common questions about our executive transfer services.
+                </p>
 
-                <div class="space-y-4">
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <button onclick="toggleFAQ(1)"
-                            class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center hover:bg-gray-50 transition">
-                            <span>How do I book an airport transfer?</span>
-                            <i class="fas fa-chevron-down transition-transform" id="icon-1"></i>
-                        </button>
-                        <div id="faq-1" class="hidden px-6 py-4 border-t border-gray-200 text-gray-700">
-                            Simply fill out our online booking form with your pickup/drop-off locations, date, and time.
-                            You'll receive an instant quote and can confirm your booking in minutes. Alternatively, call
-                            us on 0114 123 4567 for immediate assistance.
-                        </div>
-                    </div>
+                <!-- FAQ List -->
+                <div class="w-full space-y-4">
+                    @foreach ($faqs as $index => $faq)
+                        <div
+                            class="collapse collapse-plus bg-white border border-gray-200 rounded-2xl
+                                    transition-all duration-300 hover:shadow-md scroll-animate">
 
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <button onclick="toggleFAQ(2)"
-                            class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center hover:bg-gray-50 transition">
-                            <span>Are your chauffeurs licensed and insured?</span>
-                            <i class="fas fa-chevron-down transition-transform" id="icon-2"></i>
-                        </button>
-                        <div id="faq-2" class="hidden px-6 py-4 border-t border-gray-200 text-gray-700">
-                            Yes, all our chauffeurs are fully licensed by the local authority, hold enhanced DBS checks,
-                            and have extensive experience. All vehicles are comprehensively insured for your complete
-                            peace of mind.
-                        </div>
-                    </div>
+                            <input type="radio" name="faq-accordion" {{ $index == 0 ? 'checked' : '' }} />
 
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <button onclick="toggleFAQ(3)"
-                            class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center hover:bg-gray-50 transition">
-                            <span>Do you monitor flight times?</span>
-                            <i class="fas fa-chevron-down transition-transform" id="icon-3"></i>
-                        </button>
-                        <div id="faq-3" class="hidden px-6 py-4 border-t border-gray-200 text-gray-700">
-                            Absolutely. We track all flight arrivals in real-time, so if your flight is delayed or
-                            arrives early, your chauffeur will adjust accordingly. We include 60 minutes free waiting
-                            time for airport pickups and 15 minutes for other locations.
-                        </div>
-                    </div>
+                            <div class="collapse-title text-base font-semibold text-gray-900 scroll-animate">
+                                {{ $faq->question }}
+                            </div>
 
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <button onclick="toggleFAQ(4)"
-                            class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center hover:bg-gray-50 transition">
-                            <span>What's included in the price?</span>
-                            <i class="fas fa-chevron-down transition-transform" id="icon-4"></i>
-                        </button>
-                        <div id="faq-4" class="hidden px-6 py-4 border-t border-gray-200 text-gray-700">
-                            Our fixed prices include all parking fees, tolls, fuel, and taxes. There are no hidden
-                            charges. Your chauffeur will also provide complimentary bottled water and help with luggage.
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <button onclick="toggleFAQ(5)"
-                            class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center hover:bg-gray-50 transition">
-                            <span>Can I book for corporate/business travel?</span>
-                            <i class="fas fa-chevron-down transition-transform" id="icon-5"></i>
-                        </button>
-                        <div id="faq-5" class="hidden px-6 py-4 border-t border-gray-200 text-gray-700">
-                            Yes! We offer dedicated corporate accounts with monthly invoicing, priority booking, and
-                            account management. Contact us to discuss your business travel requirements.
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <button onclick="toggleFAQ(6)"
-                            class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center hover:bg-gray-50 transition">
-                            <span>What is your cancellation policy?</span>
-                            <i class="fas fa-chevron-down transition-transform" id="icon-6"></i>
-                        </button>
-                        <div id="faq-6" class="hidden px-6 py-4 border-t border-gray-200 text-gray-700">
-                            We offer free cancellation up to 24 hours before your scheduled pickup time. Cancellations
-                            made within 24 hours may incur a charge. Please refer to our terms and conditions for full
-                            details.
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <button onclick="toggleFAQ(7)"
-                            class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center hover:bg-gray-50 transition">
-                            <span>Do you cover areas outside Sheffield?</span>
-                            <i class="fas fa-chevron-down transition-transform" id="icon-7"></i>
-                        </button>
-                        <div id="faq-7" class="hidden px-6 py-4 border-t border-gray-200 text-gray-700">
-                            Yes, we cover all of South Yorkshire including Sheffield, Rotherham, Doncaster, and
-                            Barnsley, as well as transfers to all major UK airports. For longer journeys or custom
-                            routes, please contact us for a quote.
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <button onclick="toggleFAQ(8)"
-                            class="w-full px-6 py-4 text-left font-semibold flex justify-between items-center hover:bg-gray-50 transition">
-                            <span>What payment methods do you accept?</span>
-                            <i class="fas fa-chevron-down transition-transform" id="icon-8"></i>
-                        </button>
-                        <div id="faq-8" class="hidden px-6 py-4 border-t border-gray-200 text-gray-700">
-                            We accept all major credit and debit cards, bank transfers, and cash payments. For corporate
-                            accounts, we offer invoicing with flexible payment terms.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Coverage Area Section -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 heading-font">Coverage Across South
-                    Yorkshire</h2>
-                <p class="text-center text-gray-600 mb-16 text-lg">Serving all major towns and cities with premium
-                    airport transfer services</p>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition">
-                        <i class="fas fa-map-marker-alt text-4xl text-yellow-600 mb-4"></i>
-                        <h3 class="font-bold text-xl mb-2">Sheffield</h3>
-                        <p class="text-gray-600">City Centre, Ecclesall, Dore, Bradway, Totley</p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition">
-                        <i class="fas fa-map-marker-alt text-4xl text-yellow-600 mb-4"></i>
-                        <h3 class="font-bold text-xl mb-2">Rotherham</h3>
-                        <p class="text-gray-600">Town Centre, Wickersley, Maltby, Wath upon Dearne</p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition">
-                        <i class="fas fa-map-marker-alt text-4xl text-yellow-600 mb-4"></i>
-                        <h3 class="font-bold text-xl mb-2">Doncaster</h3>
-                        <p class="text-gray-600">Town Centre, Bessacarr, Cantley, Armthorpe</p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition">
-                        <i class="fas fa-map-marker-alt text-4xl text-yellow-600 mb-4"></i>
-                        <h3 class="font-bold text-xl mb-2">Barnsley</h3>
-                        <p class="text-gray-600">Town Centre, Penistone, Wombwell, Hoyland</p>
-                    </div>
-                </div>
-
-                <div class="mt-12 text-center">
-                    <p class="text-lg text-gray-700 mb-4">We also serve surrounding areas including Chesterfield,
-                        Worksop, and the Peak District</p>
-                    <a href="#booking"
-                        class="gold-gradient text-black px-8 py-3 rounded-full font-bold inline-flex items-center hover:opacity-90 transition">
-                        <i class="fas fa-route mr-2"></i>Check Your Area
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final CTA Section -->
-        <section class="py-20 bg-gradient-to-r from-yellow-600 to-yellow-500 text-black">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 heading-font">Ready to Travel in Comfort?</h2>
-                <p class="text-xl mb-8">Book your executive airport transfer today and experience premium chauffeur
-                    service</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#booking"
-                        class="bg-black text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-900 transition inline-flex items-center justify-center">
-                        <i class="fas fa-calendar-check mr-2"></i>Book Online Now
-                    </a>
-                    <a href="tel:+441234567890"
-                        class="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition inline-flex items-center justify-center">
-                        <i class="fas fa-phone mr-2"></i>Call: 0114 123 4567
-                    </a>
-                </div>
-                <p class="mt-8 text-sm">Available 24/7 • Fixed Prices • Professional Service</p>
-            </div>
-        </section>
-
-        <script>
-            // Mobile menu toggle
-            function toggleMenu() {
-                const menu = document.getElementById('mobileMenu');
-                menu.classList.toggle('hidden');
-            }
-
-            // FAQ toggle
-            function toggleFAQ(num) {
-                const content = document.getElementById('faq-' + num);
-                const icon = document.getElementById('icon-' + num);
-                content.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
-            }
-
-            // Review carousel
-            const reviews = [{
-                    name: "Sarah Johnson",
-                    rating: 5,
-                    text: "Absolutely fantastic service! The driver was punctual, professional, and the Mercedes was immaculate. Made our trip to Manchester Airport stress-free. Highly recommended!",
-                    date: "2 weeks ago"
-                },
-                {
-                    name: "David Thompson",
-                    rating: 5,
-                    text: "I use Central Executive for all my business trips. Always reliable, comfortable vehicles, and the drivers are very knowledgeable about the local area. Worth every penny.",
-                    date: "1 month ago"
-                },
-                {
-                    name: "Emma Williams",
-                    rating: 5,
-                    text: "Booked a transfer for my parents' anniversary trip. The service was exceptional - on time, courteous driver, and they even helped with heavy luggage. Five stars!",
-                    date: "3 weeks ago"
-                },
-                {
-                    name: "Michael Brown",
-                    rating: 5,
-                    text: "Used them for a 4am airport run. Driver was waiting early, car was spotless and comfortable. Great communication throughout. Will definitely use again.",
-                    date: "1 week ago"
-                },
-                {
-                    name: "Lisa Anderson",
-                    rating: 5,
-                    text: "Professional from start to finish. Online booking was easy, price was transparent, and the journey was smooth. Best airport transfer service in Sheffield!",
-                    date: "2 months ago"
-                },
-                {
-                    name: "James Roberts",
-                    rating: 5,
-                    text: "Flight was delayed by 2 hours, but the driver tracked it and was there waiting when we landed. No stress, no extra charges. Exceptional service!",
-                    date: "3 weeks ago"
-                }
-            ];
-
-            let currentReviewSet = 0;
-
-            function displayReviews() {
-                const carousel = document.getElementById('reviewCarousel');
-                const start = currentReviewSet * 3;
-                const reviewsToShow = reviews.slice(start, start + 3);
-
-                carousel.innerHTML = reviewsToShow.map(review => `
-                <div class="review-card bg-white p-6 rounded-xl shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                            ${review.name.charAt(0)}
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="font-bold">${review.name}</h4>
-                            <div class="text-yellow-500">
-                                ${'<i class="fas fa-star"></i>'.repeat(review.rating)}
+                            <div class="collapse-content text-sm text-gray-600 leading-relaxed scroll-animate">
+                                {{ $faq->answer }}
                             </div>
                         </div>
-                    </div>
-                    <p class="text-gray-700 mb-3">"${review.text}"</p>
-                    <p class="text-sm text-gray-500">${review.date}</p>
+                    @endforeach
                 </div>
-            `).join('');
-            }
+            </div>
+        </section>
 
-            function rotateReviews() {
-                currentReviewSet = (currentReviewSet + 1) % 2;
-                displayReviews();
-            }
 
-            // Initial display
-            displayReviews();
 
-            // Rotate reviews every 5 seconds
-            setInterval(rotateReviews, 5000);
-
-            // Smooth scroll
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        // Close mobile menu if open
-                        document.getElementById('mobileMenu').classList.add('hidden');
-                    }
-                });
-            });
-
-            // Add animation on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-fade-in');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('section').forEach(section => {
-                observer.observe(section);
-            });
-        </script>
+        <!-- CTA Section -->
+        <section class="bg-white text-center py-12 scroll-animate">
+            <div class="container mx-auto px-5">
+                <h2 class="text-3xl font-bold text-black mb-3 scroll-animate">Ready when you are</h2>
+                <p class="text-black mb-3 scroll-animate"> Book now and secure your driver</p>
+                <p class="scroll-animate">
+                    <a href="{{ route('booking') }}#booking"
+                        title="Central Executive Transfers | Reserve
+                        your driver now"
+                        class="inline-block px-6 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1 hover:shadow-2xl shadow-lg">Reserve
+                        your driver now</a>
+                </p>
+            </div>
+        </section>
     </div>
 </section>
+
+@push('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper('.reviewSwiper', {
+                slidesPerView: 1.2, // Shows a peek of the next card on mobile
+                spaceBetween: 16,
+                centeredSlides: false,
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-next-btn',
+                    prevEl: '.swiper-prev-btn',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 16,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                }
+            });
+        });
+    </script>
+@endpush

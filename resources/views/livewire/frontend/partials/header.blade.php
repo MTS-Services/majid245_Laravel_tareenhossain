@@ -3,7 +3,7 @@
         class="container mx-auto px-4 py-3 flex items-center justify-between transition-all duration-300 relative">
 
         <!-- Logo -->
-        <a href="{{ route('home') }}" class="no-underline leading-tight">
+        <a href="{{ route('home') }}" class="no-underline leading-tight" title="Central Executive Transfers">
             <span class="text-white font-black tracking-wide text-lg">CENTRAL</span>
             <div class="text-second-500 text-xs tracking-widest uppercase">
                 Executive Transfers
@@ -12,7 +12,7 @@
 
         <!-- Right actions -->
         <div class="flex items-center gap-3 md:gap-5">
-            <a href="{{ route('booking') }}#booking"
+            <a href="{{ route('booking') }}#booking" title="Central Executive Transfers | Booking Now"
                 class="inline-flex bg-second-500 hover:bg-yellow-500 text-black font-semibold px-4 py-3 rounded-lg text-sm transition-all duration-300 hover:scale-105 shadow-lg">
                 Book Now
             </a>
@@ -37,24 +37,24 @@
                md:border md:border-gray-800 bg-gray-900 border-t border-gray-800 shadow-2xl">
 
                 <!-- Book Now (Highlighted & First) -->
-                <a href="{{ route('booking') }}#booking"
+                <a href="{{ route('booking') }}#booking" title="Central Executive Transfers | Booking Now"
                     class="block bg-second-500 text-black font-bold rounded-lg px-4 py-3 text-center hover:bg-yellow-500 transition">
                     Book Now
                 </a>
 
-                <a href="{{ route('home') }}#why" class="nav-item">Why Us</a>
+                <a href="{{ route('home') }}#why" class="nav-item" title="Central Executive Transfers | Why Us">Why Us</a>
 
-                <a href="{{ route('home') }}#prices" class="nav-item">Prices</a>
+                <a href="{{ route('home') }}#prices" class="nav-item" title="Central Executive Transfers | Prices">Prices</a>
 
-                <a href="{{ route('home') }}#fleet" class="nav-item">Fleet</a>
+                <a href="{{ route('home') }}#fleet" class="nav-item" title="Central Executive Transfers | Fleet">Fleet</a>
 
-                <a href="{{ route('home') }}#reviews" class="nav-item">Reviews</a>
+                <a href="{{ route('home') }}#reviews" class="nav-item" title="Central Executive Transfers | Reviews">Reviews</a>
 
-                <a href="{{ route('home') }}#faq" class="nav-item">FAQs</a>
+                <a href="{{ route('home') }}#faq" class="nav-item" title="Central Executive Transfers | Frequently Asked Questions">FAQs</a>
 
-                <a href="{{ route('gallery') }}" class="nav-item">Gallery</a>
+                <a href="{{ route('gallery') }}" class="nav-item" title="Central Executive Transfers | Gallery">Gallery</a>
 
-                <a href="{{ route('home') }}#contact" class="nav-item">Contact Us</a>
+                <a href="{{ route('home') }}#contact" class="nav-item" title="Central Executive Transfers | Contact Us">Contact Us</a>
             </div>
         </nav>
     </div>
@@ -62,6 +62,7 @@
 
 @push('scripts')
     <script>
+    document.addEventListener('DOMContentLoaded', () => {
         const menuBtn = document.getElementById('menuBtn');
         const mobileNav = document.getElementById('mobileNav');
         const header = document.getElementById('header');
@@ -92,5 +93,6 @@
         }, {
             passive: true
         });
+    });
     </script>
 @endpush

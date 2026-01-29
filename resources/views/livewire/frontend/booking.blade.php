@@ -1,7 +1,34 @@
+
+
+
 <section>
+    @section('meta')
+        {{-- SEO PRIMARY TAGS --}}
+        <meta name="title" content="Book Executive Airport Transfer | Instant Quote Sheffield">
+        <meta name="description" content="Get an instant fixed-price quote for executive airport transfers in Sheffield. Book your Mercedes or 8-seater MPV online in minutes. Secure payment & 24/7 availability.">
+        <meta name="keywords" content="Book Airport Transfer Sheffield, Online Taxi Booking, Executive Car Hire Quote, Airport Transfer Prices Sheffield, Manchester Airport Taxi Quote, Central Executive Transfers Booking">
+    
+        {{-- Open Graph / Facebook --}}
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Book Executive Airport Transfer | Instant Quote Sheffield">
+        <meta property="og:description" content="Reserve your luxury chauffeur today. Instant online quotes for transfers to Manchester, Heathrow, Gatwick, and more. No hidden fees.">
+        <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+        <meta property="og:url" content="{{ url()->current() }}">
+        <meta property="og:image:secure_url" content="{{ asset('assets/images/logo.png') }}">
+        <link rel="image_src" href="{{ asset('assets/images/logo.png') }}">
+    
+        {{-- Twitter --}}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Book Executive Airport Transfer | Instant Quote Sheffield">
+        <meta name="twitter:description" content="Get a fixed price quote for your next airport transfer. 24/7 online booking for luxury Mercedes and MPV travel from Sheffield.">
+        <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+    
+        {{-- Canonical URL --}}
+        <link rel="canonical" href="{{ url()->current() }}">
+    @endsection
     <section class="relative h-[40vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('assets/images/home_page/airport-transfer.jpeg') }}" alt="Gallery Hero"
+            <img src="{{ asset('assets/images/home_page/airport-transfer.jpeg') }}" alt="Book Executive Airport Transfer | Gallery Hero" title="Book Executive Airport Transfer | Gallery Hero"
                 class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
         </div>

@@ -1,11 +1,41 @@
+@section('meta')
+    {{-- SEO PRIMARY TAGS --}}
+    <meta name="title" content="Central Executive Transfers | Luxury Airport Transfers Sheffield">
+    <meta name="description"
+        content="Premium executive airport transfers in Sheffield & South Yorkshire. 5-star rated, licensed chauffeurs, Mercedes fleet, and fixed prices to Manchester, Heathrow & all UK airports. Book now.">
+    <meta name="keywords"
+        content="Executive Transfers Sheffield, Airport Taxi South Yorkshire, Chauffeur Service Sheffield, Manchester Airport Transfer, Luxury Travel Sheffield, Corporate Transfers, Mercedes E-Class Taxi, Central Executive Transfers">
+
+    {{-- Open Graph / Facebook --}}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Central Executive Transfers | Luxury Airport Transfers Sheffield">
+    <meta property="og:description"
+        content="Reliable, licensed executive airport transfers. 24/7 service, flight tracking, and fixed prices to all UK airports. Experience 5-star chauffeur service in Sheffield.">
+    <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image:secure_url" content="{{ asset('assets/images/logo.png') }}">
+    <link rel="image_src" href="{{ asset('assets/images/logo.png') }}">
+
+    {{-- Twitter --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Central Executive Transfers | Luxury Airport Transfers Sheffield">
+    <meta name="twitter:description"
+        content="Premium airport transfers in Sheffield. Licensed drivers, flight tracking, and luxury Mercedes vehicles. Book your ride today.">
+    <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
+
+    {{-- Canonical URL --}}
+    <link rel="canonical" href="{{ url()->current() }}">
+@endsection
+
 <section>
     <div>
         <!-- Hero Section -->
         <section class="relative h-[calc(100vh-70px)] md:h-[60vh] flex items-center justify-center overflow-hidden">
             <!-- Background Image -->
             <div class="absolute inset-0 z-0 scroll-animate-y">
-                <img src="{{ asset('assets/images/home_page/airport-transfer.jpeg') }}" fetchpriority="high" alt="Luxury Car"
-                    class="w-full h-full object-cover">
+                <img src="{{ asset('assets/images/home_page/airport-transfer.webp') }}" fetchpriority="high"
+                    alt="Central Executive Transfers | Airport Transfer"
+                    title="Central Executive Transfers | Airport Transfer" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-b from-black/45 to-black/70"></div>
             </div>
 
@@ -36,11 +66,11 @@
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col md:flex-row gap-4 text-center">
-                        <a href="{{ route('booking') }}#booking"
+                        <a href="{{ route('booking') }}#booking" title="Central Executive Transfers | Get Instant Quote"
                             class="bg-second-500 hover:bg-yellow-500 text-black font-semibold px-6 py-4 md:px-8 md:py-6 rounded-lg text-lg transition-all duration-300! transform hover:scale-105 hover:shadow-2xl shadow-xl scroll-animate-x-reverse pulse-premium">
                             Get Instant Quote
                         </a>
-                        <a href="tel:+447405172435"
+                        <a href="tel:+447405172435" title="Central Executive Transfers | Call Us Now"
                             class="bg-transparent hover:bg-white/20 border-2 border-white text-white font-semibold px-6 py-4 md:px-8 md:py-6 rounded-lg text-lg transition-all backdrop-blur-sm scroll-animate-x">Call
                             Us Now</a>
                     </div>
@@ -297,38 +327,47 @@
             <div class="container mx-auto px-5">
                 <h2 class="text-3xl font-bold mb-6 scroll-animate">Fleet</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <a href="{{ route('booking') }}#boking" wire:navigate class="cursor-pointer">
+                    <a href="{{ route('booking') }}#booking" class="cursor-pointer"
+                        title="Central Executive Transfers | Executive">
                         <div
                             class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
                            transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
                             <div class="overflow-hidden rounded-lg mb-2 bg-white">
                                 <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
-                                    src="{{ asset('assets/images/home_page/Executive.png') }}" alt="Executive">
+                                    src="{{ asset('assets/images/home_page/Executive.png') }}"
+                                    alt="Central Executive Transfers | Executive"
+                                    title="Central Executive Transfers | Executive">
                             </div>
                             <h3 class="text-lg font-bold mb-2">Executive</h3>
                             <p class="m-0">Mercedes E‑Class or similar — 4 passengers • 2 suitcases • 2 hand carry.
                             </p>
                         </div>
                     </a>
-                    <a href="{{ route('booking') }}#boking" wire:navigate class="cursor-pointer">
+                    <a href="{{ route('booking') }}#booking" class="cursor-pointer"
+                        title="Central Executive Transfers | Minibus">
                         <div
                             class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
                            transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
                             <div class="overflow-hidden rounded-lg mb-2 bg-white">
                                 <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
-                                    src="{{ asset('assets/images/home_page/Minibus.png') }}" alt="Minibus">
+                                    src="{{ asset('assets/images/home_page/Minibus.png') }}"
+                                    alt="Central Executive Transfers | Minibus"
+                                    title="Central Executive Transfers | Minibus">
                             </div>
                             <h3 class="text-lg font-bold mb-2">Minibus</h3>
                             <p class="m-0">8‑seater MPV — 8 passengers • 8 suitcases • 3 hand carry.</p>
                         </div>
                     </a>
-                    <a href="{{ route('booking') }}#boking" wire:navigate class="cursor-pointer">
+                    <a href="{{ route('booking') }}#booking" class="cursor-pointer"
+                        title="Central Executive Transfers | Luxury">
                         <div
                             class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm min-h-[180px] scroll-animate
                            transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
                             <div class="overflow-hidden rounded-lg mb-2 bg-white">
                                 <img class="w-full h-[100px] object-contain transition-transform duration-300! group-hover:scale-110"
-                                    src="{{ asset('assets/images/home_page/Luxury.png') }}" alt="Luxury">
+                                    src="{{ asset('assets/images/home_page/Luxury.png') }}"
+                                    alt="Central Executive Transfers | Luxury"
+                                    title="Central Executive Transfers | Luxury">
                             </div>
                             <h3 class="text-lg font-bold mb-2">Luxury</h3>
                             <p class="m-0">Rolls‑Royce or similar — 3 passengers • 2 suitcases • 2 hand carry.</p>
@@ -385,6 +424,7 @@
 
                                     <div class="mt-6 pt-4 border-t border-gray-100">
                                         <a href="{{ $review['author_url'] }}" target="_blank"
+                                            title="Central Executive Transfers | Verified Google Review"
                                             class="text-xs font-semibold tracking-wide uppercase text-gray-400 hover:text-yellow-600 transition-colors">
                                             — Verified Google Review
                                         </a>
@@ -400,6 +440,7 @@
 
                 <div class="text-center md:text-left mt-2">
                     <a href="https://g.co/kgs/CQqsY6t" target="_blank" rel="noopener"
+                        title="Central Executive Transfers | See all reviews on Google"
                         class="text-sm font-medium text-gray-500 hover:text-yellow-600 underline decoration-gray-300 transition-all">
                         See all reviews on Google
                     </a>
@@ -446,6 +487,8 @@
                 <p class="text-black mb-3 scroll-animate"> Book now and secure your driver</p>
                 <p class="scroll-animate">
                     <a href="{{ route('booking') }}#booking"
+                        title="Central Executive Transfers | Reserve
+                        your driver now"
                         class="inline-block px-6 py-4 rounded-lg no-underline font-bold bg-second-500 text-gray-900 transition-all duration-300! hover:-translate-y-1 hover:shadow-2xl shadow-lg">Reserve
                         your driver now</a>
                 </p>
@@ -458,37 +501,39 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        const swiper = new Swiper('.reviewSwiper', {
-            slidesPerView: 1.2, // Shows a peek of the next card on mobile
-            spaceBetween: 16,
-            centeredSlides: false,
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: '.swiper-next-btn',
-                prevEl: '.swiper-prev-btn',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 1.2,
-                    spaceBetween: 16,
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper('.reviewSwiper', {
+                slidesPerView: 1.2, // Shows a peek of the next card on mobile
+                spaceBetween: 16,
+                centeredSlides: false,
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
                 },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 24,
+                navigation: {
+                    nextEl: '.swiper-next-btn',
+                    prevEl: '.swiper-prev-btn',
                 },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
                 },
-            }
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 16,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                }
+            });
         });
     </script>
 @endpush
