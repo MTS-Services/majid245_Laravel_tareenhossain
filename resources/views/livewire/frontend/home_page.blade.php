@@ -56,12 +56,36 @@
 
                     <!-- Rating Badge -->
                     <div
-                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-md px-3 md:px-6 py-3 mb-8 hover:bg-white/20 scroll-animate-y-reverse ease-in-out!">
-                        <svg class="w-6 h-6 fill-second-500" viewBox="0 0 20 20">
-                            <path
-                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                        <span class="font-semibold text-lg text-white">5-Star Rated Service on Google</span>
+                        class="flex flex-col md:flex-row md:items-center mb-4 md:mb-8 gap-4 md:gap-10 scroll-animate-y-reverse ease-in-out!">
+                        <div
+                            class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-md px-3 md:px-6 py-3 hover:bg-white/20 scroll-animate-y-reverse ease-in-out! order-1 md:order-0">
+                            <svg class="w-6 h-6 fill-second-500" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <span class="font-semibold text-lg text-white">5-Star Rated Service on Google</span>
+                        </div>
+                        <div class="flex gap-5 md:justify-center items-center">
+                            <!-- Facebook -->
+                            <a href="#" target="_blank" aria-label="Facebook"
+                                class="w-14 h-14 flex items-center justify-center rounded-full border border-white/50 hover:border-second-500/40 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    class="w-7 h-7 fill-white/80 hover:fill-second-500">
+                                    <path
+                                        d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.5c0-2.3 1.37-3.6 3.46-3.6.99 0 2.03.18 2.03.18v2.23h-1.14c-1.13 0-1.48.7-1.48 1.42v1.7H16l-.38 3h-2.1v7A10 10 0 0 0 22 12z" />
+                                </svg>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="#" aria-label="LinkedIn"
+                                class="w-14 h-14 flex items-center justify-center rounded-full border border-white/50 hover:border-second-500/40 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    class="w-7 h-7 fill-white/80 hover:fill-second-500">
+                                    <path
+                                        d="M20.45 20.45h-3.55v-5.4c0-1.29-.03-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85v5.5h-3.55V9h3.4v1.56h.05c.47-.9 1.62-1.85 3.34-1.85 3.57 0 4.23 2.35 4.23 5.4v6.34zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.78C.8 0 0 .77 0 1.72v20.55C0 23.23.8 24 1.78 24h20.44C23.2 24 24 23.23 24 22.27V1.72C24 .77 23.2 0 22.22 0z" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
                     <!-- CTA Buttons -->
