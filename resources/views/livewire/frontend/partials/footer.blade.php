@@ -21,7 +21,7 @@
                 For bookings, enquiries, or urgent travel needs, contact our team anytime.
             </p>
 
-            <div class="grid gap-6 md:grid-cols-3 scroll-animate">
+            <div class="grid gap-6 md:grid-cols-4 scroll-animate">
                 <!-- Phone -->
                 <div class="bg-gray-900 rounded-2xl p-6 text-white shadow-lg">
                     <h3 class="text-lg font-semibold mb-2 text-white">Phone</h3>
@@ -47,6 +47,29 @@
                         Admin@centralexecutivetransfers.co.uk
                     </a>
                 </div>
+                <div class="bg-gray-900 rounded-2xl p-6 text-white shadow-lg flex gap-6 justify-center items-center">
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook"
+                        class="w-14 h-14 flex items-center justify-center rounded-full border border-white/50 hover:border-second-500/40 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="w-7 h-7 fill-white/80 hover:fill-second-500">
+                            <path
+                                d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.5c0-2.3 1.37-3.6 3.46-3.6.99 0 2.03.18 2.03.18v2.23h-1.14c-1.13 0-1.48.7-1.48 1.42v1.7H16l-.38 3h-2.1v7A10 10 0 0 0 22 12z" />
+                        </svg>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="#" aria-label="LinkedIn"
+                        class="w-14 h-14 flex items-center justify-center rounded-full border border-white/50 hover:border-second-500/40 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            class="w-7 h-7 fill-white/80 hover:fill-second-500">
+                            <path
+                                d="M20.45 20.45h-3.55v-5.4c0-1.29-.03-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85v5.5h-3.55V9h3.4v1.56h.05c.47-.9 1.62-1.85 3.34-1.85 3.57 0 4.23 2.35 4.23 5.4v6.34zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.78C.8 0 0 .77 0 1.72v20.55C0 23.23.8 24 1.78 24h20.44C23.2 24 24 23.23 24 22.27V1.72C24 .77 23.2 0 22.22 0z" />
+                        </svg>
+                    </a>
+                </div>
+
+
             </div>
 
             <p class="text-sm text-gray-500 mt-6 scroll-animate">
